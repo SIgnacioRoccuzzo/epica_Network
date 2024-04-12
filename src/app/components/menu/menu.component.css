@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+
 #header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(303, 87%, 63%);
+    background-color: transparent;
     padding: 10px 20px;
 }
 
 .logo-header {
-    height: 120px;
+    height: 100px;
+    border: 2px solid rgba(0, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 .burguer {
@@ -37,7 +41,7 @@
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 2.5px;
+    height: 3px;
     background-color: white;
     transition: width 0.3s ease-out, left 0.3s ease-out;
 
@@ -77,9 +81,9 @@
     .menu-list {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 120px;
         left: 0;
-        background-color: hsl(303, 87%, 63%);
+        background-color: transparent;
         width: 100%;
         padding: 10px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -95,6 +99,7 @@
         margin: 10px 0;
         padding: 10px;
         border-bottom: 1px solid black;
+        font-size: 1rem;
 
     }
 
