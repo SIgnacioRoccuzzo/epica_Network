@@ -1,23 +1,30 @@
 /* pricing-page.component.css */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+h1 {
+    font-family: "Montserrat", sans-serif;
 }
 
 .pricing-card {
-    background-color: #1e1e1e;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
     text-align: center;
     width: 250px;
+    transition: box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-card h2 {
-    color: #fff;
+    color: black;
 }
 
 .price {
@@ -34,8 +41,8 @@ ul li {
     margin-bottom: 10px;
 }
 
-button {
-    background-color: #4CAF50;
+a {
+    background-color: rgb(240, 62, 200);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -46,8 +53,19 @@ button {
     margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+a:hover {
+    background-color: #b83ad2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+
+    .pricing-card {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

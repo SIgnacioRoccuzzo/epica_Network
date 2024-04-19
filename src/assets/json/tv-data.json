@@ -1,0 +1,19 @@
+{
+    "tv": [
+        {
+            "name": "TV Básico",
+            "data": "+100 canales de TV",
+            "price": 2.99
+        },
+        {
+            "name": "TV Completo",
+            "data": "+100 canales de TV + cine + series + documentales + música",
+            "price": 7.99
+        },
+        {
+            "name": "TV Premium",
+            "data": "+100 canales de TV + cine + series + documentales + música + telenovelas",
+            "price": 9.99
+        }
+    ]
+}

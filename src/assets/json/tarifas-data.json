@@ -1,0 +1,98 @@
+{
+    "movil": [
+        {
+            "name": "Plan Oro",
+            "data": "Móvil 32GB + ilimitadas",
+            "description": "Sin permanencia ni penalizaciones\nDisponible en formato eSIM\nGestiónalo todo desde la app Mi épica",
+            "price": 8.95
+        },
+        {
+            "name": "Plan Esmeralda",
+            "data": "Móvil 70GB + ilimitadas",
+            "description": "Sin permanencia ni penalizaciones\nDisponible en formato eSIM\nGestiónalo todo desde la app Mi épica",
+            "price": 10.95
+        },
+        {
+            "name": "Plan Diamante",
+            "data": "Móvil 120GB + ilimitadas",
+            "description": "Sin permanencia ni penalizaciones\nDisponible en formato eSIM\nGestiónalo todo desde la app Mi épica",
+            "price": 12.95
+        },
+        {
+            "name": "Plan Maestro",
+            "data": "Móvil 160GB + ilimitadas",
+            "description": "Sin permanencia ni penalizaciones\nDisponible en formato eSIM\nGestiónalo todo desde la app Mi épica",
+            "price": 18.95
+        },
+        {
+            "name": "Plan Gran Maestro",
+            "data": "Móvil Libre GB + Libre ilimitadas",
+            "description": "Sin permanencia ni penalizaciones\nDisponible en formato eSIM\nGestiónalo todo desde la app Mi épica",
+            "price": 25.95
+        }
+    ],
+    "fibra": [
+        {
+            "name": "Plan Élite",
+            "data": "Fibra 100Mb",
+            "description": "Precio Final. Sin sorpresas en tu factura.\nSin permanencia ni penalizaciones.\nLlamadas ilimitadas desde el fijo.\nInstalación gratis y router HGU incluido.\nRed de fibra de Telefónica.",
+            "price": 22.90
+        },
+        {
+            "name": "Plan Campeón",
+            "data": "Fibra 300Mb",
+            "description": "Precio Final. Sin sorpresas en tu factura.\nSin permanencia ni penalizaciones.\nLlamadas ilimitadas desde el fijo.\nInstalación gratis y router HGU incluido.\nRed de fibra de Telefónica.",
+            "price": 24.90
+        },
+        {
+            "name": "Plan Irreal",
+            "data": "Fibra 600Mb",
+            "description": "Precio Final. Sin sorpresas en tu factura.\nSin permanencia ni penalizaciones.\nLlamadas ilimitadas desde el fijo.\nInstalación gratis y router HGU incluido.\nRed de fibra de Telefónica.",
+            "price": 29.90
+        }
+    ],
+    "fibra_movil": [
+        {
+            "name": "Cofre Inicial",
+            "data": "Fibra 300Mb + Móvil 10GB + ilimitadas",
+            "price": 29.90
+        },
+        {
+            "name": "Cofre Épico",
+            "data": "Fibra 300Mb + Móvil 55GB + ilimitadas",
+            "price": 34.90
+        },
+        {
+            "name": "Cofre Legendario",
+            "data": "Fibra 300Mb + 2x Móvil 25GB + ilimitadas",
+            "price": 39.90
+        },
+        {
+            "name": "Cofre Invicto",
+            "data": "Fibra 600Mb + Móvil 25GB + ilimitadas",
+            "price": 34.90
+        },
+        {
+            "name": "Cofre Supremo",
+            "data": "Fibra 600Mb + Móvil 55GB + ilimitadas",
+            "price": 39.90
+        }
+    ],
+    "tv": [
+        {
+            "name": "TV Básico",
+            "data": "+100 canales de TV",
+            "price": 2.99
+        },
+        {
+            "name": "TV Completo",
+            "data": "+100 canales de TV + cine + series + documentales + música",
+            "price": 7.99
+        },
+        {
+            "name": "TV Premium",
+            "data": "+100 canales de TV + cine + series + documentales + música + telenovelas",
+            "price": 9.99
+        }
+    ]
+}

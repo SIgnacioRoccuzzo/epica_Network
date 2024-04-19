@@ -1,54 +1,16 @@
 <div class="container">
-    <div class="pricing-card">
-        <h2>Basic</h2>
-        <p class="price">$10/month</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-        <button>Select</button>
+    <h1 class="mb-3 text-white text-center">Tarifas de Fibra Epica</h1>
+    <div class="row justify-content-md-center">
+        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fibra of fibraData">
+            <h3>{{ fibra.name }}</h3>
+            <ul>
+                <li>{{ fibra.data }}</li>
+                <p>{{ fibra.price }}<span>€</span></p>
+                <small class="iva">Precio Final</small>
+                <li>{{fibra.description}}</li>
+            </ul>
+            <a [href]="whatsappLink">Me interesa</a>
+        </div>
     </div>
-    <div class="pricing-card">
-        <h2>Basic</h2>
-        <p class="price">$10/month</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-        <button>Select</button>
-    </div>
-    <div class="pricing-card">
-        <h2>Basic</h2>
-        <p class="price">$10/month</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-        <button>Select</button>
-    </div>
-    <div class="pricing-card">
-        <h2>Basic</h2>
-        <p class="price">$10/month</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-        <button>Select</button>
-    </div>
-    <div class="pricing-card">
-        <h2>Basic</h2>
-        <p class="price">$10/month</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-        <button>Select</button>
-    </div>
-
 
 </div>

@@ -1,0 +1,22 @@
+{
+    "fibra": [
+        {
+            "name": "Plan Élite",
+            "data": "Fibra 100Mb",
+            "description": "Precio Final. Sin sorpresas en tu factura.\nSin permanencia ni penalizaciones.\nLlamadas ilimitadas desde el fijo.\nInstalación gratis y router HGU incluido.\nRed de fibra de Telefónica.",
+            "price": 22.90
+        },
+        {
+            "name": "Plan Campeón",
+            "data": "Fibra 300Mb",
+            "description": "Precio Final. Sin sorpresas en tu factura.\nSin permanencia ni penalizaciones.\nLlamadas ilimitadas desde el fijo.\nInstalación gratis y router HGU incluido.\nRed de fibra de Telefónica.",
+            "price": 24.90
+        },
+        {
+            "name": "Plan Irreal",
+            "data": "Fibra 600Mb",
+            "description": "Precio Final. Sin sorpresas en tu factura.\nSin permanencia ni penalizaciones.\nLlamadas ilimitadas desde el fijo.\nInstalación gratis y router HGU incluido.\nRed de fibra de Telefónica.",
+            "price": 29.90
+        }
+    ]
+}

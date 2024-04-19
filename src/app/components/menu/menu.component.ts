@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
   firstMenu = [
-    { label: 'Fibra y Movil', route: 'fibra-y-movil' },
+    { label: 'Fibra y Móvil', route: 'fibra-y-movil' },
     { label: 'Fibra', route: 'fibra' },
-    { label: 'Tarifa Movil', route: 'movil' },
-    { label: 'Tv', route: 'tv' },
+    { label: 'Móvil', route: 'movil' },
+    { label: 'TV', route: 'tv' },
 
   ];
   secondMenu = [
     { label: 'Sobre Epica', route: 'sobre-epica' },
-    { label: 'Ayuda', route: 'ayuda' },
+    /*    { label: 'Ayuda', route: 'ayuda' }, */
     { label: 'Contacto', route: 'contacto' },
   ]
   isMenuOpen = false;
@@ -32,8 +32,6 @@ export class MenuComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-
-
       this.router.navigate([], { fragment: sectionId });
     }
   }

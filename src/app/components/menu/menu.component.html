@@ -1,18 +1,26 @@
-<nav id="header-menu" class="container">
-    <div class="logo-container">
-        <a href="http://epicanetwork.es" class="logo" alt="epica">
-            <img class="logo-header" src="../../../assets/images/logo.png" alt="epica">
-        </a>
+<header class="container">
+    <div class="atencion justify-content-end">
+        <p>Si no eres cliente, llámanos <span>999888777</span></p>
     </div>
-    <button class="burguer" (click)="toggleMenu()">
-        <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
-    </button>
-    <ul class="menu-list" [class.is-open]="isMenuOpen">
-        <li *ngFor="let section of firstMenu" [routerLink]="[section.route]"
-            (click)="scrollTo(section.route); toggleMenu()">{{ section.label }}</li>
-        <li *ngFor="let section of secondMenu" [routerLink]="[section.route]"
-            (click)="scrollTo(section.route); toggleMenu()" class="sub-menu">{{ section.label }}</li>
-        <a class="loginButton" href="https://clientesepicanetwork.ispgestion.com/site/login">Soy Cliente</a>
-    </ul>
-
-</nav>
+    <nav id="header-menu" class="container">
+        <div class="logo-container">
+            <a href="http://epicanetwork.es" class="logo" alt="epica">
+                <img class="logo-header" src="../../../assets/images/logoBlanco.png" alt="epica">
+            </a>
+        </div>
+        <button class="burguer" (click)="toggleMenu()">
+            <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
+        </button>
+        <ul class="menu-list" [class.is-open]="isMenuOpen">
+            <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
+                (click)="toggleMenu()">
+                {{ section.label }}
+            </li>
+            <li *ngFor="let section of secondMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
+                (click)="toggleMenu()" class="sub-menu">
+                {{ section.label }}
+            </li>
+            <a class="loginButton" href="https://clientesepicanetwork.ispgestion.com/site/login">Soy Cliente</a>
+        </ul>
+    </nav>
+</header>

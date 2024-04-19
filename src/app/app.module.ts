@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,11 @@ import { SobreEpicaComponent } from './pages/epicaNetwork/sobre-epica/sobre-epic
 import { AyudaComponent } from './pages/epicaNetwork/ayuda/ayuda.component';
 import { ContactoComponent } from './pages/epicaNetwork/contacto/contacto.component';
 import { FibraMovilComponent } from './pages/tarifas/fibra-movil/fibra-movil.component';
+import { register } from 'swiper/element/bundle';
+import { HttpClientModule } from '@angular/common/http';
+
+register()
+
 
 @NgModule({
   declarations: [
@@ -25,9 +30,12 @@ import { FibraMovilComponent } from './pages/tarifas/fibra-movil/fibra-movil.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

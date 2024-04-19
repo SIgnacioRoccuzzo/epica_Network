@@ -1,19 +1,45 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
+.atencion {
+    text-align: right;
+    margin-bottom: 0;
+    padding: 10px;
+
+}
+
+.atencion p {
+    color: white;
+    margin-bottom: 0;
+
+}
+
+.atencion span {
+    background-color: #97eb9d;
+    padding: 5px 10px;
+
+
+}
+
+.atencion span,
+.atencion span:hover {
+    color: black;
+
+}
+
+
 #header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0;
     background-color: transparent;
-    padding: 10px 20px;
+
 }
 
 .logo-header {
-    height: 100px;
-    border: 2px solid rgba(0, 255, 255, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    height: 120px;
+
 }
 
 .burguer {
@@ -25,7 +51,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px;
+    gap: 15px;
 }
 
 .menu-list li {
@@ -53,6 +79,11 @@
 
 }
 
+.menu-list li.active::before {
+    width: 100%;
+    left: 0;
+}
+
 .sub-menu {
     opacity: 0.5;
 }
@@ -70,7 +101,7 @@
     border-radius: 4px;
 }
 
-@media (min-width: 400px) and (max-width: 1200px) {
+@media (min-width: 300px) and (max-width: 1200px) {
     .burguer {
         display: block;
         background: none;
@@ -81,12 +112,13 @@
     .menu-list {
         display: none;
         position: absolute;
-        top: 120px;
+        top: 162px;
         left: 0;
-        background-color: transparent;
+        background-color: #b83ad2;
         width: 100%;
         padding: 10px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
 
     }
 

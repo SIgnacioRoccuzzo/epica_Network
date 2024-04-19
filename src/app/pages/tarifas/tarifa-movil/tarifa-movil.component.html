@@ -1,0 +1,54 @@
+<div class="container">
+    <h1 class="mb-3 text-white text-center">TARIFAS DE MÓVIL ÉPICA</h1>
+    <div class="row justify-content-md-center">
+        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let movil of planMovil">
+            <h3>{{ movil.name }}</h3>
+            <ul>
+                <li>{{ movil.data }}</li>
+                <p>{{ movil.price }}<span>€</span></p>
+                <small class="iva">Precio Final</small>
+            </ul>
+            <ul class="lista_checks">
+                <li><span>√</span> Sin permanencia ni penalizaciones</li>
+                <li><span>√</span> Disponible en formato eSIM</li>
+                <li><span>√</span> Gestiónalo todo desde la app MiEpica</li>
+            </ul>
+            <a [href]="whatsappLink">Me interesa</a>
+        </div>
+    </div>
+
+    <article class="bloque_cards text-center">
+        <div class="container">
+            <h2 class="mb-3 text-center">Un servicio móvil sencillo</h2>
+            <p class="subtitle text-center">Y si quieres hablar con nosotros estaremos ahí para ayudarte</p>
+            <div class="d-sm-block">
+                <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let card of mobileCards; let i = index">
+                        <div class="card h-100" [ngClass]="{'last-card': isLastCard(i)}">
+                            <img class="card-img-top" [src]="card.imageUrl" [alt]="card.title">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ card.title }}</h5>
+                                <p class="card-text">{{ card.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <swiper-container class="mobil" navigation="true" pagination="true" pagination-clickable="true">
+        <swiper-slide *ngFor="let slide of swiperSlides">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" [src]="slide.imageUrl" [alt]="slide.title">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ slide.title }}</h5>
+                        <p class="card-text">{{ slide.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+</div>

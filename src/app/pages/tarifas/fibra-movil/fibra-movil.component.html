@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="mb-3 text-white text-center">Tarifas de Fibra Epica</h1>
+    <div class="row justify-content-md-center">
+        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fiber of fibraMovilData">
+            <h3>{{ fiber.name }}</h3>
+            <ul>
+                <li>{{ fiber.data }}</li>
+                <p>{{ fiber.price }}<span>€</span></p>
+                <small class="iva">Precio Final</small>
+                <li>{{fiber.description}}</li>
+            </ul>
+            <a [href]="whatsappLink">Me interesa</a>
+        </div>
+    </div>
+</div>

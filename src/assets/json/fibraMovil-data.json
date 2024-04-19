@@ -1,0 +1,29 @@
+{
+    "fibra_movil": [
+        {
+            "name": "Cofre Inicial",
+            "data": "Fibra 300Mb + Móvil 10GB + ilimitadas",
+            "price": 29.90
+        },
+        {
+            "name": "Cofre Épico",
+            "data": "Fibra 300Mb + Móvil 55GB + ilimitadas",
+            "price": 34.90
+        },
+        {
+            "name": "Cofre Legendario",
+            "data": "Fibra 300Mb + 2x Móvil 25GB + ilimitadas",
+            "price": 39.90
+        },
+        {
+            "name": "Cofre Invicto",
+            "data": "Fibra 600Mb + Móvil 25GB + ilimitadas",
+            "price": 34.90
+        },
+        {
+            "name": "Cofre Supremo",
+            "data": "Fibra 600Mb + Móvil 55GB + ilimitadas",
+            "price": 39.90
+        }
+    ]
+}
