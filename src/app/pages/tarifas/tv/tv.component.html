@@ -4,10 +4,9 @@
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let tv of planTv">
             <h3>{{ tv.name }}</h3>
             <ul>
-                <li>{{ tv.data }}</li>
-                <p>{{ tv.price }}<span>€</span></p>
-                <small class="iva">Precio Final</small>
+                <li class="data">{{ tv.data }}</li>
             </ul>
+            <p>{{ tv.price }}<span>€/mes</span></p>
             <div class="button-container">
                 <a class="interes" [href]="whatsappLink">Me interesa</a>
             </div>

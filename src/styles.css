@@ -1,73 +1,154 @@
-  *,
-  p {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      line-height: 24px;
-      vertical-align: baseline;
-      background: transparent;
-      text-decoration: none;
-      outline: none;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
-  html,
-  body {
-      overflow-x: hidden;
-      background-image: url('../src/assets/images/shinyOverlay.svg');
-  }
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-  ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-  }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
 
-  img {
-      border: none;
-  }
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='2560' height='1700' preserveAspectRatio='none' viewBox='0 0 2560 1700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1692%26quot%3b)' fill='none'%3e%3crect width='2560' height='1700' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1693%26quot%3b)'%3e%3c/rect%3e%3cpath d='M2560 0L2473.16 0L2560 399.95z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M2473.16 0L2560 399.95L2560 1018.04L1100.7799999999997 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1100.78 0L2560 1018.04L2560 1382.3899999999999L969.27 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M969.27 0L2560 1382.3899999999999L2560 1424.6899999999998L373.80999999999995 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1700L402.17 1700L0 1673.24z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 1673.24L402.17 1700L1229.92 1700L0 1166.55z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 1166.55L1229.92 1700L1715.44 1700L0 940.3199999999999z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 940.3199999999999L1715.44 1700L1893.18 1700L0 839.9899999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1692'%3e%3crect width='2560' height='1700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='0%25' x2='50%25' y2='100%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1693'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(39%2c 38%2c 50%2c 1)' offset='0.95'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    height: 100vh;
 
-  .container {
-      max-width: 1350px !important;
-  }
+}
 
-  button,
-  button:hover,
-  button:focus {
-      outline: none;
-  }
+.container {
+    max-width: 1350px !important;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
 
-  a,
-  a:hover,
-  a:focus,
-  a:visited {
-      text-decoration: none;
-      font-size: inherit;
-  }
+ol,
+ul {
+    list-style: none;
+}
 
-  body {
-      font-family: "OnAir-Light", Arial, sans-serif !important;
-      font-size: 18px !important;
-      line-height: 26px;
-  }
+blockquote,
+q {
+    quotes: none;
+}
 
-  b,
-  strong {
-      font-family: "OnAir-Bold" !important;
-      font-weight: normal;
-  }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
 
-  img {
-      max-width: 100%;
-  }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
-
-  html {
-      scroll-behavior: smooth;
-  }
-
-  @media screen and (prefers-reduced-motion: reduce) {
-      html {
-          scroll-behavior: auto;
-      }
-  }
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

@@ -1,27 +1,27 @@
 {
     "movil": [
         {
-            "name": "Plan Oro",
+            "name": "Oro",
             "data": "Móvil 32GB + ilimitadas",
             "price": 8.95
         },
         {
-            "name": "Plan Esmeralda",
+            "name": "Esmeralda",
             "data": "Móvil 70GB + ilimitadas",
             "price": 10.95
         },
         {
-            "name": "Plan Diamante",
+            "name": "Diamante",
             "data": "Móvil 120GB + ilimitadas",
             "price": 12.95
         },
         {
-            "name": "Plan Maestro",
+            "name": "Maestro",
             "data": "Móvil 160GB + ilimitadas",
             "price": 18.95
         },
         {
-            "name": "Plan Gran Maestro",
+            "name": "Gran Maestro",
             "data": "Móvil Libre GB + Libre ilimitadas",
             "price": 25.95
         }

@@ -2,8 +2,11 @@
 
 
 .atencion {
+    position: fixed;
     text-align: right;
-    margin-bottom: 0;
+    top: 0;
+    right: 40px;
+    z-index: 1000;
     padding: 10px;
 
 }
@@ -27,18 +30,23 @@
 
 }
 
-
 #header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
     background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
 
 }
 
 .logo-header {
-    height: 120px;
+    height: 150px;
 
 }
 
@@ -102,6 +110,11 @@
 }
 
 @media (min-width: 300px) and (max-width: 1200px) {
+    .atencion {
+        white-space: nowrap;
+        left: 0;
+    }
+
     .burguer {
         display: block;
         background: none;

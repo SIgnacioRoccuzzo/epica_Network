@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+
+
   firstMenu = [
     { label: 'Fibra y Móvil', route: 'fibra-y-movil' },
     { label: 'Fibra', route: 'fibra' },
