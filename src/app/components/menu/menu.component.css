@@ -5,7 +5,7 @@
     position: fixed;
     text-align: right;
     top: 0;
-    right: 40px;
+    right: 279px;
     z-index: 1000;
     padding: 10px;
 
@@ -159,6 +159,7 @@
 }
 
 @media (min-width: 1201px) {
+
     .menu-list {
         display: flex !important;
 

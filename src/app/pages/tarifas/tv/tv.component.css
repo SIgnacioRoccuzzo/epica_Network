@@ -24,21 +24,87 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+#tv-image {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+
+.image {
+    width: 280px;
+}
+
 .pricing-card h3 {
     font-size: 2.5rem;
     color: #97eb9d;
 }
 
-.data {
+.neon-effect {
+    color: #97eb9d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow:
+        0 0 5px rgba(139, 0, 139, 0.3),
+        0 0 10px rgba(139, 0, 139, 0.3),
+        0 0 15px rgba(139, 0, 139, 0.3),
+        0 0 20px rgba(139, 0, 139, 0.3),
+        0 0 35px rgba(139, 0, 139, 0.3),
+        0 0 40px rgba(139, 0, 139, 0.3),
+        0 0 50px rgba(139, 0, 139, 0.3),
+        0 0 75px rgba(139, 0, 139, 0.3);
+    animation: neon-animation 1.5s infinite alternate;
+}
+
+@keyframes neon-animation {
+    from {
+        text-shadow:
+            0 0 5px rgba(139, 0, 139, 0.3),
+            0 0 10px rgba(139, 0, 139, 0.3),
+            0 0 15px rgba(139, 0, 139, 0.3),
+            0 0 20px rgba(139, 0, 139, 0.3),
+            0 0 35px rgba(139, 0, 139, 0.3),
+            0 0 40px rgba(139, 0, 139, 0.3),
+            0 0 50px rgba(139, 0, 139, 0.3),
+            0 0 75px rgba(139, 0, 139, 0.3);
+    }
+
+    to {
+        text-shadow:
+            0 0 10px rgba(139, 0, 139, 0.3),
+            0 0 20px rgba(139, 0, 139, 0.3),
+            0 0 30px rgba(139, 0, 139, 0.3),
+            0 0 40px rgba(139, 0, 139, 0.3),
+            0 0 50px rgba(139, 0, 139, 0.3),
+            0 0 60px rgba(139, 0, 139, 0.3),
+            0 0 70px rgba(139, 0, 139, 0.3),
+            0 0 80px rgba(139, 0, 139, 0.3);
+    }
+}
+
+.pricing-card .data {
     font-size: 18px;
     font-weight: 800;
+    margin-bottom: 10px;
+    min-height: 100px;
 
 }
 
 p {
-    color: #97eb9d;
     font-size: 24px;
+    color: #97eb9d;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
+p span {
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
 }
 
 .button-container {

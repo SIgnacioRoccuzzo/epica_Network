@@ -2,7 +2,10 @@
     <h1 class="mb-3 text-white text-center">TARIFAS DE TV ÉPICA</h1>
     <div class="row justify-content-md-center">
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let tv of planTv">
-            <h3>{{ tv.name }}</h3>
+            <div id="tv-image">
+                <img class="image" src="../../../../assets/images/tv.png" alt="tv">
+            </div>
+            <h3 class="neon-effect">{{ tv.name }}</h3>
             <ul>
                 <li class="data">{{ tv.data }}</li>
             </ul>

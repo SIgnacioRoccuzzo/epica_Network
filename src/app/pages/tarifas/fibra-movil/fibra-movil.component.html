@@ -2,14 +2,16 @@
     <h1 class="mb-3 text-white text-center">Tarifas de Fibra Epica</h1>
     <div class="row justify-content-md-center">
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fiber of fibraMovilData">
-            <img class="image" src="../../../../assets/images/Layer 6.png" alt="fibraymovil">
+            <div id="fibraMovil-image">
+                <img class="image" src="../../../../assets/images/Layer 6.png" alt="fibraymovil">
+            </div>
             <div id="name" class="container">
                 <p>PLAN <strong> {{fiber.name}}</strong></p>
             </div>
             <ul>
                 <li class="neon-effect">{{ fiber.data }}</li>
             </ul>
-            <p>{{ fiber.price }}<span> €/mes</span></p>
+            <p class="price">{{ fiber.price }} <span>€/mes</span></p>
             <div class="button-container">
                 <a class="interes" [href]="whatsappLink">Me interesa</a>
             </div>

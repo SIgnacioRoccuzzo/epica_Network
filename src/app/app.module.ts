@@ -12,6 +12,8 @@ import { ContactoComponent } from './pages/epicaNetwork/contacto/contacto.compon
 import { FibraMovilComponent } from './pages/tarifas/fibra-movil/fibra-movil.component';
 import { register } from 'swiper/element/bundle';
 import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 register()
 
@@ -26,7 +28,9 @@ register()
     SobreEpicaComponent,
     AyudaComponent,
     ContactoComponent,
-    FibraMovilComponent
+    FibraMovilComponent,
+    InicioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

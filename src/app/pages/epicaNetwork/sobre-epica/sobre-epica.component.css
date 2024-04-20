@@ -1,0 +1,25 @@
+.container {
+    max-width: 800px;
+    margin-bottom: 40px;
+    margin: 20px auto;
+    top: 150px;
+    /* Centrar el contenido horizontalmente */
+    padding: 20px;
+    /* Espaciado interno */
+    background-color: #fff;
+    /* Fondo blanco para el contenido */
+    border-radius: 10px;
+    /* Bordes redondeados para un aspecto suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para profundidad */
+}
+
+/* Estilos de párrafo */
+.container p {
+    line-height: 1.6;
+    /* Espaciado entre líneas para mejor legibilidad */
+    text-align: justify;
+    /* Alineación justificada para un aspecto limpio */
+    padding-bottom: 10px;
+
+}

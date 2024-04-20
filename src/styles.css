@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
+:root {
+    /* Colores principales de la empresa */
+    --color-principal: #97eb9d;
+    --color-secundario: #4b3b68;
+    --color-destacado: #b83ad2;
+    --color-resaltado: #c357d2;
+    --color-vibrante: #d264ff;
+    --color-fondo: #2b2933;
+    --color-texto: #d8d8d8;
+
+    /* Fuentes */
+    --fuente-titulo: 'Anton', sans-serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
 /* Reset CSS */
 html,
 body,
