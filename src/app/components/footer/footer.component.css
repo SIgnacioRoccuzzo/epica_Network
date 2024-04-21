@@ -28,7 +28,7 @@ footer {
 
 .primary-footer .footer-logo {
     height: 80px;
-    width: auto;
+    width: 100px;
 }
 
 .primary-footer ul {
@@ -51,47 +51,87 @@ footer {
     color: var(--color-principal);
 }
 
+/* Estilo para el bloque de redes sociales */
+.social-list {
+    list-style-type: none;
+    padding: 0;
+}
+
 .social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
 }
 
-.social a {
-    color: var(--color-texto);
-    transition: color 0.3s ease;
+.social a i {
+    margin-right: 5px;
+    font-size: 24px;
+    transition: color 0.3s;
 }
 
-.social a i {
-    font-size: 24px;
-    transition: color 0.3s ease;
+/* Colores distintivos para cada icono de redes sociales */
+.social .fab.fa-youtube {
+    color: red;
+    /* YouTube */
+}
+
+.social .fab.fa-facebook-f {
+    color: #1877F2;
+    /* Facebook */
+}
+
+.social .fab.fa-instagram {
+    color: #C13584;
+    /* Instagram */
+}
+
+.social .fa-brands.fa-threads {
+    color: black;
+    /* Threads */
+}
+
+.social .fab.fa-tiktok {
+    color: black;
+    /* TikTok */
+}
+
+.social .fa-brands.fa-x-twitter {
+    color: #1DA1F2;
+    /* X (anteriormente Twitter) */
+}
+
+.social .fab.fa-linkedin {
+    color: #0A66C2;
+    /* LinkedIn */
+}
+
+/* Efecto de animación y cambio de color al hacer hover */
+.social a:hover {
+    transform: translateY(-5px);
+    /* Efecto de animación al pasar el ratón */
 }
 
 .social a:hover i {
-    color: var(--color-principal);
+    color: #FF4500;
+    /* Cambia el color del ícono al pasar el ratón por encima */
 }
 
-.social a:hover .fab.fa-youtube {
-    color: #ff0000;
+/* Centrar las redes sociales */
+.social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.social a:hover .fab.fa-facebook-f {
-    color: #1877f2;
-}
-
-.social a:hover .fab.fa-instagram {
-    color: #e1306c;
-}
-
-.social a:hover .fab.fa-tiktok {
-    color: #000000;
-}
-
-.social a:hover .fab.fa-twitter {
-    color: #1da1f2;
-}
-
-.social a:hover .fab.fa-linkedin {
-    color: #0a66c2;
+.social-list .social a {
+    padding: 5px 10px;
 }
 
 .secondary-footer {
@@ -138,5 +178,20 @@ footer {
 
     .primary-footer>div {
         flex: 1 1 100%;
+    }
+
+    .social-list {
+        align-items: center;
+        /* Centra los íconos en dispositivos más pequeños */
+    }
+
+    .social a {
+        font-size: 20px;
+        /* Ajusta el tamaño del texto para dispositivos más pequeños */
+    }
+
+    .social a i {
+        font-size: 22px;
+        /* Ajusta el tamaño del ícono para dispositivos más pequeños */
     }
 }

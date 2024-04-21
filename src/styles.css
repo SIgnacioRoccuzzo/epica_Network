@@ -1,9 +1,10 @@
+/* Importación de fuentes y estilos externos */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
+/* Definición de variables globales */
 :root {
-    /* Colores principales de la empresa */
     --color-principal: #97eb9d;
     --color-secundario: #4b3b68;
     --color-destacado: #b83ad2;
@@ -11,13 +12,17 @@
     --color-vibrante: #d264ff;
     --color-fondo: #2b2933;
     --color-texto: #d8d8d8;
-
-    /* Fuentes */
     --fuente-titulo: 'Anton', sans-serif;
     --fuente-cuerpo: 'Montserrat', sans-serif;
+    --radio-pequeno: 0.3125rem;
+    --radio-grande: 0.9375rem;
+    --radio-extra: 1.875rem;
+    --sombra-normal: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    --sombra-hover: var(--sombra-normal), 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+    --transicion-general: all 0.3s ease;
 }
 
-/* Reset CSS */
+/* Reset CSS para consistencia en diferentes navegadores */
 html,
 body,
 div,
@@ -107,7 +112,7 @@ video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* Ajustes para elementos HTML5 */
 article,
 aside,
 details,
@@ -122,14 +127,18 @@ section {
     display: block;
 }
 
+/* Estilos para el cuerpo de la página */
 body {
     line-height: 1;
     overflow-x: hidden;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='2560' height='1700' preserveAspectRatio='none' viewBox='0 0 2560 1700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1692%26quot%3b)' fill='none'%3e%3crect width='2560' height='1700' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1693%26quot%3b)'%3e%3c/rect%3e%3cpath d='M2560 0L2473.16 0L2560 399.95z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M2473.16 0L2560 399.95L2560 1018.04L1100.7799999999997 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1100.78 0L2560 1018.04L2560 1382.3899999999999L969.27 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M969.27 0L2560 1382.3899999999999L2560 1424.6899999999998L373.80999999999995 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1700L402.17 1700L0 1673.24z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 1673.24L402.17 1700L1229.92 1700L0 1166.55z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 1166.55L1229.92 1700L1715.44 1700L0 940.3199999999999z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 940.3199999999999L1715.44 1700L1893.18 1700L0 839.9899999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1692'%3e%3crect width='2560' height='1700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='0%25' x2='50%25' y2='100%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1693'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(39%2c 38%2c 50%2c 1)' offset='0.95'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
+/* Estilos para contenedores */
 .container {
     max-width: 1350px !important;
     position: relative;
@@ -139,11 +148,13 @@ body {
     box-sizing: border-box;
 }
 
+/* Estilos para listas */
 ol,
 ul {
     list-style: none;
 }
 
+/* Estilos para citas y tablas */
 blockquote,
 q {
     quotes: none;
@@ -162,6 +173,7 @@ table {
     border-spacing: 0;
 }
 
+/* Estilos para accesibilidad */
 @media screen and (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

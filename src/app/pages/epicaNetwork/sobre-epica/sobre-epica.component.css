@@ -1,25 +1,115 @@
+@import url(../../../../styles.css);
+
 .container {
-    max-width: 800px;
-    margin-bottom: 40px;
-    margin: 20px auto;
-    top: 150px;
-    /* Centrar el contenido horizontalmente */
-    padding: 20px;
-    /* Espaciado interno */
-    background-color: #fff;
-    /* Fondo blanco para el contenido */
-    border-radius: 10px;
-    /* Bordes redondeados para un aspecto suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Sombra para profundidad */
+    max-width: 50rem;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 11.25rem;
 }
 
-/* Estilos de párrafo */
+.content-section {
+    margin-bottom: 1.25rem;
+}
+
+h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 0.9375rem;
+
+}
+
 .container p {
     line-height: 1.6;
-    /* Espaciado entre líneas para mejor legibilidad */
     text-align: justify;
-    /* Alineación justificada para un aspecto limpio */
-    padding-bottom: 10px;
+    margin-bottom: 0.9375rem;
 
+}
+
+.container a {
+    color: var(--color-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.text-link {
+    color: var(--color-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--color-destacado);
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 37.5rem) {
+
+
+    .container {
+        padding: 0.9375rem;
+        margin-top: 10.25rem;
+
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.9375rem;
+
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.625rem;
+
+    }
+
+    .content-section {
+        margin-bottom: 0.9375rem;
+
+    }
+
+    .container p {
+        font-size: 0.875rem;
+        line-height: 1.4;
+        margin-bottom: 0.625rem;
+
+    }
+
+    .text-link {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+
+
+    .container {
+        max-width: 62.5rem;
+        margin-top: 15.625rem;
+
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
 }
