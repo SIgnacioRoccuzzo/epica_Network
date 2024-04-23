@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "epica:build:production"
+              "buildTarget": "epica:build:production"
             },
             "development": {
-              "browserTarget": "epica:build:development"
+              "buildTarget": "epica:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "epica:build"
+            "buildTarget": "epica:build"
           }
         },
         "test": {

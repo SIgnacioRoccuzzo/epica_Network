@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
+import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,5 @@ import { Component, inject } from '@angular/core';
 })
 export class AppComponent {
   title = 'epica';
+
 }

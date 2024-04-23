@@ -41,9 +41,7 @@ register()
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
