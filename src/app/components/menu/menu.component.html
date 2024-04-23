@@ -1,8 +1,8 @@
 <header id="main-header">
     <div id="top-bar">
-        <p class="atencion">Si no eres cliente, llámanos <i class="material-icons phone-icon">phone</i><span>
-
-                999888777</span></p>
+        <p class="atencion">Si no eres cliente, llámanos
+            <i class="material-icons phone-icon">phone</i><span>999888777</span>
+        </p>
     </div>
     <div class="nav-container">
         <a href="http://epicanetwork.es" class="logo" alt="epica">
@@ -13,7 +13,6 @@
         </button>
         <nav class="menu-header text-white" [ngClass]="{'is-open': isMenuOpen}">
             <ul class="first-menu">
-
                 <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
                     (click)="toggleMenu()">
                     {{ section.label }}
@@ -25,7 +24,7 @@
                     {{ section.label }}
                 </li>
             </ul>
-            <a class="loginButton" href="https://clientesepicanetwork.ispgestion.com/site/login"
+            <a class="buttom" href="https://clientesepicanetwork.ispgestion.com/site/login"
                 [ngClass]="{'is-open': isMenuOpen}">
                 Soy Cliente
             </a>

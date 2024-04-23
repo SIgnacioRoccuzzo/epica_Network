@@ -1,12 +1,10 @@
 @import url('../../../styles.css');
 
-
-
 /* Estilo para el footer general */
 footer {
-    background-color: transparent;
+    background-color: var(--color-fondo);
     color: var(--color-texto);
-    padding: var(--padding-default);
+
 }
 
 /* Primary Footer */

@@ -3,7 +3,7 @@
 
 /* Asegurar que el encabezado ocupe toda la pantalla a lo ancho */
 #main-header {
-    background-color: var(--color-destacado);
+    background-color: var(--color-fondo);
     position: fixed;
     top: 0;
     left: 0;
@@ -17,13 +17,13 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--color-secundario);
+    background-color: white;
 
 }
 
 .phone-icon {
     font-size: 28px;
-    color: var(--color-principal);
+    color: var(--color-vibrante);
     vertical-align: middle;
 
 }
@@ -33,7 +33,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 7px;
-    color: white;
+    color: black;
 
 }
 
@@ -120,12 +120,12 @@
 
 }
 
-.loginButton {
+.buttom {
     font-size: 1rem;
     line-height: 24px;
-    color: var(--color-vibrante);
+    color: var(--color-principal);
     text-decoration: none;
-    border: 1px solid var(--color-vibrante);
+    border: 1.5px solid var(--color-principal);
     border-radius: 4px;
     padding: 7px 10px;
     margin-top: 1px;
@@ -173,12 +173,12 @@
         width: 100%;
     }
 
-    .loginButton {
+    .buttom {
         display: none;
         text-align: center;
     }
 
-    .loginButton.is-open {
+    .buttom.is-open {
         display: block;
         padding: 10px;
         margin-top: 20px;

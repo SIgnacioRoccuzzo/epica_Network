@@ -22,7 +22,7 @@
     --font-size-large: 1.5em;
 
     /* Espaciado y dimensiones */
-    --margin-top: 11.375rem;
+    --margin-top: 5.375rem;
     --radio-pequeno: 0.3125rem;
     --radio-grande: 0.9375rem;
     --radio-extra: 1.875rem;
@@ -43,7 +43,7 @@
     --card-flex-direction: column;
     --card-justify-content: space-between;
     --card-align-items: center;
-    --card-background-color: hwb(180 8% 51%);
+    --card-background-color: white;
     --card-border-radius: 1.875rem;
     --card-box-shadow: var(--sombra-normal);
     --card-padding: 0.625rem;
@@ -80,13 +80,13 @@
         0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
 
 
-    /* Configuraciones para neon */
-    --neon-font-size: 1.5rem;
+
+    /*     --neon-font-size: 1.5rem;
     --neon-font-weight: var(--font-weight);
     --neon-animation-duration: 1.5s;
     --neon-animation-iteration: infinite alternate;
 
-    /* Sombra para neon */
+
     --neon-shadow-base:
         0 0 0.3125rem rgba(139, 0, 139, 0.3),
         0 0 0.625rem rgba(139, 0, 139, 0.3),
@@ -105,7 +105,7 @@
         0 0 3.125rem rgba(139, 0, 139, 0.3),
         0 0 3.75rem rgba(139, 0, 139, 0.3),
         0 0 4.375rem rgba(139, 0, 139, 0.3),
-        0 0 5rem rgba(139, 0, 139, 0.3);
+        0 0 5rem rgba(139, 0, 139, 0.3); */
 }
 
 
@@ -200,7 +200,7 @@ video {
 
 }
 
-/* Ajustes para elementos HTML5 */
+/* /* Ajustes para elementos HTML5 */
 article,
 aside,
 details,
@@ -215,6 +215,7 @@ section {
     display: block;
 }
 
+
 /* Estilos para el cuerpo de la página */
 html {
     font-size: 16px;
@@ -225,7 +226,6 @@ body {
     line-height: 1;
     overflow-x: hidden;
     width: 100%;
-    background-color: var(--color-fondo) !important;
 
 }
 
@@ -245,7 +245,7 @@ h1 {
     margin-top: var(--margin-top);
     font-weight: var(--font-weight);
     font-size: var(--font-size);
-    color: var(--color-texto);
+    color: var(--color-fondo);
 }
 
 /* Estilos para tarjetas (cards) */
@@ -271,7 +271,7 @@ h1 {
 
 /* Estilos para efectos neon */
 .neon-effect {
-    color: var(--color-principal);
+    color: black;
     font-size: var(--neon-font-size);
     font-weight: var(--neon-font-weight);
     text-shadow: var(--neon-shadow-base);
