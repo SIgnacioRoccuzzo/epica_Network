@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+
 register()
 
 
@@ -30,7 +31,8 @@ register()
     ContactoComponent,
     FibraMovilComponent,
     InicioComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,9 @@ register()
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [
+
+  ]
 })
 export class AppModule { }
