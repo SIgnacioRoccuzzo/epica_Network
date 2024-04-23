@@ -1,5 +1,7 @@
+Tarifa movil html
+
 <section class="container">
-    <h1 class="mb-3 text-white text-center">Tarifas de Móvil de Épica</h1>
+    <h1 class="mb-3 text-center">Tarifas de Móvil de Épica</h1>
     <div class="row justify-content-md-center">
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let movil of planMovil">
             <div class="movil-image">
@@ -10,21 +12,20 @@
                 <p>PLAN <strong> {{movil.name}}</strong></p>
             </div>
             <ul class="lista_checks">
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong>Sin permanencia.</strong></li>
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong>Llamadas ilimitadas.</strong>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <strong>Sin permanencia.</strong>
                 </li>
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong>Cobertura en todo el territorio nacional.
-                    </strong></li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <strong>Llamadas ilimitadas.</strong>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <strong>Cobertura en todo el territorio nacional.</strong>
+                </li>
             </ul>
+
             <p class="price">{{ movil.price }} <span>€/mes</span></p>
             <div class="button-container">
                 <i class="fas fa-long-arrow-alt-right neon-effect"></i>

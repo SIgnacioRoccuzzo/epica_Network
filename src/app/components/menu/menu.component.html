@@ -1,30 +1,34 @@
-<header id="main-header" class="container">
-    <div id="top-bar" class="container">
-        <p class="atencion">Si no eres cliente, llámanos <span>999888777</span></p>
+<header id="main-header">
+    <div id="top-bar">
+        <p class="atencion">Si no eres cliente, llámanos <i class="material-icons phone-icon">phone</i><span>
+
+                999888777</span></p>
     </div>
-    <nav id="menu-header" class="container">
+    <div class="nav-container">
         <a href="http://epicanetwork.es" class="logo" alt="epica">
             <img class="logo-header" src="../../../assets/images/logoBlanco.png" alt="epica">
         </a>
         <button class="burguer" (click)="toggleMenu()">
             <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
         </button>
-        <ul class="menu-list" [class.is-open]="isMenuOpen">
+        <nav class="menu-header text-white" [ngClass]="{'is-open': isMenuOpen}">
+            <ul class="first-menu">
 
-            <li class="first-menu" *ngFor="let section of firstMenu" [routerLink]="[section.route]"
-                [routerLinkActive]="['active']" (click)="toggleMenu()">
-                {{ section.label }}
-            </li>
-            <li class="second-menu" *ngFor="let section of secondMenu" [routerLink]="[section.route]"
-                [routerLinkActive]="['active']" (click)="toggleMenu()">
-                {{ section.label }}
-            </li>
-        </ul>
-        <a class="loginButton" [class.is-open]="isMenuOpen"
-            href="https://clientesepicanetwork.ispgestion.com/site/login">
-            Soy Cliente
-        </a>
-
-
-    </nav>
+                <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
+                    (click)="toggleMenu()">
+                    {{ section.label }}
+                </li>
+            </ul>
+            <ul class="second-menu">
+                <li *ngFor="let section of secondMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
+                    (click)="toggleMenu()">
+                    {{ section.label }}
+                </li>
+            </ul>
+            <a class="loginButton" href="https://clientesepicanetwork.ispgestion.com/site/login"
+                [ngClass]="{'is-open': isMenuOpen}">
+                Soy Cliente
+            </a>
+        </nav>
+    </div>
 </header>

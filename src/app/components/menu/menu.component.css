@@ -1,41 +1,65 @@
-/* Importar íconos de Material Icons */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-/* @import url(../../../styles.css); */
+/* @import url('../../../styles.css'); */
 
+/* Asegurar que el encabezado ocupe toda la pantalla a lo ancho */
 #main-header {
+    background-color: var(--color-destacado);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+}
+
+#top-bar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-
+    background-color: var(--color-secundario);
 
 }
 
-#top-bar {
-    max-width: 100%;
-    text-align: right;
-    background-color: #333;
-    padding: 5px;
+.phone-icon {
+    font-size: 28px;
+    color: var(--color-principal);
+    vertical-align: middle;
+
+}
+
+.atencion {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
     color: white;
+
 }
 
 .atencion span {
-    background-color: #97eb9d;
+    background-color: var(--color-principal);
+    font-size: 16px;
     padding: 5px 10px;
-    color: black;
 }
 
-/* Estilos del menú de navegación */
-#menu-header {
+.nav-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    transition: all 0.3s ease;
+    padding-top: 28px;
 
 }
 
 .logo-header {
-    height: 100px;
+    width: 85px;
+    transition: all 0.3s ease;
+
 }
 
 .burguer {
@@ -45,63 +69,73 @@
 
 .burguer .material-icons {
     font-size: 45px;
+
 }
 
+.menu-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.1rem;
+    color: white;
+}
 
-.menu-list {
+.menu-header ul {
+    position: relative;
+    display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 50px;
-    color: white;
-    font-size: 1.1rem;
+    gap: 40px;
 }
 
-
-.menu-list li {
+.menu-header li {
     position: relative;
     cursor: pointer;
 
 }
 
-.menu-list li::before {
+.menu-header li::before {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     left: 50%;
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: white;
-    transition: width 0.3s ease-out, left 0.3s ease-out;
+    transition: width 0.3s ease, left 0.3s ease;
+
 }
 
-.menu-list li:hover::before,
-.menu-list li.active::before {
+.menu-header li:hover::before,
+.menu-header li.active::before {
     width: 100%;
     left: 0;
+
 }
 
-
 .second-menu {
+    opacity: 0.7;
 
-    opacity: 0.5;
 }
 
 .loginButton {
-    float: right;
     font-size: 1rem;
     line-height: 24px;
-    color: #fff;
+    color: var(--color-vibrante);
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--color-vibrante);
     border-radius: 4px;
     padding: 7px 10px;
     margin-top: 1px;
 
 }
 
+
 @media (min-width: 300px) and (max-width: 1199px) {
+
+
     .burguer {
         display: block;
         background: none;
@@ -109,54 +143,44 @@
         cursor: pointer;
     }
 
-    .menu-list,
+    .menu-header {
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        background-color: var(--color-destacado);
+        width: 100%;
+        display: none;
+        transition: all 0.3s ease;
+        z-index: 1000;
+
+    }
+
+    .menu-header.is-open {
+        display: block;
+        padding: 15px;
+    }
+
+    .menu-header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .menu-header li {
+        padding: 10px;
+        border-bottom: 1px sólido white;
+        width: 100%;
+    }
+
     .loginButton {
         display: none;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        background-color: #b83ad2;
-        width: 100%;
-        padding: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-
-    .menu-list li::before {
-        bottom: 0;
-
-    }
-
-    .menu-list>*:last-child {
-
-        margin-bottom: 15px;
-
-    }
-
-
-    .menu-list.is-open {
-        display: block;
-        padding-bottom: 45px;
-    }
-
-    .menu-list li {
-        margin: 10px 0;
-        padding: 10px;
-        border-bottom: 1px solid white;
-        font-size: 1rem;
+        text-align: center;
     }
 
     .loginButton.is-open {
         display: block;
+        padding: 10px;
+        margin-top: 20px;
     }
-
-    .loginButton {
-        width: 33%;
-        transition: none;
-        text-align: center;
-        top: 447px;
-
-    }
-
-
 }

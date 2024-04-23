@@ -1,5 +1,5 @@
 <section class="container">
-    <h1 class="mb-3 text-white text-center">Tarifas de Fibra Epica</h1>
+    <h1 class="mb-3 text-center">Tarifas de Fibra Epica</h1>
     <div class="row justify-content-md-center">
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fibra of fibraData">
             <div class="fibra-image">
@@ -10,27 +10,11 @@
                 <p>PLAN <strong> {{fibra.name}}</strong></p>
             </div>
             <ul>
-
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong> Precio Final.</strong> Sin sorpresas en tu factura.</li>
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong> Sin permanencia</strong> ni penalizaciones.</li>
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong> Llamadas ilimitadas</strong> desde el fijo.</li>
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg><strong> Instalación gratis</strong> y router HGU incluido.</li>
-                <li><svg class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-                    </svg> Red de fibra de <strong>Épica</strong></li>
+                <li><i class="fas fa-check"></i><strong> Precio Final.</strong> Sin sorpresas en tu factura.</li>
+                <li><i class="fas fa-check"></i><strong> Sin permanencia</strong> ni penalizaciones.</li>
+                <li><i class="fas fa-check"></i><strong> Llamadas ilimitadas</strong> desde el fijo.</li>
+                <li><i class="fas fa-check"></i><strong> Instalación gratis</strong> y router HGU incluido.</li>
+                <li><i class="fas fa-check"></i> Red de fibra de <strong>Épica</strong></li>
             </ul>
             <p class="price">{{ fibra.price }} <span>€/mes</span></p>
 
