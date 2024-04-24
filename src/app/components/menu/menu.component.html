@@ -1,17 +1,19 @@
 <header id="main-header">
     <div id="top-bar">
         <p class="atencion">Si no eres cliente, llámanos
-            <i class="material-icons phone-icon">phone</i><span>999888777</span>
+            <i class="fa-solid fa-phone fa-beat-fade"></i><span>999888777</span>
         </p>
     </div>
     <div class="nav-container">
         <a href="http://epicanetwork.es" class="logo" alt="epica">
-            <img class="logo-header" src="../../../assets/images/logoBlanco.png" alt="epica">
+            <img class="logo-header"
+                src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Flogos%2FLOGOentrega-01.png?alt=media&token=d8cdce61-52f1-4097-a124-263870e0b078"
+                alt="epica">
         </a>
         <button class="burguer" (click)="toggleMenu()">
-            <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
+            <i class="fa-solid fa-bars">{{ isMenuOpen ? "" : "" }}</i>
         </button>
-        <nav class="menu-header text-white" [ngClass]="{'is-open': isMenuOpen}">
+        <nav class="menu-header" [ngClass]="{'is-open': isMenuOpen}">
             <ul class="first-menu">
                 <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
                     (click)="toggleMenu()">

@@ -1,6 +1,4 @@
-Tarifa movil html
-
-<section class="container">
+<section class="container tarifas">
     <h1 class="mb-3 text-center">Tarifas de Móvil de Épica</h1>
     <div class="row justify-content-md-center">
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let movil of planMovil">
@@ -9,7 +7,7 @@ Tarifa movil html
                     src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2026.png?alt=media&token=d1012426-607f-45db-86a7-d29c77633b18"
                     alt="movil">
             </div>
-            <h3 class="neon-effect">{{ movil.data }}</h3>
+            <h3 class="data">{{ movil.data }}</h3>
             <div id="name" class="container">
                 <p>PLAN <strong> {{movil.name}}</strong></p>
             </div>
@@ -27,20 +25,19 @@ Tarifa movil html
                     <strong>Cobertura en todo el territorio nacional.</strong>
                 </li>
             </ul>
-
             <p class="price">{{ movil.price }} <span>€/mes</span></p>
             <div class="button-container">
-                <i class="fas fa-long-arrow-alt-right neon-effect"></i>
-                <a class="info" href="#">Mas detalles</a>
                 <a class="interes" [href]="whatsappLink">Me interesa</a>
             </div>
 
         </div>
     </div>
+</section>
+<section class="container cards info">
     <article class="bloque_cards text-center">
         <div class="container">
             <h2 class="mb-3 text-center">Un servicio móvil sencillo</h2>
-            <p class="subtitle text-center">Y si quieres hablar con nosotros estaremos ahí para ayudarte</p>
+            <h5 class="subtitle text-center">Y si quieres hablar con nosotros estaremos ahí para ayudarte</h5>
             <div class="d-sm-block">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let card of mobileCards; let i = index">
@@ -57,13 +54,13 @@ Tarifa movil html
         </div>
     </article>
     <swiper-container class="mobil" navigation="true" pagination="true" pagination-clickable="true">
-        <swiper-slide *ngFor="let slide of swiperSlides">
+        <swiper-slide *ngFor="let card of mobileCards">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100">
-                    <img class="card-img-top" [src]="slide.imageUrl" [alt]="slide.title">
+                    <img class="card-img-top" [src]="card.imageUrl" [alt]="card.title">
                     <div class="card-body">
-                        <h5 class="card-title">{{ slide.title }}</h5>
-                        <p class="card-text">{{ slide.description }}</p>
+                        <h5 class="card-title">{{ card.title }}</h5>
+                        <p class="card-text">{{ card.description }}</p>
                     </div>
                 </div>
             </div>

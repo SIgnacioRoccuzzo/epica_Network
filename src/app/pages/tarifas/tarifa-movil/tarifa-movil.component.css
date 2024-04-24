@@ -3,7 +3,7 @@
 @import url('../../../../styles.css');
 
 .movil-image {
-    height: 5rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,15 +17,20 @@
     height: auto;
 }
 
-.pricing-card h3 {
+.data {
     font-size: 2rem;
-    color: var(--color-principal);
+    color: var(--background);
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    font-weight: 800;
 }
 
+
 .price {
-    font-size: 1.25rem;
-    margin-top: 0.625rem;
-    color: var(--color-principal);
+    font-size: 2.25rem;
+    font-weight: 400;
+
+    color: var(--primary);
 }
 
 p span {
@@ -33,6 +38,7 @@ p span {
     font-weight: normal;
     display: inline-block;
     gap: 0.3125rem;
+    color: var(--background);
 }
 
 #name {
@@ -54,14 +60,21 @@ strong {
 
 ul {
     list-style: none;
-    padding: 0.3125rem;
+    padding: 0;
 
 }
 
+ul li {
+    color: var(--background);
+    text-align: start;
+    margin: 15px;
+}
+
+
 .fas.fa-check {
     font-size: 1rem;
-    color: var(--color-principal);
-    margin: 2px;
+    color: var(--primary);
+    margin: 5px;
 }
 
 
@@ -73,6 +86,10 @@ ul {
 
 }
 
+.button-container {
+    width: 100%;
+    text-align: center;
+}
 
 .bloque_cards {
     margin-top: 3.125rem;
@@ -84,10 +101,16 @@ ul {
 }
 
 .bloque_cards h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fuente-titulo);
+    font-size: var(--font-size);
     margin-bottom: 1.25rem;
-    /* 20px */
-    color: white;
+    color: var(--text);
+}
+
+.bloque_cards h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text);
 }
 
 .subtitle {
@@ -98,13 +121,11 @@ ul {
 .card {
     background-color: white;
     border-radius: 0.625rem;
-    /* 10px */
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     max-width: 23.75rem;
-    /* 380px */
     margin: 0 auto 1.25rem;
-    /* 20px */
+    margin-top: 30px;
 }
 
 .card:hover {
@@ -118,23 +139,25 @@ ul {
     display: block;
     margin: 0 auto;
     margin-top: 0.5rem;
-    /* 8px */
+
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #333;
+    color: var(--text);
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .card-text {
     font-size: 1rem;
-    color: #666;
+    color: var(--text);
 }
 
 .card-body {
     padding: 1.25rem;
-    /* 20px */
+
 }
 
 .mobil {
@@ -143,8 +166,7 @@ ul {
 
 @media (min-width: 18.75rem) and (max-width: 75rem) {
     h1 {
-        margin-top: 10.3125rem;
-        /* 165px */
+        margin-top: 4rem;
     }
 
     .pricing-card {

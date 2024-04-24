@@ -2,8 +2,8 @@
 
 /* Estilo para el footer general */
 footer {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    background-color: var(--text);
+    color: var(--background);
 
 }
 
@@ -15,9 +15,8 @@ footer {
     justify-content: space-between;
 }
 
-.primary-footer span {
+.primary-footer h5 {
     font-size: var(--font-size-large);
-    color: var(--color-contraste);
     font-family: var(--fuente-titulo);
     display: block;
     margin-bottom: 10px;
@@ -43,13 +42,13 @@ footer {
 }
 
 .primary-footer a {
-    color: var(--color-texto);
+    color: var(--background);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .primary-footer a:hover {
-    color: var(--color-principal);
+    color: var(--primary);
 }
 
 /* Estilo para redes sociales */
@@ -116,7 +115,7 @@ footer {
 
 /* Secondary Footer */
 .secondary-footer {
-    background-color: transparent;
+
     text-align: center;
 }
 
@@ -138,13 +137,13 @@ footer {
 
 .secondary-footer a {
     font-weight: bold;
-    color: var(--color-destacado);
+    color: var(--highlight);
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 .secondary-footer a:hover {
-    color: var(--color-principal);
+    color: var(--primary);
     text-decoration: none;
 }
 

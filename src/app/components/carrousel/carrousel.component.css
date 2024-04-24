@@ -5,3 +5,16 @@
     margin-top: 60px;
     padding-top: 60px;
 }
+
+.carousel-item {
+    height: 350px;
+    /* Ajusta la altura según tus necesidades */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    /* Para que ocupen toda la altura */
+}

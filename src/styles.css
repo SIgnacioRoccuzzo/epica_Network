@@ -5,46 +5,51 @@
 
 /* Definición de variables globales */
 :root {
+
     /* Colores */
-    --color-principal: #97eb9d;
-    --color-secundario: #4b3b68;
-    --color-destacado: #b83ad2;
-    --color-resaltado: #c357d2;
-    --color-vibrante: #d264ff;
-    --color-fondo: #2b2933;
-    --color-texto: #d8d8d8;
+    --text: #2b2933;
+    --background: #f7f6ed;
+    --primary: #99eb9e;
+    --secondary: #4b3b68;
+    --accent: #c456d2;
+    --highlight: #b83ad2;
+    --vibrant: #d264ff;
 
     /* Fuentes y estilos de texto */
     --fuente-titulo: 'Anton', sans-serif;
     --fuente-cuerpo: 'Montserrat', sans-serif;
     --font-weight: 900;
     --font-size: 3rem;
+    --size-text: 1rem;
     --font-size-large: 1.5em;
 
-    /* Espaciado y dimensiones */
-    --margin-top: 5.375rem;
+    /* Espaciados y dimensiones */
+    --margin-top: 2.375rem;
+    /* Espaciado superior */
     --radio-pequeno: 0.3125rem;
+    /* Radio pequeño */
     --radio-grande: 0.9375rem;
+    /* Radio grande */
     --radio-extra: 1.875rem;
+    /* Radio extra */
     --padding-default: 20px;
+    /* Espaciado predeterminado */
 
     /* Sombras */
     --sombra-normal: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
     --sombra-hover: var(--sombra-normal), 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
-    /* Se unifica con --card-hover-box-shadow */
 
     /* Transiciones */
     --transicion-general: all 0.3s ease;
     --hover-transition: var(--transicion-general);
-
 
     /* Configuraciones para tarjetas (cards) */
     --card-display: flex;
     --card-flex-direction: column;
     --card-justify-content: space-between;
     --card-align-items: center;
-    --card-background-color: white;
-    --card-border-radius: 1.875rem;
+    --card-background-color: var(--text);
+    --card-border-radius: var(--radio-extra);
     --card-box-shadow: var(--sombra-normal);
     --card-padding: 0.625rem;
     --card-margin: 1.25rem;
@@ -53,41 +58,53 @@
     --card-transition: var(--transicion-general);
     --card-hover-box-shadow: var(--sombra-hover);
 
-    /* boton info */
+    /* Configuración para botones informativos */
     --info-text-color: white;
+    /* Color del texto */
     --info-padding: 0.625rem 0.9375rem;
+    /* Espaciado */
     --info-text-align: center;
+    /* Alineación de texto */
     --info-font-size: 0.875rem;
+    /* Tamaño de fuente */
     --info-border-radius: 0.625rem;
+    /* Radio del borde */
     --info-transition: background-color 0.3s ease;
     --info-margin: 0.625rem;
-
+    /* Margen */
     --info-hover-background-color: hsl(290, 13%, 63%);
+    /* Color de fondo en hover */
 
-    /* boton interes */
+    /* Configuración para botones de interés */
     --interes-background-color: rgb(240, 62, 200);
+    /* Color de fondo */
     --interes-text-color: white;
+    /* Color del texto */
     --interes-padding: 0.625rem 0.9375rem;
+    /* Espaciado */
     --interes-text-align: center;
+    /* Alineación */
     --interes-font-size: 0.875rem;
+    /* Tamaño de fuente */
     --interes-border-radius: 0.625rem;
+    /* Radio del borde */
     --interes-transition: background-color 0.3s ease;
     --interes-margin: 0.625rem;
+    /* Margen */
 
-
+    /* Efectos de hover para botones */
     --button-hover-box-shadow:
         0 0.25rem 0.375rem rgba(0, 0, 0, 0.1),
         0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
 
+    /* Configuración para efectos de neón (comentado) */
+    /* --neon-font-size: 1.5rem; */
+    /* --neon-font-weight: var(--font-weight); */
+    /* --neon-animation-duration: 1.5s; */
+    /* --neon-animation-iteration: infinite alternate; */
 
-
-    /*     --neon-font-size: 1.5rem;
-    --neon-font-weight: var(--font-weight);
-    --neon-animation-duration: 1.5s;
-    --neon-animation-iteration: infinite alternate;
-
-
-    --neon-shadow-base:
+    /* Otros estilos para efectos de neón (comentado) */
+    /* --neon-shadow-base:
         0 0 0.3125rem rgba(139, 0, 139, 0.3),
         0 0 0.625rem rgba(139, 0, 139, 0.3),
         0 0 0.9375rem rgba(139, 0, 139, 0.3),
@@ -95,21 +112,10 @@
         0 0 2.1875rem rgba(139, 0, 139, 0.3),
         0 0 2.5rem rgba(139, 0, 139, 0.3),
         0 0 3.125rem rgba(139, 0, 139, 0.3),
-        0 0 4.6875rem rgba(139, 0, 139, 0.3);
-
-    --neon-shadow-to:
-        0 0 0.625rem rgba(139, 0, 139, 0.3),
-        0 0 1.25rem rgba(139, 0, 139, 0.3),
-        0 0 1.875rem rgba(139, 0, 139, 0.3),
-        0 0 2.5rem rgba(139, 0, 139, 0.3),
-        0 0 3.125rem rgba(139, 0, 139, 0.3),
-        0 0 3.75rem rgba(139, 0, 139, 0.3),
-        0 0 4.375rem rgba(139, 0, 139, 0.3),
-        0 0 5rem rgba(139, 0, 139, 0.3); */
+        0 0 4.6875rem rgba(139, 0, 139, 0.3); */
 }
 
-
-/* Reset CSS para consistencia en diferentes navegadores */
+/* Ajustes generales para consistencia entre navegadores */
 html,
 body,
 div,
@@ -197,10 +203,9 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-
 }
 
-/* /* Ajustes para elementos HTML5 */
+/* Ajustes para elementos HTML5 */
 article,
 aside,
 details,
@@ -215,18 +220,17 @@ section {
     display: block;
 }
 
-
-/* Estilos para el cuerpo de la página */
+/* Estilos para el cuerpo */
 html {
     font-size: 16px;
-
+    /* Tamaño base de fuente */
 }
 
 body {
     line-height: 1;
     overflow-x: hidden;
     width: 100%;
-
+    background-color: var(--background) !important;
 }
 
 /* Estilos para contenedores */
@@ -245,105 +249,62 @@ h1 {
     margin-top: var(--margin-top);
     font-weight: var(--font-weight);
     font-size: var(--font-size);
-    color: var(--color-fondo);
+    color: var(--text);
+    /* Uso de la variable para el color del texto */
 }
 
-/* Estilos para tarjetas (cards) */
+/* Estilos para tarjetas */
 .pricing-card {
-    display: var(--card-display);
-    flex-direction: var(--card-flex-direction);
-    justify-content: var(--card-justify-content);
-    align-items: var(--card-align-items);
-    background-color: var(--card-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text);
+    border: 2px solid black;
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);
     padding: var(--card-padding);
-    margin: var(--card-margin);
-    text-align: var(--card-text-align);
-    width: var(--card-width);
+    margin: 1.25rem;
+    text-align: center;
+    width: 20.625rem;
     transition: var(--card-transition);
 }
 
-/* Estilo de hover para tarjetas (cards) */
 .pricing-card:hover {
     box-shadow: var(--card-hover-box-shadow);
+    /* Uso de la sombra en hover */
 }
 
-/* Estilos para efectos neon */
-.neon-effect {
-    color: black;
-    font-size: var(--neon-font-size);
-    font-weight: var(--neon-font-weight);
-    text-shadow: var(--neon-shadow-base);
-    animation: neon-animation var(--neon-animation-duration) var(--neon-animation-iteration);
-}
-
-@keyframes neon-animation {
-    from {
-        text-shadow: var(--neon-shadow-base);
-    }
-
-    to {
-        text-shadow: var(--neon-shadow-to);
-    }
-}
-
-/* Estilos para enlaces con clase .info */
-.info {
-    background-color: var(--color-secundario);
-    border: none;
-    color: var(--info-text-color);
-    padding: var(--info-padding);
-    text-align: var(--info-text-align);
-    text-decoration: none;
-    display: inline-block;
-    font-size: var(--info-font-size);
-    cursor: pointer;
-    border-radius: var(--info-border-radius);
-    transition: var(--info-transition);
-    margin: var(--info-margin);
-}
-
-/* Estilos para hover en enlaces con clase .info */
-a.info:hover {
-    background-color: var(--info-hover-background-color);
-    box-shadow: var(--button-hover-box-shadow);
-}
-
-/* Estilos para enlaces con clase .interes */
+/* Estilos para botones con clase .interes */
 a.interes {
-    background-color: var(--interes-background-color);
-    border: none;
-    color: var(--interes-text-color);
-    padding: var(--interes-padding);
-    text-align: var(--interes-text-align);
+    background-color: var(--accent);
+    color: white;
+    padding: 0.625rem 0.9375rem;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: var(--interes-font-size);
+    font-size: 0.875rem;
     cursor: pointer;
-    border-radius: var(--interes-border-radius);
-    transition: var(--interes-transition);
-    margin: var(--interes-margin);
+    border-radius: 0.625rem;
+    transition: background-color 0.3s ease;
+    width: 80%;
 }
 
-/* Estilo para el último elemento con clase .interes */
 a.interes:last-child {
-    margin-bottom: var(--interes-margin);
+    margin-bottom: 0.625rem;
 }
 
-/* Estilos para hover en enlaces con clase .interes */
 a.interes:hover {
-    background-color: var(--color-destacado);
+    background-color: var(--highlight);
     box-shadow: var(--button-hover-box-shadow);
 }
 
-/* Estilos para listas */
+/* Estilos para listas y tablas */
 ol,
 ul {
     list-style: none;
 }
 
-/* Estilos para citas y tablas */
 blockquote,
 q {
     quotes: none;
@@ -362,7 +323,7 @@ table {
     border-spacing: 0;
 }
 
-
+/* Estilos para la transición y movimiento fluido */
 @media screen and (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

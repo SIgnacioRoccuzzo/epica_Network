@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-/* @import url('../../../styles.css'); */
+@import url('../../../styles.css');
 
 /* Asegurar que el encabezado ocupe toda la pantalla a lo ancho */
 #main-header {
-    background-color: var(--color-fondo);
+    background-color: var(--text);
     position: fixed;
     top: 0;
     left: 0;
@@ -21,9 +20,9 @@
 
 }
 
-.phone-icon {
+.fa-phone {
     font-size: 28px;
-    color: var(--color-vibrante);
+    color: var(--primary);
     vertical-align: middle;
 
 }
@@ -33,14 +32,15 @@
     align-items: center;
     justify-content: flex-end;
     gap: 7px;
-    color: black;
+    color: var(--text);
 
 }
 
 .atencion span {
-    background-color: var(--color-principal);
+    background-color: var(--highlight);
     font-size: 16px;
     padding: 5px 10px;
+    color: var(--background);
 }
 
 .nav-container {
@@ -67,9 +67,9 @@
 
 }
 
-.burguer .material-icons {
-    font-size: 45px;
-
+.burguer .fa-bars {
+    font-size: 40px;
+    color: white;
 }
 
 .menu-header {
@@ -123,9 +123,9 @@
 .buttom {
     font-size: 1rem;
     line-height: 24px;
-    color: var(--color-principal);
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
     text-decoration: none;
-    border: 1.5px solid var(--color-principal);
     border-radius: 4px;
     padding: 7px 10px;
     margin-top: 1px;
@@ -135,24 +135,35 @@
 
 @media (min-width: 300px) and (max-width: 1199px) {
 
-
     .burguer {
         display: block;
+        position: absolute;
+        right: 10px;
         background: none;
         border: none;
         cursor: pointer;
     }
 
     .menu-header {
+        display: block;
         position: absolute;
         flex-direction: column;
         top: 100%;
         left: 0;
-        background-color: var(--color-destacado);
+        background-color: var(--background);
+        box-shadow: var(--sombra-hover);
         width: 100%;
         display: none;
         transition: all 0.3s ease;
         z-index: 1000;
+        color: var(--text);
+
+    }
+
+    .menu-header li::before {
+
+        background-color: var(--text);
+
 
     }
 
@@ -176,6 +187,8 @@
     .buttom {
         display: none;
         text-align: center;
+        color: var(--text);
+        border: 1.5px solid var(--text);
     }
 
     .buttom.is-open {

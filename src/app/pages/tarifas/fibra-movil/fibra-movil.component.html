@@ -3,13 +3,15 @@
     <div class="row justify-content-md-center">
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fiber of fibraMovilData">
             <div id="fibraMovil-image">
-                <img class="image" src="../../../../assets/images/Layer 6.png" alt="fibraymovil">
+                <img class="image"
+                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2025.png?alt=media&token=6a83f64d-8617-4c56-9e1f-2711f94caba1"
+                    alt="fibraymovil">
             </div>
             <div id="name" class="container">
                 <p>PLAN <strong> {{fiber.name}}</strong></p>
             </div>
             <ul>
-                <li class="neon-effect">{{ fiber.data }}</li>
+                <li class="data">{{ fiber.data }}</li>
             </ul>
             <p class="price">{{ fiber.price }} <span>€/mes</span></p>
             <div class="button-container">
