@@ -1,19 +1,34 @@
 {
     "fibra": [
         {
-            "name": "Élite",
-            "data": "Fibra 100Mb",
-            "price": 22.90
+            "name": "Plan Élite",
+            "price": 22.90,
+            "speed": "100Mb",
+            "details": [
+                "Sin coste de línea fija, nada de cuotas extras",
+                "Con o sin Permanencia. Tú eliges.",
+                "Velocidad simétrica según disponibilidad geográfica"
+            ]
         },
         {
-            "name": "Campeón",
-            "data": "Fibra 300Mb",
-            "price": 24.90
+            "name": "Plan Campeón",
+            "price": 24.90,
+            "speed": "300Mb",
+            "details": [
+                "Sin coste de línea fija, nada de cuotas extras",
+                "Con o sin Permanencia. Tú eliges.",
+                "Velocidad simétrica según disponibilidad geográfica"
+            ]
         },
         {
-            "name": "Irreal",
-            "data": "Fibra 600Mb",
-            "price": 29.90
+            "name": "Plan Irreal",
+            "price": 29.90,
+            "speed": "600Mb",
+            "details": [
+                "Sin coste de línea fija, nada de cuotas extras",
+                "Con o sin Permanencia. Tú eliges.",
+                "Velocidad simétrica según disponibilidad geográfica"
+            ]
         }
     ]
 }

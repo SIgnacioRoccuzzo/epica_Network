@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { MobilePlan } from 'src/app/interfaces/mobile.interface';
 
 @Component({
   selector: 'app-tarifa-movil',
@@ -8,8 +10,9 @@ import { Component, OnInit, inject } from '@angular/core';
 })
 export class TarifaMovilComponent implements OnInit {
 
-  planMovil: any[];
+  planMovil: MobilePlan[];
   private httpClient = inject(HttpClient)
+  private router = inject(Router)
 
   constructor() {
     this.planMovil = []
@@ -18,6 +21,9 @@ export class TarifaMovilComponent implements OnInit {
     this.httpClient.get<any>('../../../../assets/json/movil-data.json').subscribe(data => {
       this.planMovil = data.movil
     })
+  }
+  navigateToDetail(name: string) {
+    this.router.navigate(['/movil', name]); // Navega a la ruta parametrizada usando el nombre del plan
   }
 
   mobileCards = [

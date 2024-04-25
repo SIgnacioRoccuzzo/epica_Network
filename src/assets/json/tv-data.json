@@ -2,18 +2,33 @@
     "tv": [
         {
             "name": "TV Básico",
-            "data": "+100 canales de TV",
-            "price": 2.99
+            "price": 2.99,
+            "details": [
+                "+100 canales de TV",
+                "Canales TDT",
+                "Canales TV Autonómicas",
+                "Sin permanencia"
+            ]
         },
         {
             "name": "TV Completo",
-            "data": "+100 canales de TV + cine + series + documentales + música",
-            "price": 7.99
+            "price": 7.99,
+            "details": [
+                "+100 canales de TV + cine + series",
+                "Canales TDT",
+                "Canales TV Autonómicas",
+                "Sin permanencia"
+            ]
         },
         {
             "name": "TV Premium",
-            "data": "+100 canales de TV + cine + series + documentales + música + telenovelas",
-            "price": 9.99
+            "price": 9.99,
+            "details": [
+                "+100 canales de TV + cine + series + telenovelas",
+                "Canales TDT",
+                "Canales Internacionales",
+                "Sin permanencia"
+            ]
         }
     ]
 }

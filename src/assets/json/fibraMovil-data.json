@@ -2,28 +2,78 @@
     "fibra_movil": [
         {
             "name": "Cofre Inicial",
-            "data": "Fibra 300Mb + Móvil 10GB + ilimitadas",
-            "price": 29.90
+            "price": 29.90,
+            "fiberSpeed": "300Mb",
+            "mobileData": "10GB",
+            "details": [
+                "Sin cuota de línea fija",
+                "Velocidad simétrica según disponibilidad geográfica",
+                "Llamadas ilimitadas",
+                "Instalación y Router gratis",
+                "Descuento del 100% en los gastos de instalación",
+                "Envío SIM gratuito",
+                "¡Solo 3 meses de Permanencia!"
+            ]
         },
         {
             "name": "Cofre Épico",
-            "data": "Fibra 300Mb + Móvil 55GB + ilimitadas",
-            "price": 34.90
+            "price": 34.90,
+            "fiberSpeed": "300Mb",
+            "mobileData": "55GB",
+            "details": [
+                "Sin cuota de línea fija",
+                "Velocidad simétrica según disponibilidad geográfica",
+                "Llamadas ilimitadas",
+                "Instalación y Router gratis",
+                "Descuento del 100% en los gastos de instalación",
+                "Envío SIM gratuito",
+                "¡Solo 3 meses de Permanencia!"
+            ]
         },
         {
             "name": "Cofre Legendario",
-            "data": "Fibra 300Mb + 2x Móvil 25GB + ilimitadas",
-            "price": 39.90
+            "price": 39.90,
+            "fiberSpeed": "300Mb",
+            "mobileData": "2x 25GB",
+            "details": [
+                "Sin cuota de línea fija",
+                "Velocidad simétrica según disponibilidad geográfica",
+                "Llamadas ilimitadas",
+                "Instalación y Router gratis",
+                "Descuento del 100% en los gastos de instalación",
+                "Envío SIM gratuito",
+                "¡Solo 3 meses de Permanencia!"
+            ]
         },
         {
             "name": "Cofre Invicto",
-            "data": "Fibra 600Mb + Móvil 25GB + ilimitadas",
-            "price": 34.90
+            "price": 34.90,
+            "fiberSpeed": "600Mb",
+            "mobileData": "25GB",
+            "details": [
+                "Sin cuota de línea fija",
+                "Velocidad simétrica según disponibilidad geográfica",
+                "Llamadas ilimitadas",
+                "Instalación y Router gratis",
+                "Descuento del 100% en los gastos de instalación",
+                "Envío SIM gratuito",
+                "¡Solo 3 meses de Permanencia!"
+            ]
         },
         {
             "name": "Cofre Supremo",
-            "data": "Fibra 600Mb + Móvil 55GB + ilimitadas",
-            "price": 39.90
+            "price": 39.90,
+            "fiberSpeed": "600Mb",
+            "mobileData": "55GB",
+            "details": [
+                "Sin cuota de línea fija",
+                "Velocidad simétrica según disponibilidad geográfica",
+                "Llamadas ilimitadas",
+                "Instalación y Router gratis",
+                "Descuento del 100% en los gastos de instalación",
+                "Envío SIM gratuito",
+                "¡Solo 3 meses de Permanencia!"
+            ]
         }
     ]
 }

@@ -1,0 +1,35 @@
+.not-found {
+    text-align: center;
+    /* Centrar el contenido */
+    padding: 50px;
+    /* Espaciado alrededor del contenido */
+}
+
+h1 {
+    font-size: 2rem;
+    /* Tamaño de la fuente para el encabezado */
+    color: red;
+    /* Color del texto */
+}
+
+button {
+    margin-top: 20px;
+    /* Espaciado encima del botón */
+    padding: 10px 20px;
+    /* Relleno del botón */
+    font-size: 1rem;
+    /* Tamaño de la fuente */
+    background-color: #007bff;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cambiar el cursor a una mano al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Cambiar el color de fondo cuando se pasa el cursor */
+}

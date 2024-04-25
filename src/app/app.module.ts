@@ -15,8 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
-
-
+import { FibraDetailsComponent } from './pages/tarifas/fibra/fibra-detail/fibra-detail.component';
 
 register()
 
@@ -35,13 +34,15 @@ register()
     InicioComponent,
     FooterComponent,
     CarrouselComponent,
+    FibraDetailsComponent,
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

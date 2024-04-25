@@ -1,6 +1,11 @@
 <section class="container">
     <h1 class="mb-3 text-center">Tarifas de Fibra y Móvil Épica</h1>
     <div class="row justify-content-md-center">
+        <ul class="nav-item" *ngFor="let plan of fibraMovilData">
+            <li>
+                <button (click)="navigateToDetail(plan.name)">{{ plan.fiberSpeed }} + {{plan.mobileData}}</button>
+            </li>
+        </ul>
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fiber of fibraMovilData">
             <div id="fibraMovil-image">
                 <img class="image"
@@ -11,7 +16,8 @@
                 <p>PLAN <strong> {{fiber.name}}</strong></p>
             </div>
             <ul>
-                <li class="data">{{ fiber.data }}</li>
+                <li class="data">{{ fiber.mobileData }}</li>
+                <li class="speed">{{fiber.fiberSpeed}}</li>
             </ul>
             <p class="price">{{ fiber.price }} <span>€/mes</span></p>
             <div class="button-container">

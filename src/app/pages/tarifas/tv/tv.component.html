@@ -1,6 +1,12 @@
 <section class="container">
     <h1 class="mb-3 text-center">Tarifas de Tv de Épica</h1>
     <div class="row justify-content-md-center">
+        <div *ngFor="let plan of planTv">
+            <div class="card">
+                <p>{{ plan.name }}</p>
+                <button (click)="navigateToDetail(plan.name)">Ver detalles</button>
+            </div>
+        </div>
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let tv of planTv">
             <div id="tv-image">
                 <img class="image"
@@ -9,7 +15,7 @@
             </div>
             <h3 class="neon-effect">{{ tv.name }}</h3>
             <ul>
-                <li class="data">{{ tv.data }}</li>
+                <li class="details">{{ tv.details }}</li>
             </ul>
             <p>{{ tv.price }}<span>€/mes</span></p>
             <div class="button-container">
