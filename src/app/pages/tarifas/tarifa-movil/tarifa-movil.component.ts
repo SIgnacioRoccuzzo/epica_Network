@@ -1,29 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { MobilePlan } from 'src/app/interfaces/mobile.interface';
+import { Tarifas } from 'src/app/interfaces/tarifas.interface';
+import { TarifasService } from 'src/app/services/tarifas.service';
+import { UrlFormatterService } from 'src/app/services/url-formatter.service';
+
 
 @Component({
   selector: 'app-tarifa-movil',
   templateUrl: './tarifa-movil.component.html',
   styleUrls: ['./tarifa-movil.component.css']
 })
-export class TarifaMovilComponent implements OnInit {
+export class TarifaMovilComponent {
 
-  planMovil: MobilePlan[];
-  private httpClient = inject(HttpClient)
-  private router = inject(Router)
-
+  tarifasMovil: Tarifas[];
+  urlFormatterService = inject(UrlFormatterService)
+  tarifasService = inject(TarifasService)
+  router = inject(Router)
   constructor() {
-    this.planMovil = []
+    this.tarifasMovil = [];
   }
-  ngOnInit(): void {
-    this.httpClient.get<any>('../../../../assets/json/movil-data.json').subscribe(data => {
-      this.planMovil = data.movil
-    })
+
+  async ngOnInit() {
+    try {
+      const response = await this.tarifasService.getBytype('movil');
+      this.tarifasMovil = response;
+    } catch (error) {
+      console.log(error);
+    }
   }
-  navigateToDetail(name: string) {
-    this.router.navigate(['/movil', name]); // Navega a la ruta parametrizada usando el nombre del plan
+  navigateToDetail(data: string) {
+    const urlFriendlyName = this.urlFormatterService.toUrlFriendly(data); // Convertir a URL-friendly
+    this.router.navigate(['/movil', urlFriendlyName]); // Usar el nombre amigable en la navegación
   }
 
   mobileCards = [

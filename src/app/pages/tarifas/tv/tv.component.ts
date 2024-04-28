@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { TVPlan } from 'src/app/interfaces/tv.interface';
+import { Tarifas } from 'src/app/interfaces/tarifas.interface';
+import { TarifasService } from 'src/app/services/tarifas.service';
+import { UrlFormatterService } from 'src/app/services/url-formatter.service';
+
 
 @Component({
   selector: 'app-tv',
@@ -9,21 +11,27 @@ import { TVPlan } from 'src/app/interfaces/tv.interface';
   styleUrls: ['./tv.component.css']
 })
 export class TvComponent {
-  planTv: TVPlan[];
-  private httpClient = inject(HttpClient);
-  private router = inject(Router)
-  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=%C2%A1Hola%2C%20Luis!%20Ayud%C3%A1me%20a%20comparar%20mis%20tarifas%20de%20mis%20servicios%20de%20internet%20y%20telefon%C3%ADa.';
+  tarifasTv: Tarifas[];
 
+  urlFormatterService = inject(UrlFormatterService)
+  tarifasService = inject(TarifasService);
+  router = inject(Router);
   constructor() {
-    this.planTv = [];
+    this.tarifasTv = [];
   }
-  ngOnInit(): void {
-    this.httpClient.get<any>('../../../../assets/json/tv-data.json').subscribe(data => {
-      this.planTv = data.tv
-    })
+
+  async ngOnInit() {
+    try {
+      const response = await this.tarifasService.getBytype('tv');
+      this.tarifasTv = response;
+    } catch (error) {
+      console.log(error);
+    }
   }
   navigateToDetail(name: string) {
-    this.router.navigate(['/tv', name]); // Navega a la ruta parametrizada usando el nombre del plan
+    const urlFriendlyName = this.urlFormatterService.toUrlFriendly(name); // Convertir a URL-friendly
+    this.router.navigate(['/tv', urlFriendlyName]); // Usar el nombre amigable en la navegación
   }
+  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=%C2%A1Hola%2C%20Luis!%20Ayud%C3%A1me%20a%20comparar%20mis%20tarifas%20de%20mis%20servicios%20de%20internet%20y%20telefon%C3%ADa.';
 
 }

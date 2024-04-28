@@ -20,7 +20,7 @@ const routes: Routes = [
 
   // Rutas de tarifas
   { path: 'fibra', component: FibraComponent },
-  { path: 'fibra/:name', component: FibraDetailsComponent },
+  { path: 'data/:data', component: FibraDetailsComponent },
   { path: 'fibra-y-movil', component: FibraMovilComponent },
   { path: 'fibra-movil/:name', component: FibraMovilDetailComponent },
   { path: 'movil', component: TarifaMovilComponent },

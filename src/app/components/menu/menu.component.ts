@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { Tarifas } from 'src/app/interfaces/tarifas.interface';
+import { TarifasService } from 'src/app/services/tarifas.service';
 
 
 
@@ -9,6 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+  /*   tarifas: Tarifas
+   tarifasService = inject(TarifasService) */
+  router = inject(Router)
   isMenuOpen = false;
   firstMenu = [
 
@@ -24,8 +29,19 @@ export class MenuComponent {
     { label: 'Contacto', route: 'contacto' },
   ]
 
-
-  constructor(private router: Router) { }
+  /* 
+    constructor(private router: Router) {
+      this.tarifas = {
+        name: '',
+        type: '',
+        data: '',
+        price: 0
+      }
+    }
+    async ngOnInit() {
+      this.tarifas = await this.tarifasService.getByData('data');
+      console.log(this.tarifas.data)
+    } */
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;

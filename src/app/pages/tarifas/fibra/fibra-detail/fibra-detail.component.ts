@@ -1,7 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FiberPlan } from 'src/app/interfaces/fibra.interface';
-import { HttpClient } from '@angular/common/http';
+import { Tarifas } from 'src/app/interfaces/tarifas.interface';
+import { TarifasService } from 'src/app/services/tarifas.service';
 
 @Component({
   selector: 'app-fibra-details',
@@ -9,20 +8,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./fibra-detail.component.css']
 })
 export class FibraDetailsComponent implements OnInit {
-  planName: string | null = null;
-  planDetails: FiberPlan[] | undefined;
+  planData: string | null = null;
+  planDetails: Tarifas[] | undefined;
+  tarifasService = inject(TarifasService)
 
-  private activatedRoute = inject(ActivatedRoute);
-  private httpClient = inject(HttpClient);
-
-  ngOnInit(): void {
-    // Obtener el parámetro de la URL
-    this.planName = this.activatedRoute.snapshot.paramMap.get('name');
-
-    // Cargar datos del archivo JSON y buscar el plan por nombre
-    this.httpClient.get<any>('../../../../assets/json/fibra-data.json').subscribe(data => {
-      const plans = data.fibra;
-      this.planDetails = plans.find((plan: FiberPlan) => plan.name === this.planName);
-    });
+  async ngOnInit() {
+    try {
+      const response = await this.tarifasService.getByData('data');
+      this.planDetails = response;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

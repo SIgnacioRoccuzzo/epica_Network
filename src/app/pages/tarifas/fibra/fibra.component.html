@@ -2,25 +2,25 @@
     <h1 class="mb-3 text-center">Tarifas de Fibra Epica</h1>
     <div class="row justify-content-md-center">
         <ul class="nav-item">
-            <li *ngFor="let plan of fibraPlans">
-                <button (click)="navigateToDetail(plan.name)">{{ plan.speed }}</button>
+            <li *ngFor="let plan of tarifasFibra">
+                <button (click)="navigateToDetail(plan.data)">{{ plan.data }}</button>
 
             </li>
 
         </ul>
-        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fibra of fibraPlans">
+        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fibra of tarifasFibra">
             <div class="fibra-image">
                 <img class="image"
                     src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2028.png?alt=media&token=261b2424-76c3-40ea-bb16-617bc5da1230"
                     alt="fibra">
             </div>
-            <h3 class="data">{{ fibra.speed }}</h3>
+            <h3 class="data">{{ fibra.data }}</h3>
             <div id="name" class="container">
                 <p>PLAN <strong> {{fibra.name}}</strong></p>
             </div>
-            <ul>
+            <!--     <ul>
                 <li><i class="fas fa-check"></i>{{fibra.details}}</li>
-            </ul>
+            </ul> -->
             <p class="price">{{ fibra.price }} <span>€/mes</span></p>
 
             <div class="button-container">
