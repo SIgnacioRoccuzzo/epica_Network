@@ -1,6 +1,11 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+// Componentes y Páginas
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FibraComponent } from './pages/tarifas/fibra/fibra.component';
@@ -10,15 +15,20 @@ import { SobreEpicaComponent } from './pages/epicaNetwork/sobre-epica/sobre-epic
 import { AyudaComponent } from './pages/epicaNetwork/ayuda/ayuda.component';
 import { ContactoComponent } from './pages/epicaNetwork/contacto/contacto.component';
 import { FibraMovilComponent } from './pages/tarifas/fibra-movil/fibra-movil.component';
-import { register } from 'swiper/element/bundle';
-import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { FibraDetailsComponent } from './pages/tarifas/fibra/fibra-detail/fibra-detail.component';
+import { SubmenuComponent } from './components/submenu/submenu.component';
 
-register()
 
+// Registro de librerías externas
+import { register } from 'swiper/element/bundle';
+import { FibraMovilDetailComponent } from './pages/tarifas/fibra-movil/fibra-movil-detail/fibra-movil-detail.component';
+import { MovilDetailComponent } from './pages/tarifas/tarifa-movil/movil-detail/movil-detail.component';
+import { TvDetailComponent } from './pages/tarifas/tv/tv-detail/tv-detail.component';
+
+register();
 
 @NgModule({
   declarations: [
@@ -35,20 +45,22 @@ register()
     FooterComponent,
     CarrouselComponent,
     FibraDetailsComponent,
-
+    SubmenuComponent,
+    FibraMovilDetailComponent,
+    MovilDetailComponent,
+    TvDetailComponent
 
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    BrowserModule, // Necesario para el AppModule
+    CommonModule, // Necesario para directivas como *ngFor
+    AppRoutingModule, // Importa las rutas de la aplicación
+    HttpClientModule, // Para llamadas HTTP
+    RouterModule, // Para rutas dinámicas
 
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: [
-
-  ]
+  bootstrap: [AppComponent], // Indica que este es el módulo principal
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Permite el uso de elementos personalizados
 })
 export class AppModule { }

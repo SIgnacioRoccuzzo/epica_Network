@@ -1,34 +1,5 @@
 @import url('../../../../styles.css');
 
-
-.nav-item {
-    display: flex;
-    flex-direction: row;
-    /* Alinear horizontalmente */
-    justify-content: space-around;
-    /* Espacio entre elementos */
-    flex-wrap: nowrap;
-    /* Evitar que se envuelvan en varias líneas */
-    list-style: none;
-    padding: 10px 0;
-    /* Espacio adicional para evitar desbordamiento */
-    margin: 0;
-    /* Eliminar margen */
-}
-
-/* Estilo para el botón dentro del 'li' */
-button {
-    font-family: var(--fuente-titulo);
-    background: none;
-    color: var(--text);
-    border: none;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
 #fibraMovil-image {
     height: 5rem;
     display: flex;

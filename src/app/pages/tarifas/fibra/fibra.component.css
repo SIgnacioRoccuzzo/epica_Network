@@ -1,32 +1,5 @@
 @import url('../../../../styles.css');
 
-/* Alinear los elementos en una fila */
-.nav-item {
-    display: flex;
-    flex-direction: row;
-    /* Asegura que los elementos se muestren en una fila */
-    flex-wrap: nowrap;
-    /* Evita que se envuelvan en varias líneas */
-    padding-left: 0;
-    list-style: none;
-    justify-content: center;
-    /* Centrar los elementos horizontalmente */
-}
-
-/* Estilo para el enlace dentro del 'li' */
-button {
-    font-family: var(--fuente-titulo);
-    background: none;
-    color: var(--text);
-    border: none;
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-
 .fibra-image {
     height: 5rem;
     display: flex;

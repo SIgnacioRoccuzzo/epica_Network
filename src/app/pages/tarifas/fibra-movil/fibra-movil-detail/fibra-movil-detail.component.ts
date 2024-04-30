@@ -1,32 +1,37 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
 
-
 @Component({
   selector: 'app-fibra-movil-detail',
-  standalone: true,
-  imports: [],
   templateUrl: './fibra-movil-detail.component.html',
   styleUrl: './fibra-movil-detail.component.css'
 })
 export class FibraMovilDetailComponent {
-  planData: any | null = null;
-  planDetails: Tarifas[];
+  private tarifasService = inject(TarifasService);
+  private route = inject(ActivatedRoute);
 
-  tarifasService = inject(TarifasService)
+  tarifa: Tarifas | null = null; // Aquí guardaremos la tarifa específica
 
-  constructor() {
-    this.planDetails = [];
-  }
+  constructor() { }
 
   async ngOnInit() {
     try {
-      const response = await this.tarifasService.getBytype('fibra');
-      this.planData = response;
+      // Obtener el parámetro "data" de la URL
+      const data = this.route.snapshot.paramMap.get('data');
+
+      if (data) {
+        // Obtener las tarifas con base en el valor de "data"
+        const response = await this.tarifasService.getByData(data);
+        if (response.length > 0) {
+          this.tarifa = response[0]; // Tomamos la primera tarifa que coincide
+        } else {
+          console.error('No se encontró tarifa con ese valor de data');
+        }
+      }
     } catch (error) {
-      console.log(error);
+      console.error('Error al obtener la tarifa por data:', error);
     }
   }
 }

@@ -1,10 +1,12 @@
 <section class="container tarifas">
     <h1 class="mb-3 text-center">Tarifas de Móvil de Épica</h1>
     <div class="row justify-content-md-center">
+        <!--    <div *ngFor="let tarifa of tarifasMovil">
+            <button [routerLink]="['/movil', tarifa.data]">
+                {{ tarifa.data }}
+            </button>
+        </div> -->
         <div *ngFor="let plan of tarifasMovil">
-            <div class="card">
-                <button (click)="navigateToDetail(plan.data)">{{ plan.data }}</button>
-            </div>
         </div>
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let movil of tarifasMovil">
             <div class="movil-image">

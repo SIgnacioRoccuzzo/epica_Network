@@ -1,0 +1,42 @@
+/* Contenedor principal que contiene el submenú */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el submenú */
+.submenu {
+    background-color: transparent;
+    /* padding: 5px; */
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    transition: all 0.5s ease;
+
+}
+
+/* Estilos para los elementos del submenú */
+.submenu li {
+    margin-right: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+.submenu a {
+    color: #f7f6ed;
+    font-family: var(--fuente-cuerpo);
+    text-decoration: none;
+    font-size: var(--size-text);
+    margin: 15px;
+}
+
+.submenu li:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+
+}
+
+.submenu a:hover {
+    color: var(--primary);
+}

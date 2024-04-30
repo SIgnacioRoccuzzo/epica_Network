@@ -16,7 +16,7 @@
         <nav class="menu-header" [ngClass]="{'is-open': isMenuOpen}">
             <ul class="first-menu">
                 <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
-                    (click)="toggleMenu()">
+                    (click)="toggleSubmenu(section.submenuType)">
                     {{ section.label }}
                 </li>
             </ul>
@@ -30,7 +30,9 @@
                 [ngClass]="{'is-open': isMenuOpen}">
                 Soy Cliente
             </a>
+
         </nav>
     </div>
+    <app-submenu *ngIf="activeSubmenu" [items]="getSubmenuItems(activeSubmenu)"></app-submenu>
 
 </header>

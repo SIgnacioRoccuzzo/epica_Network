@@ -24,19 +24,25 @@ export class TarifasService {
       this.httpClient.get<Tarifas | any>(`${this.baseUrl}/${tarifasId}`)
     );
   }
-  getBytype(tarifastype: string): Promise<Tarifas | any> {
+  getByData(tarifasData: string): Promise<Tarifas[] | any> {
+    return firstValueFrom(
+      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/data/${tarifasData}`)
+    );
+  }
+  getBytype(tarifastype: string): Promise<Tarifas[] | any> {
     return firstValueFrom(
       this.httpClient.get<Tarifas | any>(`${this.baseUrl}/type/${tarifastype}`)
     );
   }
-  getByName(tarifasName: string): Promise<Tarifas | any> {
+  getByName(tarifasName: string): Promise<Tarifas[] | any> {
     return firstValueFrom(
       this.httpClient.get<Tarifas | any>(`${this.baseUrl}/name/${tarifasName}`)
     );
   }
-  getByData(tarifasData: string): Promise<Tarifas | any> {
+
+  getByTypeandData(type: string, data: string): Promise<Tarifas[] | any> {
     return firstValueFrom(
-      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/data/${tarifasData}`)
+      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/${type}/${data}`)
     );
   }
 

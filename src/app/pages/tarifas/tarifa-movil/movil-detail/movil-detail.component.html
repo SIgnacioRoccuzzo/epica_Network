@@ -1,1 +1,45 @@
-<p>movil-detail works!</p>
+<div *ngIf="tarifa" class="row justify-content-md-center card-body">
+    <!-- Columna para la información del plan -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="row no-gutters">
+            <!-- Información de la tarifa -->
+            <h2>{{ tarifa.name }}</h2> <!-- Título con la fuente especificada -->
+            <p>{{ tarifa.data }}</p>
+            <div class="col-12">
+                <div class="row align-items-center">
+                    <!-- Sección de precio -->
+                    <div class="col-6">
+                        <p class="tarifa_title">Tarifa</p>
+                        <div class="tarifa_datos">
+                            <p>{{ tarifa.price | currency }}</p>
+                        </div>
+                    </div>
+                    <!-- Botón para acción -->
+                    <div class="col-6">
+                        <button class="cta">Comprar Ahora</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Botón para más información -->
+            <div class="col-12">
+                <a href="/checkout" class="btn btn-primary-green mt-3">Más Información</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Columna para detalles adicionales o beneficios -->
+    <div class="col-12 col-md-6 col-lg-8">
+        <div class="row no-gutters lista_checks">
+            <p class="mb-3" style="color: var(--background);">Beneficios de la Tarifa:</p>
+            <ul>
+                <li>Sin cargos adicionales ni tarifas sorpresa.</li>
+                <li>Sin permanencia ni penalizaciones.</li>
+                <li>Incluye llamadas ilimitadas a fijos y móviles nacionales.</li>
+                <li>SMS ilimitados.</li>
+                <li>Velocidad reducida sin coste adicional si se agotan los datos.</li>
+                <li>Envío de la SIM gratuito.</li>
+                <li>Con tecnología de red avanzada.</li>
+            </ul>
+        </div>
+    </div>
+</div>

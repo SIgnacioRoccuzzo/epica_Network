@@ -1,11 +1,12 @@
 <section class="container">
     <h1 class="mb-3 text-center">Tarifas de Tv de Épica</h1>
     <div class="row justify-content-md-center">
+        <!--       <div *ngFor="let tarifa of tarifasTv">
+            <button [routerLink]="['/tv', tarifa.data]">
+                {{ tarifa.data }}
+            </button>
+        </div> -->
         <div *ngFor="let plan of tarifasTv">
-            <div class="card">
-                <p>{{ plan.name }}</p>
-                <button (click)="navigateToDetail(plan.name)">Ver detalles</button>
-            </div>
         </div>
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let tv of tarifasTv">
             <div id="tv-image">

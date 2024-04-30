@@ -13,6 +13,7 @@ import { FibraMovilDetailComponent } from './pages/tarifas/fibra-movil/fibra-mov
 import { TvDetailComponent } from './pages/tarifas/tv/tv-detail/tv-detail.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component'; // Un componente para rutas no encontradas
+import { SubmenuComponent } from './components/submenu/submenu.component';
 
 const routes: Routes = [
   // Página de inicio
@@ -20,13 +21,14 @@ const routes: Routes = [
 
   // Rutas de tarifas
   { path: 'fibra', component: FibraComponent },
-  { path: 'data/:data', component: FibraDetailsComponent },
+  { path: 'fibra/:data', component: FibraDetailsComponent },
   { path: 'fibra-y-movil', component: FibraMovilComponent },
-  { path: 'fibra-movil/:name', component: FibraMovilDetailComponent },
+  { path: 'fibra-y-movil/:data', component: FibraMovilDetailComponent },
   { path: 'movil', component: TarifaMovilComponent },
-  { path: 'movil/:name', component: MovilDetailComponent },
+  { path: 'movil/:data', component: MovilDetailComponent },
   { path: 'tv', component: TvComponent },
-  { path: 'tv/:name', component: TvDetailComponent },
+  { path: 'tv/:data', component: TvDetailComponent },
+  { path: 'detalle/:name', component: SubmenuComponent },
 
   // Rutas generales
   { path: 'ayuda', component: AyudaComponent },

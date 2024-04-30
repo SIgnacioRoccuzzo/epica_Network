@@ -1,1 +1,51 @@
-@import url('../../../../../styles.css');
+.pricing-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%;
+    text-align: left;
+}
+
+.pricing-card h3 {
+    text-align: center;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 5px 0;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}

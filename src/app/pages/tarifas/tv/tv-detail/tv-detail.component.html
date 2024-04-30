@@ -1,1 +1,9 @@
-<p>tv-detail works!</p>
+<div *ngIf="tarifa">
+    <h2>{{ tarifa.name }}</h2>
+    <p>Descripción: {{ tarifa.data }}</p>
+    <p>Precio: {{ tarifa.price | currency }}</p>
+</div>
+
+<div *ngIf="!tarifa">
+    <p>La tarifa no está disponible.</p>
+</div>
