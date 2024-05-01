@@ -1,42 +1,39 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UrlFormatterService {
   toUrlFriendly(text: string): string {
-    // Declaración del mapa con tipos explícitos
-    const tildeMap: { [key: string]: string } = {
-      'á': 'a',
-      'é': 'e',
-      'í': 'i',
-      'ó': 'o',
-      'ú': 'u',
-      'ñ': 'n',
-      'Á': 'A',
-      'É': 'E',
-      'Í': 'I',
-      'Ó': 'O',
-      'Ú': 'U',
-      'Ñ': 'N',
-    };
+    if (!text) {
+      return '';
+    }
 
-    // Reemplazar caracteres con tildes por sus equivalentes sin tildes
+    const tildeMap = new Map([
+      ['á', 'a'],
+      ['é', 'e'],
+      ['í', 'i'],
+      ['ó', 'o'],
+      ['ú', 'u'],
+      ['ñ', 'n'],
+      ['Á', 'A'],
+      ['É', 'E'],
+      ['Í', 'I'],
+      ['Ó', 'O'],
+      ['Ú', 'U'],
+      ['Ñ', 'N'],
+    ]);
+
     const withoutTildes = text
       .split('')
-      .map(char => tildeMap[char] || char) // Reemplaza usando el mapa o conserva el carácter si no está en el mapa
+      .map(char => tildeMap.get(char) || char) // Uso seguro del mapa
       .join('');
 
-    // Convertir a minúsculas
-    const lowerCaseText = withoutTildes.toLowerCase();
-
-    // Reemplazar espacios por guiones
-    const withHyphens = lowerCaseText.replace(/\s+/g, '-');
-
-    // Eliminar caracteres no alfanuméricos excepto guiones
+    const withHyphens = withoutTildes.toLowerCase().replace(/\s+/g, '-');
     const sanitized = withHyphens.replace(/[^a-z0-9-]/g, '');
+    const cleaned = sanitized.replace(/-{2,}/g, '-').replace(/^-+|-+$/g, '');
 
-    return sanitized;
+    return cleaned;
   }
 
   constructor() { }

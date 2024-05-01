@@ -6,4 +6,11 @@
             <a [routerLink]="getRouterLink(item)">{{ item.name }}</a>
         </li>
     </ul>
+    <div *ngIf="isMobile" class="scrollmenu">
+        <ul *ngIf="!selectedItem" class="submenu">
+            <li *ngFor="let item of items" (click)="selectItem(item)">
+                <a [routerLink]="getRouterLink(item)">{{ item.name }}</a>
+            </li>
+        </ul>
+    </div>
 </div>

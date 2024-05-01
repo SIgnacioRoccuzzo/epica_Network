@@ -99,13 +99,13 @@
 .menu-header li::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -30px;
     left: 50%;
     width: 0;
-    height: 2px;
+    height: 3px;
     background-color: white;
     transition: width 0.3s ease, left 0.3s ease;
-
+    border-radius: 5px;
 }
 
 .menu-header li:hover::before,
@@ -160,7 +160,7 @@
     }
 
     .menu-header li::before {
-
+        bottom: -10px;
         background-color: var(--text);
 
 

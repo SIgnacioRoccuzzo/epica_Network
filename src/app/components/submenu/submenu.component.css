@@ -1,4 +1,5 @@
-/* Contenedor principal que contiene el submenú */
+@import url('../../../styles.css');
+
 .container {
     display: flex;
     justify-content: center;
@@ -8,11 +9,12 @@
 /* Estilos para el submenú */
 .submenu {
     background-color: transparent;
-    /* padding: 5px; */
+    padding: 8px;
     display: inline-flex;
     list-style-type: none;
     margin: 0;
     transition: all 0.5s ease;
+    font-family: var(--fuente-cuerpo);
 
 }
 
@@ -25,7 +27,7 @@
 
 .submenu a {
     color: #f7f6ed;
-    font-family: var(--fuente-cuerpo);
+
     text-decoration: none;
     font-size: var(--size-text);
     margin: 15px;
@@ -39,4 +41,15 @@
 
 .submenu a:hover {
     color: var(--primary);
+}
+
+.scrollmenu {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .scrollmenu {
+        display: none;
+    }
 }

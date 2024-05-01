@@ -11,7 +11,7 @@
                     <div class="col-6">
                         <p class="tarifa_title">Tarifa</p>
                         <div class="tarifa_datos">
-                            <p>{{ tarifa.price | currency }}</p>
+                            <p>{{ tarifa.price | currency: "EUR" }}</p>
                         </div>
                     </div>
                     <!-- Botón para acción -->
@@ -22,7 +22,7 @@
             </div>
             <!-- Botón para más información -->
             <div class="col-12">
-                <a href="/checkout" class="btn btn-primary-green mt-3">Más Información</a>
+                <a href="/checkout" class="btn mt-3">Más Información</a>
             </div>
         </div>
     </div>

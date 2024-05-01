@@ -86,31 +86,31 @@ footer {
 
 /* Colores distintivos para cada icono de redes sociales */
 .social .fab.fa-youtube {
-    color: red;
+    color: var(--background);
 }
 
 .social .fab.fa-facebook-f {
-    color: #1877F2;
+    color: var(--background);
 }
 
 .social .fab.fa-instagram {
-    color: #C13584;
+    color: var(--background);
 }
 
 .social .fa-brands.fa-threads {
-    color: black;
+    color: var(--background);
 }
 
 .social .fab.fa-tiktok {
-    color: black;
+    color: var(--background);
 }
 
 .social .fa-brands.fa-x-twitter {
-    color: #1DA1F2;
+    color: var(--background);
 }
 
 .social .fab.fa-linkedin {
-    color: #0A66C2;
+    color: var(--background);
 }
 
 /* Secondary Footer */
