@@ -16,6 +16,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component'; // Un
 import { SubmenuComponent } from './components/submenu/submenu.component';
 
 const routes: Routes = [
+  // Redireccionar a la página de inicio para la ruta raíz
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   // Página de inicio
   { path: 'inicio', component: InicioComponent },
 

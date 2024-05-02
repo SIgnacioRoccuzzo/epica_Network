@@ -1,6 +1,11 @@
-<app-menu></app-menu>
+<header>
+    <app-menu></app-menu>
+    <app-carrousel *ngIf="isInicioPage"></app-carrousel>
+</header>
 <main>
-    <app-carrousel></app-carrousel>
+
     <router-outlet></router-outlet>
 </main>
+
+
 <app-footer></app-footer>

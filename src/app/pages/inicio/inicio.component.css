@@ -1,0 +1,58 @@
+/* Estilo para la sección de la tarjeta SIM */
+.sim-section {
+    background-color: var(--background);
+    color: var(--text);
+    text-align: center;
+    padding: 40px;
+}
+
+.sim-section h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.sim-section p {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.25rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+/* Estilo para la tarjeta SIM animada */
+.sim-card {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.animated-sim {
+    width: 100%;
+    transition: transform 0.5s, opacity 0.5s;
+    /* Transición suave */
+}
+
+.sim-card:hover .animated-sim {
+    transform: rotate(360deg);
+    /* Rotación completa al pasar el ratón */
+    opacity: 0.8;
+    /* Efecto de transparencia al pasar el ratón */
+}
+
+/* Estilo para el botón de llamada a la acción */
+.cta {
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: var(--vibrant);
+    /* Cambio de color al pasar el ratón */
+}
