@@ -252,43 +252,9 @@ h1 {
     margin: 1.25rem;
     text-align: center;
     width: 20.625rem;
-    transition: var(--card-transition);
+
 }
 
-.pricing-card:hover {
-    box-shadow: var(--card-hover-box-shadow);
-    /* Uso de la sombra en hover */
-}
-
-a.interes {
-    background-color: var(--accent);
-    color: white;
-    padding: 0.625rem;
-    /* Ajusta el padding según sea necesario */
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    /* Asegura que el botón ocupa todo el ancho */
-    font-size: 0.875rem;
-    cursor: pointer;
-    border-radius: 0.625rem;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    /* Ocupa todo el ancho disponible */
-}
-
-/* Ajustes para el hover del botón */
-a.interes:hover {
-    background-color: var(--highlight);
-    /* Cambia el color al pasar el cursor */
-    box-shadow: var(--button-hover-box-shadow);
-    /* Sombra al pasar el cursor */
-}
-
-/* Elimina el margen adicional en el último elemento para asegurar alineación */
-a.interes:last-child {
-    margin-bottom: 0;
-}
 
 
 /* Estilos para listas y tablas */

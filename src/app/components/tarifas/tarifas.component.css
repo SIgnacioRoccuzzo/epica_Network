@@ -1,0 +1,90 @@
+.container {
+    padding: 10px;
+    margin-top: 250px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Espacio entre tarjetas */
+}
+
+.card {
+    flex: 1 1 300px;
+    /* Ancho base */
+    max-width: 300px;
+    /* Ancho máximo */
+    max-height: 450px;
+    /* Altura máxima */
+    display: flex;
+    flex-direction: column;
+    /* Para la estructura vertical */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Evitar desbordamientos */
+    transition: box-shadow 0.3s;
+}
+
+.card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-body {
+    flex: 1;
+    /* Para que el cuerpo se expanda */
+    display: flex;
+    flex-direction: column;
+    /* Estructura vertical */
+    justify-content: space-between;
+    padding: 15px;
+    /* Espacio interno */
+}
+
+.price {
+    font-size: 1.2rem;
+}
+
+.data {
+    font-size: 1rem;
+    /* Tamaño del texto */
+}
+
+.button {
+    margin-top: auto;
+    /* Empujar el botón hacia abajo */
+    display: flex;
+    justify-content: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent);
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+}
+
+.button a:hover {
+    background-color: var(--vibrant);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /* Efecto de hover */
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 10px;
+
+    }
+}

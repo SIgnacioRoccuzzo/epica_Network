@@ -1,159 +1,173 @@
 <section class="container">
-    <h1 class="text-center">Tarifas de Fibra Épica</h1>
+    <h1 class="text-center mb-4">Tarifas de Fibra</h1>
+    <div class="cards mb-6"> <!-- Contenedor para las tarjetas -->
+        <div class="product-card" *ngFor="let tarifa of tarifasFibra"> <!-- Clase corregida -->
+            <div class="product-card__info">
+                <h2 class="text">{{ tarifa.type }}</h2>
+                <div class="product-card__type">
+                    <div class="product-info mb-3">
+                        <img class="icon"
+                            src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
+                            alt="Fibra" loading="lazy">
+                        <span class="text-p-02-medium">Fibra</span>
+                        <span class="text-subheading-01">{{ tarifa.speed }}</span>
 
-    <!-- Contenedor para las tarjetas -->
-    <article class="tarjetas">
-        <!-- Iteración sobre las tarifas de fibra -->
-        <div class="pricing-card" *ngFor="let fibra of tarifasFibra">
-            <div class="fibra-image">
-                <img class="image"
-                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2028.png?alt=media&token=261b2424-76c3-40ea-bb16-617bc5da1230"
-                    alt="fibra">
-            </div>
-
-            <div class="data">
-                <h3>{{ fibra.speed }}</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i>Sin coste de línea fija, nada de cuotas extras.</li>
-                    <li><i class="fas fa-check-circle"></i>Con o sin permanencia. Tú eliges.</li>
-                    <li><i class="fas fa-check-circle"></i>Velocidad simétrica según disponibilidad geográfica.</li>
-                </ul>
-            </div>
-
-            <div class="name">
-                <strong>{{ fibra.name }}</strong>
-            </div>
-
-            <div class="tarifa_precio">
-                <p>{{ fibra.price }}<strong>€ </strong><small>IVA incl.</small></p>
-            </div>
-
-            <div class="button-container">
-                <a class="interes" [href]="whatsappLink">Me interesa</a>
-            </div>
-        </div>
-    </article>
-</section>
-<article class="bloque_faq">
-    <div class="container">
-        <h2>Preguntas frecuentes</h2>
-        <div *ngIf="loading" class="loading-indicator">
-            Cargando...
-        </div>
-
-        <div *ngIf="!loading && errorMessage" class="error-message">
-            {{ errorMessage }}
-        </div>
-
-        <div *ngIf="!loading && !errorMessage" id="accordion" role="tablist" aria-multiselectable="true">
-            <!-- Primera pregunta -->
-            <div class="card">
-                <div class="card-header" role="tab" id="headingOne">
-                    <h5>
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            ¿Qué tarifa de fibra y fijo me conviene?
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        Si haces un uso normal de tu conexión, con la tarifa de 300Mb por 27€ al mes, podrás ver
-                        películas y
-                        navegar por Internet sin problema.
-                        En cambio, si necesitas conectar varios dispositivos, juegas online o descargas archivos con
-                        frecuencia,
-                        la mejor tarifa para ti será la de 1Gb por 31€ al mes.
                     </div>
+                    <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
                 </div>
-            </div>
-
-            <!-- Segunda pregunta -->
-            <div class="card">
-                <div class="card-header" role="tab" id="headingTwo">
-                    <h5>
-                        <a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            ¿Tengo compromiso de permanencia con mi tarifa de solo fibra?
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                        No. En Epica Networks no existe permanencia. Puedes irte o cambiar de tarifa cuando quieras.
+                <div class="product-card__action">
+                    <div class="tarifa-price mb-4">
+                        <p>{{ tarifa.price }}</p>
+                        <div class="tarifa-price__regularity">
+                            <span class="mes">€/mes</span>
+                            <span class="iva">IVA incl.</span>
+                            <small class="tariff-message">Precio final</small>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Tercera pregunta -->
-            <div class="card">
-                <div class="card-header" role="tab" id="headingThree">
-                    <h5>
-                        <a data-toggle="collapse" href="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                            ¿Cómo es el proceso de instalación de la fibra óptica?
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                        Un instalador acudirá a tu domicilio para realizar la instalación del servicio y te
-                        proporcionará el
-                        router HGU y todo lo necesario.
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Sin coste de línea fija, nada de cuotas extras.</li>
+                        <li><i class="fas fa-check-circle"></i> Con o sin permanencia. Tú eliges.</li>
+                        <li><i class="fas fa-check-circle"></i> Velocidad simétrica según disponibilidad geográfica.
+                        </li>
+                    </ul>
+                    <div class="container">
+                        <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
                     </div>
-                </div>
-            </div>
 
-            <!-- Cuarta pregunta -->
-            <div class="card">
-                <div class="card-header" role="tab" id="headingFour">
-                    <h5>
-                        <a data-toggle="collapse" href="#collapseFour" aria-expanded="false"
-                            aria-controls="collapseFour">
-                            ¿Incluye llamadas telefónicas mi tarifa de fibra?
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">
-                        Sí. Las tarifas de fibra incluyen llamadas ilimitadas a fijos y móviles nacionales desde la
-                        línea fija.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quinta pregunta -->
-            <div class="card">
-                <div class="card-header" role="tab" id="headingFive">
-                    <h5>
-                        <a data-toggle="collapse" href="#collapseFive" aria-expanded="false"
-                            aria-controls="collapseFive">
-                            ¿Cómo puedo comprobar si tengo cobertura de fibra óptica?
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                    <div class="card-body">
-                        Durante el proceso de contratación comprobaremos si dispones de cobertura de fibra en la
-                        dirección que
-                        nos indiques.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sexta pregunta -->
-            <div class="card">
-                <div class="card-header" role="tab" id="headingSix">
-                    <h5>
-                        <a data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            ¿Puedo obtener asistencia para comparar tarifas?
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                    <div class="card-body">
-                        Puedes contactarnos para obtener asistencia para comparar tus tarifas de Internet y telefonía.
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</article>
+
+</section>
+
+<section class="fqa">
+    <article class="bloque_faq">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+            <div *ngIf="loading" class="loading-indicator">
+                Cargando...
+            </div>
+
+            <div *ngIf="!loading && errorMessage" class="error-message">
+                {{ errorMessage }}
+            </div>
+
+            <div *ngIf="!loading && !errorMessage" id="accordion" role="tablist" aria-multiselectable="true">
+                <!-- Primera pregunta -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne">
+                        <h5>
+                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                                ¿Qué tarifa de fibra y fijo me conviene?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            Si haces un uso normal de tu conexión, con la tarifa de 300Mb por 27€ al mes, podrás ver
+                            películas y
+                            navegar por Internet sin problema.
+                            En cambio, si necesitas conectar varios dispositivos, juegas online o descargas archivos con
+                            frecuencia,
+                            la mejor tarifa para ti será la de 1Gb por 31€ al mes.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda pregunta -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5>
+                            <a data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                ¿Tengo compromiso de permanencia con mi tarifa de solo fibra?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            No. En Epica Networks no existe permanencia. Puedes irte o cambiar de tarifa cuando quieras.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercera pregunta -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingThree">
+                        <h5>
+                            <a data-toggle="collapse" href="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                ¿Cómo es el proceso de instalación de la fibra óptica?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Un instalador acudirá a tu domicilio para realizar la instalación del servicio y te
+                            proporcionará el
+                            router HGU y todo lo necesario.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuarta pregunta -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingFour">
+                        <h5>
+                            <a data-toggle="collapse" href="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                ¿Incluye llamadas telefónicas mi tarifa de fibra?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            Sí. Las tarifas de fibra incluyen llamadas ilimitadas a fijos y móviles nacionales desde la
+                            línea fija.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quinta pregunta -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingFive">
+                        <h5>
+                            <a data-toggle="collapse" href="#collapseFive" aria-expanded="false"
+                                aria-controls="collapseFive">
+                                ¿Cómo puedo comprobar si tengo cobertura de fibra óptica?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            Durante el proceso de contratación comprobaremos si dispones de cobertura de fibra en la
+                            dirección que
+                            nos indiques.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sexta pregunta -->
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingSix">
+                        <h5>
+                            <a data-toggle="collapse" href="#collapseSix" aria-expanded="false"
+                                aria-controls="collapseSix">
+                                ¿Puedo obtener asistencia para comparar tarifas?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+                            Puedes contactarnos para obtener asistencia para comparar tus tarifas de Internet y
+                            telefonía.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

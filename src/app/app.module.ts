@@ -27,6 +27,7 @@ import { register } from 'swiper/element/bundle';
 import { FibraMovilDetailComponent } from './pages/tarifas/fibra-movil/fibra-movil-detail/fibra-movil-detail.component';
 import { MovilDetailComponent } from './pages/tarifas/tarifa-movil/movil-detail/movil-detail.component';
 import { TvDetailComponent } from './pages/tarifas/tv/tv-detail/tv-detail.component';
+import { TarifasComponent } from './components/tarifas/tarifas.component';
 
 
 register();
@@ -50,6 +51,7 @@ register();
     FibraMovilDetailComponent,
     MovilDetailComponent,
     TvDetailComponent,
+    TarifasComponent
 
 
   ],

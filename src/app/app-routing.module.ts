@@ -14,6 +14,7 @@ import { TvDetailComponent } from './pages/tarifas/tv/tv-detail/tv-detail.compon
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component'; // Un componente para rutas no encontradas
 import { SubmenuComponent } from './components/submenu/submenu.component';
+import { TarifasComponent } from './components/tarifas/tarifas.component';
 
 const routes: Routes = [
   // Redireccionar a la página de inicio para la ruta raíz
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'tv', component: TvComponent },
   { path: 'tv/:gb', component: TvDetailComponent },
   { path: 'detalle/:name', component: SubmenuComponent },
+  { path: 'tarifas', component: TarifasComponent },
 
   // Rutas generales
   { path: 'ayuda', component: AyudaComponent },
