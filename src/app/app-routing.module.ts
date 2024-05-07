@@ -23,13 +23,13 @@ const routes: Routes = [
 
   // Rutas de tarifas
   { path: 'fibra', component: FibraComponent },
-  { path: 'fibra/:data', component: FibraDetailsComponent },
+  { path: 'fibra/:speed', component: FibraDetailsComponent },
   { path: 'fibra-y-movil', component: FibraMovilComponent },
-  { path: 'fibra-y-movil/:data', component: FibraMovilDetailComponent },
+  { path: 'fibra-y-movil/:gb', component: FibraMovilDetailComponent },
   { path: 'movil', component: TarifaMovilComponent },
-  { path: 'movil/:data', component: MovilDetailComponent },
+  { path: 'movil/:gb', component: MovilDetailComponent },
   { path: 'tv', component: TvComponent },
-  { path: 'tv/:data', component: TvDetailComponent },
+  { path: 'tv/:gb', component: TvDetailComponent },
   { path: 'detalle/:name', component: SubmenuComponent },
 
   // Rutas generales

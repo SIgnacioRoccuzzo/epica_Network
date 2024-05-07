@@ -1,58 +1,178 @@
-/* Estilo para la sección de la tarjeta SIM */
-.sim-section {
-    background-color: var(--background);
-    color: var(--text);
+.header {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
+    /*     background: linear-gradient(to bottom, rgba(75, 59, 104, 1), rgba(75, 59, 104, 0)); */
+
 }
 
-.sim-section h2 {
+.titulo {
+
     font-family: var(--fuente-titulo);
-    font-size: 2.5rem;
-    color: var(--primary);
-}
-
-.sim-section p {
-    font-family: var(--fuente-cuerpo);
-    font-size: 1.25rem;
-    color: var(--secondary);
     margin-bottom: 20px;
 }
 
-/* Estilo para la tarjeta SIM animada */
-.sim-card {
-    display: inline-block;
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
-
-.animated-sim {
-    width: 100%;
-    transition: transform 0.5s, opacity 0.5s;
-    /* Transición suave */
-}
-
-.sim-card:hover .animated-sim {
-    transform: rotate(360deg);
-    /* Rotación completa al pasar el ratón */
-    opacity: 0.8;
-    /* Efecto de transparencia al pasar el ratón */
-}
-
-/* Estilo para el botón de llamada a la acción */
-.cta {
-    background-color: var(--accent);
+.titulo h2 {
     color: var(--background);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.titulo h4 {
+    color: var(--background);
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 0;
+    padding: 5px;
+}
+
+.filtros-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.filtros-menu li {
+    position: relative;
     cursor: pointer;
+    color: var(--background);
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.filtros-menu li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--background);
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 5px;
+}
+
+.filtros-menu li:hover::before,
+.filtros-menu li.selected::before {
+    width: 100%;
+    left: 0;
+}
+
+.filtros-menu li.selected {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+
+}
+
+.card {
+    flex: 1 1 auto;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+
+}
+
+
+.card-header {
+    background-color: var(--secondary);
+    border-radius: 5px 5px 0 0;
+    color: var(--background);
+    font-family: var(--fuente-titulo);
+    padding: 15px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Para que los elementos se alineen verticalmente */
+    justify-content: space-between;
+    /* Espacio entre contenido y botón */
+}
+
+
+.card-body h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    font-family: var(--fuente-titulo);
+    color: var(--primary);
+
+}
+
+.card-body h1>strong {
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.card-body h1>small {
+    font-size: 1.2rem;
+}
+
+.data {
+    font-size: 1.2em;
+    color: var(--secondary);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    /* Centrar el botón */
+    margin-top: auto;
+    /* Empuja el botón al final de la tarjeta */
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent);
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    /* Mantener el ancho */
     transition: background-color 0.3s;
 }
 
-.cta:hover {
+.button a:hover {
     background-color: var(--vibrant);
-    /* Cambio de color al pasar el ratón */
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    max-height: 300px;
+
+}
+
+.chatea img {
+    max-height: 400px;
+
+
+}
+
+.alta img {
+    max-height: 400px;
 }

@@ -225,6 +225,7 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
+
 }
 
 /* Estilos para encabezados */
@@ -243,8 +244,8 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--text);
-    border: 2px solid black;
+    background-color: var(--background);
+    /*  border: 2px solid black; */
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);
     padding: var(--card-padding);
@@ -259,29 +260,36 @@ h1 {
     /* Uso de la sombra en hover */
 }
 
-/* Estilos para botones con clase .interes */
 a.interes {
     background-color: var(--accent);
     color: white;
-    padding: 0.625rem 0.9375rem;
+    padding: 0.625rem;
+    /* Ajusta el padding según sea necesario */
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    /* Asegura que el botón ocupa todo el ancho */
     font-size: 0.875rem;
     cursor: pointer;
     border-radius: 0.625rem;
     transition: background-color 0.3s ease;
-    width: 80%;
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
 }
 
-a.interes:last-child {
-    margin-bottom: 0.625rem;
-}
-
+/* Ajustes para el hover del botón */
 a.interes:hover {
     background-color: var(--highlight);
+    /* Cambia el color al pasar el cursor */
     box-shadow: var(--button-hover-box-shadow);
+    /* Sombra al pasar el cursor */
 }
+
+/* Elimina el margen adicional en el último elemento para asegurar alineación */
+a.interes:last-child {
+    margin-bottom: 0;
+}
+
 
 /* Estilos para listas y tablas */
 ol,

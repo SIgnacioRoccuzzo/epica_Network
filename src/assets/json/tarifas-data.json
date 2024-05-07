@@ -1,98 +1,127 @@
 [
     {
-        "type": "movil",
+        "type": "Móvil",
         "name": "Plan Oro",
-        "data": "Móvil 32GB + ilimitadas",
+        "gb": "32GB",
+        "minutes": "ilimitadas",
         "price": 8.95
     },
     {
-        "type": "movil",
+        "type": "Móvil",
         "name": "Plan Esmeralda",
-        "data": "Móvil 70GB + ilimitadas",
+        "gb": "70GB",
+        "minutes": "ilimitadas",
         "price": 10.95
     },
     {
-        "type": "movil",
+        "type": "Móvil",
         "name": "Plan Diamante",
-        "data": "Móvil 120GB + ilimitadas",
+        "gb": "120GB",
+        "minutes": "ilimitadas",
         "price": 12.95
     },
     {
-        "type": "movil",
+        "type": "Móvil",
         "name": "Plan Maestro",
-        "data": "Móvil 160GB + ilimitadas",
+        "gb": "160GB",
+        "minutes": "ilimitadas",
         "price": 18.95
     },
     {
-        "type": "movil",
+        "type": "Móvil",
         "name": "Plan Gran Maestro",
-        "data": "Móvil Libre GB + Libre ilimitadas",
+        "gb": "libre",
+        "minutes": "ilimitadas",
         "price": 25.95
     },
     {
-        "type": "fibra",
+        "type": "Fibra",
         "name": "Plan Élite",
-        "data": "Fibra 100Mb",
+        "speed": "100Mb",
         "price": 22.90
     },
     {
-        "type": "fibra",
+        "type": "Fibra",
         "name": "Plan Campeón",
-        "data": "Fibra 300Mb",
+        "speed": "300Mb",
         "price": 24.90
     },
     {
-        "type": "fibra",
+        "type": "Fibra",
         "name": "Plan Irreal",
-        "data": "Fibra 600Mb",
+        "speed": "600Mb",
         "price": 29.90
     },
     {
-        "type": "fibra y movil",
+        "type": "Fibra y Móvil",
         "name": "Cofre Inicial",
-        "data": "Fibra 300Mb + Móvil 10GB + ilimitadas",
+        "speed": "300Mb",
+        "gb": "10GB",
+        "minutes": "ilimitadas",
         "price": 29.90
     },
     {
-        "type": "fibra y movil",
+        "type": "Fibra y Móvil",
         "name": "Cofre Épico",
-        "data": "Fibra 300Mb + Móvil 55GB + ilimitadas",
+        "speed": "300Mb",
+        "gb": "55GB",
+        "minutes": "ilimitadas",
         "price": 34.90
     },
     {
-        "type": "fibra y movil",
+        "type": "Fibra y Móvil",
         "name": "Cofre Legendario",
-        "data": "Fibra 300Mb + 2x Móvil 25GB + ilimitadas",
+        "speed": "300Mb",
+        "gb": "25GB",
+        "lines": 2,
+        "minutes": "ilimitadas",
         "price": 39.90
     },
     {
-        "type": "fibra y movil",
+        "type": "Fibra y Móvil",
         "name": "Cofre Invicto",
-        "data": "Fibra 600Mb + Móvil 25GB + ilimitadas",
+        "speed": "600Mb",
+        "gb": "25GB",
+        "minutes": "ilimitadas",
         "price": 34.90
     },
     {
-        "type": "fibra y movil",
+        "type": "Fibra y Móvil",
         "name": "Cofre Supremo",
-        "data": "Fibra 600Mb + Móvil 55GB + ilimitadas",
+        "speed": "600Mb",
+        "gb": "55GB",
+        "minutes": "ilimitadas",
         "price": 39.90
     },
     {
-        "type": "tv",
+        "type": "TV",
         "name": "TV Básico",
-        "data": "+100 canales de TV",
+        "channels": 100,
         "price": 2.99
     },
     {
-        "type": "tv",
+        "type": "TV",
         "name": "TV Completo",
-        "data": "+100 canales de TV + cine + series + documentales + música",
+        "channels": 100,
+        "extras": [
+            "cine",
+            "series",
+            "documentales",
+            "música"
+        ],
         "price": 7.99
     },
     {
-        "type": "tv",
+        "type": "TV",
         "name": "TV Premium",
-        "data": "+100 canales de TV + cine + series + documentales + música + telenovelas",
+        "channels": 100,
+        "extras": [
+            "cine",
+            "series",
+            "documentales",
+            "música",
+            "telenovelas"
+        ],
         "price": 9.99
     }
 ]

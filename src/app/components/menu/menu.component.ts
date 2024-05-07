@@ -26,9 +26,9 @@ export class MenuComponent {
   tarifasService = inject(TarifasService)
 
   firstMenu: MenuSection[] = [
-    { label: 'Fibra y Móvil', route: '/fibra-y-movil', submenuType: 'fibra y movil' },
-    { label: 'Móvil', route: '/movil', submenuType: 'movil' },
-    { label: 'Fibra', route: '/fibra', submenuType: 'fibra' },
+    { label: 'Fibra y Móvil', route: '/fibra-y-movil', submenuType: 'Fibra y Móvil' },
+    { label: 'Móvil', route: '/movil', submenuType: 'Móvil' },
+    { label: 'Fibra', route: '/fibra', submenuType: 'Fibra' },
     { label: 'TV', route: '/tv', submenuType: '' },
   ];
   secondMenu = [

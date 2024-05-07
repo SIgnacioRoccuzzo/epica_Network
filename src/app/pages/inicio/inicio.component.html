@@ -1,12 +1,59 @@
-<div class="sim-section">
-    <h2>Conoce nuestros planes SIM</h2>
-    <p>Descubre la flexibilidad de nuestras tarjetas SIM con planes personalizados para ti.</p>
-
-    <!-- Tarjeta SIM animada -->
-    <div class="sim-card">
-        <img src="https://w7.pngwing.com/pngs/446/967/png-transparent-iphone-subscriber-identity-module-apple-sim-ipad-sim-cards-electronics-rectangle-mobile-phones.png"
-            alt="Tarjeta SIM" class="animated-sim">
+<section class="header"> <!-- Contenedor principal, ancho fijo y centrado -->
+    <div class="titulo text-center"> <!-- Mantener el texto centrado -->
+        <h2>Selecciona tu plan</h2>
+        <h4>Todos nuestros planes incluyen tecnología 5G</h4>
     </div>
+    <article class="tarifas">
+        <div class="container">
+            <ul class="filtros-menu">
+                <li (click)="filtrarTarifas('Fibra y Móvil')" [class.selected]="filtroActual === 'Fibra y Móvil'">Fibra
+                    y
+                    Móvil</li>
+                <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
+                <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
+            </ul>
+            <div class="cards">
 
-    <button class="cta">Conoce más</button>
-</div>
+                <div class="card" *ngFor="let tarifa of tarifasFiltradas">
+                    <div>
+                        <div class="card-header">
+                            <h4>{{ tarifa.name }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="price">
+                                <h1 class="my-0 font-weight-normal">
+                                    {{ tarifa.price }} <strong class="text-muted">€</strong>
+                                    <small class="text-muted">/mes</small>
+                                </h1>
+                            </div>
+
+                            <div class="data">
+                                <p>{{ tarifa.gb }}</p>
+                            </div>
+
+                            <div class="button">
+                                <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</section>
+<section class="image-section">
+    <div class="chatea">
+        <figure>
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2016.png?alt=media&token=c984cb9a-b678-4384-ad55-795ce8cce886"
+                alt="">
+        </figure>
+    </div>
+    <div class="alta">
+        <figure>
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2017.png?alt=media&token=49a7d110-4127-4f3a-bcb5-e76114cf6449"
+                alt="Imagen">
+        </figure>
+    </div>
+</section>

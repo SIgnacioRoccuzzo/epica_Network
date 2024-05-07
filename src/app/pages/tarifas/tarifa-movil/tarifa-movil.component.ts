@@ -19,7 +19,7 @@ export class TarifaMovilComponent {
 
   async ngOnInit() {
     try {
-      const response = await this.tarifasService.getBytype('movil');
+      const response = await this.tarifasService.getBytype('Móvil');
       this.tarifasMovil = response;
     } catch (error) {
       console.log(error);
@@ -39,5 +39,3 @@ export class TarifaMovilComponent {
     return index === this.mobileCards.length - 1;
   }
 }
-
-

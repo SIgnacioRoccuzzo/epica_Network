@@ -1,106 +1,115 @@
 @import url('../../../../../styles.css');
-/* Importa el CSS adicional */
 
+/* Importa el CSS adicional */
 /* Estilos para la tarjeta */
 .card-body {
     background-color: var(--background);
-    /* Fondo */
-    border: 2px solid var(--secondary);
-    /* Borde */
     border-radius: 8px;
-    /* Bordes redondeados */
-    padding: 10px;
+    padding: 20px;
     /* Espacio interno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Sombra para profundidad */
-    font-size: var(--size-text);
+    font-size: 1rem;
     /* Tamaño del texto */
     width: 50%;
-    /* Tarjeta más estrecha */
-    margin: 10px auto;
+    /* Ancho más amplio para acomodar columnas */
+    margin: 20px auto;
     /* Centra la tarjeta */
+    margin-top: var(--margin-top);
+}
+
+/* Estilo para la fila con separación de columnas */
+.row {
+    display: flex;
+    /* Usar Flexbox para la fila */
+    justify-content: space-between;
+    /* Separar las columnas */
+    align-items: center;
+    /* Alinear verticalmente */
+    flex-wrap: nowrap;
+    /* No permitir que las columnas se ajusten automáticamente */
+}
+
+/* Estilo para la columna */
+.col-4 {
+    flex: 0 0 33.33%;
+    /* Ancho para columnas col-4 */
+    max-width: 33.33%;
+    /* Máximo ancho para las columnas */
 }
 
 /* Estilo para el título */
 .card-body h2 {
     font-family: var(--fuente-titulo);
-    /* Fuente para el título */
     color: var(--primary);
-    /* Color del texto */
-    font-size: 3rem;
-    /* Tamaño del título */
-    /*     margin-bottom: 10px; */
-
+    font-size: 2.9rem;
+    /* Ajustar tamaño del título */
+    margin: 0;
+    /* Sin margen adicional */
 }
 
 /* Estilo para el cuerpo del texto */
 .card-body p {
     color: var(--text);
-    /* Color del texto */
-    margin: 5px 0;
-    /* Espacio superior e inferior */
-    font-size: 1.2rem;
-    /* Tamaño del texto */
-    font-weight: 700;
-    /* Peso del texto */
+    font-size: 1rem;
+    font-weight: bold;
+    /* Ajuste del tamaño del texto */
+    margin: 0;
+    /* Sin margen adicional */
 }
 
-/* Estilo para el precio y los elementos asociados */
+/* Estilo para el precio y elementos asociados */
 .tarifa_precio {
     white-space: nowrap;
-    /* Evita que se rompa la línea */
+    /* Evitar que el texto se rompa */
+    font-size: 1.2rem;
+    /* Tamaño del texto para el precio */
 }
 
 .tarifa_precio p {
     display: inline-block;
-    /* Mantiene el texto en línea */
-    font-size: 3.5rem;
-    /* Tamaño del precio */
-    font-weight: 900;
-    /* Peso del texto */
+    font-size: 2rem;
+    /* Tamaño para el precio */
+    font-weight: 700;
     margin: 0;
-    /* Sin márgenes */
+    /* Sin margen adicional */
 }
 
 strong {
-    font-size: 2rem;
-    /* Tamaño del texto en negrita */
+    font-size: 1.5rem;
+    /* Tamaño para el texto en negrita */
 }
 
 .tarifa_precio small {
     display: inline-block;
-    /* Mantiene el texto en línea */
-    font-size: 1rem;
-    /* Tamaño pequeño para el IVA */
-    font-weight: 400;
-    /* Peso del texto */
+    font-size: 0.8rem;
+    /* Tamaño pequeño para detalles */
     margin: 0;
-    /* Sin márgenes adicionales */
+    /* Sin margen adicional */
 }
 
-/* Botón de acción (CTA) */
-.card-body .cta {
+/* Estilo para íconos y el botón */
+.iconos {
+    display: inline-flex;
+    /* Mantener íconos en línea */
+    gap: 10px;
+    /* Espacio entre íconos */
+}
+
+.cta {
     background-color: var(--accent);
-    /* Color de acento */
     color: var(--background);
-    /* Color del texto */
-    border: none;
-    /* Sin borde */
     border-radius: 8px;
-    /* Bordes redondeados */
     padding: 10px;
-    /* Espacio interno */
-    font-size: var(--size-text);
+    /* Espacio para el botón */
+    font-size: 1rem;
     /* Tamaño del texto */
-    cursor: pointer;
-    /* Cursor de mano */
     transition: background-color 0.3s;
-    /* Transición suave */
 }
 
-.card-body .cta:hover {
+.cta:hover {
     background-color: var(--vibrant);
-    /* Color al pasar el ratón */
+    /* Cambio de color al pasar el ratón */
 }
 
 /* Estilo para la lista de beneficios */
@@ -115,7 +124,7 @@ strong {
     /* Espacio interno */
     border-radius: 8px;
     /* Bordes redondeados */
-    background-color: var(--secondary);
+    background-color: var(--accent);
     /* Fondo */
 }
 

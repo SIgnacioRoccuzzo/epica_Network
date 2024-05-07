@@ -1,24 +1,26 @@
 <section class="container">
-    <h1 class="mb-3 text-center">Tarifas de Tv de Épica</h1>
-    <div class="row justify-content-md-center">
-        <!--       <div *ngFor="let tarifa of tarifasTv">
-            <button [routerLink]="['/tv', tarifa.data]">
-                {{ tarifa.data }}
-            </button>
-        </div> -->
-        <div *ngFor="let plan of tarifasTv">
-        </div>
-        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let tv of tarifasTv">
-            <div id="tv-image">
+    <h1 class="title text-center">Tarifas de TV de Épica</h1>
+
+    <div class="tarjetas">
+        <!-- Iterar sobre las tarifas de TV -->
+        <div class="pricing-card" *ngFor="let tv of tarifasTv">
+            <div class="image-container">
                 <img class="image"
                     src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2027.png?alt=media&token=ea8475ce-46f8-4241-9d26-17e28bb8d8a4"
-                    alt="tv">
+                    alt="TV">
             </div>
-            <h3 class="neon-effect">{{ tv.name }}</h3>
-            <!--  <ul>
-                <li class="details">{{ tv.details }}</li>
-            </ul> -->
-            <p>{{ tv.price }}<span>€/mes</span></p>
+            <div>
+                <h3>{{ tv.name }}</h3>
+            </div>
+            <div>
+                <p>{{tv.channels}}</p>
+            </div>
+
+
+            <div class="tarifa_precio">
+                <p>{{ tv.price }}<strong>€ </strong><small>IVA incl.</small></p>
+            </div>
+            <!-- Botón de acción -->
             <div class="button-container">
                 <a class="interes" [href]="whatsappLink">Me interesa</a>
             </div>

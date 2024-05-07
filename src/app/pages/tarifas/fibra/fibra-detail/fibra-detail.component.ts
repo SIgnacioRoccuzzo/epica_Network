@@ -20,19 +20,19 @@ export class FibraDetailsComponent implements OnInit {
   async ngOnInit() {
     try {
       // Obtener el parámetro "data" de la URL
-      const data = this.route.snapshot.paramMap.get('data');
+      const speed = this.route.snapshot.paramMap.get('speed');
 
-      if (data) {
+      if (speed) {
         // Obtener las tarifas con base en el valor de "data"
-        const response = await this.tarifasService.getByData(data);
+        const response = await this.tarifasService.getBySpeed(speed);
         if (response.length > 0) {
           this.tarifa = response[0]; // Tomamos la primera tarifa que coincide
         } else {
-          console.error('No se encontró tarifa con ese valor de data');
+          console.error('No se encontró tarifa con ese valor de speed');
         }
       }
     } catch (error) {
-      console.error('Error al obtener la tarifa por data:', error);
+      console.error('Error al obtener la tarifa por speed:', error);
     }
   }
 

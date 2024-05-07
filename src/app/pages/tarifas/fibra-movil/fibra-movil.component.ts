@@ -17,7 +17,7 @@ export class FibraMovilComponent {
 
   async ngOnInit() {
     try {
-      const response = await this.tarifasService.getBytype('fibra y movil');
+      const response = await this.tarifasService.getBytype('Fibra y Móvil');
       this.tarifasFibraMovil = response;
     } catch (error) {
       console.log(error);
@@ -25,5 +25,3 @@ export class FibraMovilComponent {
   }
   whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=%C2%A1Hola%2C%20Luis!%20Ayud%C3%A1me%20a%20comparar%20mis%20tarifas%20de%20mis%20servicios%20de%20internet%20y%20telefon%C3%ADa.';
 }
-
-

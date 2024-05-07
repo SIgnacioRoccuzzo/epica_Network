@@ -1,8 +1,8 @@
-import { Component, Input, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
-import { UrlFormatterService } from 'src/app/services/url-formatter.service';
+
 
 @Component({
   selector: 'app-submenu',
@@ -12,9 +12,8 @@ import { UrlFormatterService } from 'src/app/services/url-formatter.service';
 export class SubmenuComponent {
   @Input() items: Tarifas[] = []
   selectedItem: Tarifas | null = null;
-  private router = inject(Router)
-  private urlFormatter = inject(UrlFormatterService)
-  isMobile = false;
+  isSubmenuVisible = true;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -31,19 +30,18 @@ export class SubmenuComponent {
   }
   getRouterLink(item: Tarifas): string[] {
 
-    if (item.type === 'fibra') {
-      return ['/fibra', item.data];
-    } else if (item.type === 'fibra y movil') {
-      return ['/fibra-y-movil', item.data];
-    } else if (item.type === 'movil') {
-      return ['/movil', item.data];
+    if (item.type === 'Fibra') {
+      return ['/fibra', item.speed];
+    } else if (item.type === 'Fibra y Móvil') {
+      return ['/fibra-y-movil', item.gb];
+    } else if (item.type === 'Móvil') {
+      return ['/movil', item.gb];
     } else {
-      return ['/tv', item.data];
+      return ['/tv', item.name];
     }
   }
-  navigateToTarifa(data: string) {
-    const friendlyName = this.urlFormatter.toUrlFriendly(data);
-    this.router.navigateByUrl(`/fibra/${friendlyName}`);
+  toggleSubmenu(): void {
+    this.isSubmenuVisible = !this.isSubmenuVisible; // Alternar visibilidad del submenú
   }
 
 

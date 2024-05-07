@@ -1,11 +1,6 @@
 <section class="container tarifas">
     <h1 class="mb-3 text-center">Tarifas de Móvil de Épica</h1>
-    <div class="row justify-content-md-center">
-        <!--    <div *ngFor="let tarifa of tarifasMovil">
-            <button [routerLink]="['/movil', tarifa.data]">
-                {{ tarifa.data }}
-            </button>
-        </div> -->
+    <div class="tarjetas">
         <div *ngFor="let plan of tarifasMovil">
         </div>
         <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let movil of tarifasMovil">
@@ -14,25 +9,27 @@
                     src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2026.png?alt=media&token=d1012426-607f-45db-86a7-d29c77633b18"
                     alt="movil">
             </div>
-            <h3 class="data">{{ movil.data }}</h3>
+            <h3 class="data">{{ movil.gb }}</h3>
             <div id="name" class="container">
-                <p>PLAN <strong> {{movil.name}}</strong></p>
+                <p><strong> {{movil.name}}</strong></p>
             </div>
             <ul class="lista_checks">
                 <li>
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check-circle"></i>
                     <strong>Sin permanencia.</strong>
                 </li>
                 <li>
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check-circle"></i>
                     <strong>Llamadas ilimitadas.</strong>
                 </li>
                 <li>
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check-circle"></i>
                     <strong>Cobertura en todo el territorio nacional.</strong>
                 </li>
             </ul>
-            <p class="price">{{ movil.price }} <span>€/mes</span></p>
+            <div class="tarifa_precio">
+                <p>{{ movil.price }}<strong>€ </strong><small>IVA incl.</small></p>
+            </div>
             <div class="button-container">
                 <a class="interes" [href]="whatsappLink">Me interesa</a>
             </div>

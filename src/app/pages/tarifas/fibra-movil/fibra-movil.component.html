@@ -1,24 +1,39 @@
-<section class="container">
-    <h1 class="mb-3 text-center">Tarifas de Fibra y Móvil Épica</h1>
-    <div class="row justify-content-md-center">
-        <!--  <div *ngFor="let tarifa of tarifasFibraMovil">
-            <button [routerLink]="['/fibra-y-movil', tarifa.data]">
-                {{ tarifa.data }}
-            </button>
-        </div> -->
-        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let fiber of tarifasFibraMovil">
-            <div id="fibraMovil-image">
-                <img class="image"
-                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2025.png?alt=media&token=6a83f64d-8617-4c56-9e1f-2711f94caba1"
-                    alt="fibraymovil">
+<section class="container-fluid">
+    <h1 class="title">Tarifas de Fibra y Móvil Épica</h1>
+
+    <div class="tarjetas">
+        <!-- Iterar a través de las tarifas de Fibra y Móvil -->
+        <div class="pricing-card" *ngFor="let fiber of tarifasFibraMovil">
+            <div class="image-container">
+                <figure>
+                    <img class="image"
+                        src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2025.png?alt=media&token=6a83f64d-8617-4c56-9e1f-2711f94caba1"
+                        alt="Fibra y Móvil">
+                </figure>
+
             </div>
-            <div id="name" class="container">
-                <p>PLAN <strong> {{fiber.name}}</strong></p>
+
+            <div class="name">
+                <p>PLAN <strong>{{ fiber.name }}</strong></p>
             </div>
-            <ul>
-                <li class="data">{{ fiber.data }}</li>
-            </ul>
-            <p class="price">{{ fiber.price }} <span>€/mes</span></p>
+
+            <div class="data">
+                <h3>{{ fiber.gb }}</h3>
+            </div>
+            <div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Sin cuota de línea fija.</li>
+                    <li><i class="fas fa-check-circle"></i>Velocidad simétrica según disponibilidad geográfica
+                    </li>
+                    <li><i class="fas fa-check-circle"></i>Llamadas ilimitadas.</li>
+
+                </ul>
+            </div>
+
+            <div class="tarifa_precio">
+                <p>{{ fiber.price }}<strong>€ </strong>/mes<small>IVA incl.</small></p>
+            </div>
+
             <div class="button-container">
                 <a class="interes" [href]="whatsappLink">Me interesa</a>
             </div>

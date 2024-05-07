@@ -14,8 +14,6 @@
     list-style-type: none;
     margin: 0;
     transition: all 0.5s ease;
-    font-family: var(--fuente-cuerpo);
-
 }
 
 /* Estilos para los elementos del submenú */
@@ -27,7 +25,7 @@
 
 .submenu a {
     color: #f7f6ed;
-
+    font-family: var(--fuente-cuerpo);
     text-decoration: none;
     font-size: var(--size-text);
     margin: 15px;
@@ -40,7 +38,7 @@
 }
 
 .submenu a:hover {
-    color: var(--primary);
+    color: var(--vibrant);
 }
 
 .scrollmenu {
@@ -48,8 +46,20 @@
     white-space: nowrap;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .scrollmenu {
         display: none;
+    }
+
+    .submenu {
+        text-align: center;
+
+    }
+
+    .submenu a {
+        font-size: 0.85rem;
+        margin: 0 auto;
+        gap: 5px;
+        font-weight: bold;
     }
 }

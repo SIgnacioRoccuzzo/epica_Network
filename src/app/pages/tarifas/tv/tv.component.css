@@ -1,5 +1,13 @@
 @import url('../../../../styles.css');
 
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+
+}
 
 #tv-image {
     height: 5rem;
@@ -33,7 +41,24 @@ p {
     display: flex;
     align-items: center;
     gap: 0.3125rem;
+}
 
+.tarifa_precio p {
+    font-size: 2rem;
+    color: var(--background);
+    font-weight: bold;
+    margin: 0;
+}
+
+.tarifa_precio strong {
+    font-size: 1.5rem;
+}
+
+.tarifa_precio small {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin: 0;
+    /* Sin margen adicional */
 }
 
 p span {

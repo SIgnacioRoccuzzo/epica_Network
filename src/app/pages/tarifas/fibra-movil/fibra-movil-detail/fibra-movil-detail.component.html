@@ -3,41 +3,39 @@
         <div *ngIf="tarifa" class="row justify-content-center">
             <!-- Columna para la información del plan -->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="row">
+                <div class="row align-items-center"> <!-- Usar Flexbox para alinear elementos -->
                     <!-- Información de la tarifa -->
-                    <h2>{{ tarifa.name }}</h2> <!-- Título principal -->
-                    <p class="tarifa_title">Tarifa</p>
-                    <p>{{ tarifa.data }}</p> <!-- Información adicional -->
-                    <div class="col-12">
-                        <div class="row align-items-center">
-                            <!-- Sección de precio -->
-                            <div class="col-6">
-                                <div class="tarifa_precio">
-                                    <p>{{ tarifa.price }} <strong>€</strong> <small class="iva">IVA incl.</small></p>
-                                </div>
-                                <!-- Iconos de tecnología -->
-                                <div class="iconos">
-                                    <figure>
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1183/1183601.png"
-                                            alt="Icono de velocidad" width="34" height="34">
-                                        <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-5g-50.png?alt=media&token=7024db98-66f6-4b21-8df4-6900ab290768"
-                                            alt="Icono de 5G" width="34" height="34">
-                                        <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Teléfono"
-                                            width="32" height="32">
-                                    </figure>
-                                </div>
-                                <div class="boton">
-                                    <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
-                                </div>
-                            </div>
+                    <div class="col-4"> <!-- Ajustar el espacio de cada columna -->
+                        <h2>{{ tarifa.name }}</h2> <!-- Título principal -->
+                        <p class="tarifa_title">Tarifa</p> <!-- Tarifa -->
+                        <p>{{ tarifa.gb }}</p> <!-- Información adicional -->
+                        <p>{{tarifa.speed}}</p>
+                    </div>
+
+                    <!-- Sección de precio -->
+                    <div class="col-4">
+                        <div class="tarifa_precio">
+                            <p>{{ tarifa.price }} <strong>€</strong> <small class="iva">IVA incl.</small></p>
+                        </div>
+
+                        <div class="iconos">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1183/1183601.png" alt="Icono de velocidad"
+                                width="34" height="34">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-5g-50.png?alt=media&token=7024db98-66f6-4b21-8df4-6900ab290768"
+                                alt="Icono de 5G" width="34" height="34">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Teléfono" width="32"
+                                height="32">
+                        </div>
+                        <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
+                        <!-- Botón para más información -->
+                        <div>
+                            <a href="/checkout" class="btn btn-primary-green mt-3" aria-label="Más información">Más
+                                Información</a>
                         </div>
                     </div>
-                    <!-- Botón para más información -->
-                    <div class="col-12">
-                        <a href="/checkout" class="btn btn-primary-green mt-3" aria-label="Más información">Más
-                            Información</a>
-                    </div>
                 </div>
+
+
             </div>
 
             <!-- Columna para detalles adicionales o beneficios -->
@@ -50,7 +48,7 @@
                         <li>Llamadas ilimitadas.</li>
                         <li>Instalación y Router gratis.</li>
                         <li>Descuento del 100% en los gastos de instalación.</li>
-                        <li>Envío SIM gratuito</li>
+                        <li>Envío SIM gratuito.</li>
                         <li>¡Solo 3 meses de Permanencia!</li>
                     </ul>
                 </div>

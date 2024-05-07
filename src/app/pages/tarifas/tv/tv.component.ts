@@ -18,7 +18,7 @@ export class TvComponent {
 
   async ngOnInit() {
     try {
-      const response = await this.tarifasService.getBytype('tv');
+      const response = await this.tarifasService.getBytype('Tv');
       this.tarifasTv = response;
     } catch (error) {
       console.log(error);

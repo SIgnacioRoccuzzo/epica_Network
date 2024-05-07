@@ -28,6 +28,7 @@ import { FibraMovilDetailComponent } from './pages/tarifas/fibra-movil/fibra-mov
 import { MovilDetailComponent } from './pages/tarifas/tarifa-movil/movil-detail/movil-detail.component';
 import { TvDetailComponent } from './pages/tarifas/tv/tv-detail/tv-detail.component';
 
+
 register();
 
 @NgModule({
@@ -48,7 +49,8 @@ register();
     SubmenuComponent,
     FibraMovilDetailComponent,
     MovilDetailComponent,
-    TvDetailComponent
+    TvDetailComponent,
+
 
   ],
   imports: [

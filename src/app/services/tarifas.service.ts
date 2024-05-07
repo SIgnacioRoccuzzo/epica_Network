@@ -24,9 +24,14 @@ export class TarifasService {
       this.httpClient.get<Tarifas | any>(`${this.baseUrl}/${tarifasId}`)
     );
   }
-  getByData(tarifasData: string): Promise<Tarifas[] | any> {
+  getByGb(tarifasGb: string): Promise<Tarifas[] | any> {
     return firstValueFrom(
-      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/data/${tarifasData}`)
+      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/gb/${tarifasGb}`)
+    );
+  }
+  getBySpeed(tarifasSpeed: string): Promise<Tarifas[] | any> {
+    return firstValueFrom(
+      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/speed/${tarifasSpeed}`)
     );
   }
   getBytype(tarifastype: string): Promise<Tarifas[] | any> {
