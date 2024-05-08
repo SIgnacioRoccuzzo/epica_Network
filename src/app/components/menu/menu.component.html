@@ -5,34 +5,36 @@
         </p>
     </div>
     <div class="nav-container">
-        <a href="/inicio" class="logo" alt="epica">
-            <img class="logo-header"
-                src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Flogos%2FLOGOentrega-01.png?alt=media&token=d8cdce61-52f1-4097-a124-263870e0b078"
-                alt="epica">
-        </a>
-        <button class="burguer" (click)="toggleMenu()">
-            <i class="fa-solid fa-bars">{{ isMenuOpen ? "" : "" }}</i>
-        </button>
-        <nav class="menu-header" [ngClass]="{'is-open': isMenuOpen}">
-            <ul class="first-menu">
-                <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
-                    (click)="toggleSubmenu(section.submenuType)">
-                    {{ section.label }}
-                </li>
-            </ul>
-            <ul class="second-menu">
-                <li *ngFor="let section of secondMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
-                    (click)="toggleMenu()">
-                    {{ section.label }}
-                </li>
-            </ul>
-            <a class="buttom" href="https://clientesepicanetwork.ispgestion.com/site/login"
-                [ngClass]="{'is-open': isMenuOpen}">
-                Soy Cliente
+        <div class="logo-wrapper">
+            <a href="/inicio" class="logo" alt="epica">
+                <img class="logo-header"
+                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Flogos%2FLOGOentrega-15.png?alt=media&token=c23ad302-a885-443d-9bdb-51a3e7c74e7a"
+                    alt="epica">
             </a>
-
-        </nav>
+        </div>
+        <div class="menu-wrapper">
+            <button class="burguer" (click)="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="menu-header" [ngClass]="{'is-open': isMenuOpen}">
+                <ul class="first-menu">
+                    <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" [routerLinkActive]="['active']"
+                        (click)="toggleSubmenu(section.submenuType)">
+                        {{ section.label }}
+                    </li>
+                </ul>
+                <ul class="second-menu">
+                    <li *ngFor="let section of secondMenu" [routerLink]="[section.route]"
+                        [routerLinkActive]="['active']" (click)="toggleMenu()">
+                        {{ section.label }}
+                    </li>
+                </ul>
+                <a class="buttom" href="https://clientesepicanetwork.ispgestion.com/site/login"
+                    [ngClass]="{'is-open': isMenuOpen}">
+                    Soy Cliente
+                </a>
+            </nav>
+        </div>
     </div>
     <app-submenu *ngIf="activeSubmenu" [items]="getSubmenuItems(activeSubmenu)"></app-submenu>
-
 </header>

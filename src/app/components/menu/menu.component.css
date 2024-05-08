@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
     z-index: 2000;
+
 }
 
 #top-bar {
@@ -47,18 +48,27 @@
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
-    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     transition: all 0.3s ease;
-    padding-top: 28px;
+}
 
+.logo-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .logo-header {
-    width: 85px;
+    width: 115px;
     transition: all 0.3s ease;
+}
+
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
 
 }
 
@@ -75,6 +85,7 @@
 .menu-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
     font-size: 1.1rem;
     color: white;
@@ -99,7 +110,7 @@
 .menu-header li::before {
     content: '';
     position: absolute;
-    bottom: -30px;
+    bottom: -46.5px;
     left: 50%;
     width: 0;
     height: 3px;

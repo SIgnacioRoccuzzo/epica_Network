@@ -1,28 +1,26 @@
 .header {
-    text-align: center;
     padding: 20px;
-    /*     background: linear-gradient(to bottom, rgba(75, 59, 104, 1), rgba(75, 59, 104, 0)); */
-
 }
 
 .titulo {
-
+    color: var(--text);
     font-family: var(--fuente-titulo);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .titulo h2 {
-    color: var(--background);
+    color: var(--text);
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
     padding: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 .titulo h4 {
-    color: var(--background);
+    color: var(--text);
     font-size: 1.2em;
     font-weight: normal;
     margin: 0;
@@ -42,7 +40,7 @@
 .filtros-menu li {
     position: relative;
     cursor: pointer;
-    color: var(--background);
+    color: var(--text);
     font-size: 1.1rem;
     font-weight: normal;
     padding-bottom: 10px;
@@ -55,7 +53,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: var(--background);
+    background-color: var(--text);
     transition: width 0.3s ease, left 0.3s ease;
     border-radius: 5px;
 }
@@ -71,108 +69,544 @@
     text-decoration: none;
 }
 
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 50px;
+}
+
+.product-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: var(--card-transition);
+    padding: 5px;
+}
+
+.product-card:hover {
+    box-shadow: var(--card-hover-box-shadow);
+
+}
+
+.product-card__info {
+    padding: 5px;
+
+}
+
+.product-card__info .text {
+    color: #666;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: .5rem;
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.product-card__type {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product-card__type .product-info {
+    --min-height: 2rem;
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    min-height: 2rem;
+    gap: .5rem;
+}
+
+.product-card__type .product-info .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.product-card__type .text-p-02-medium {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.product-card__type .text-subheading-01 {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.product-card__type .text-p-01-regular {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+
+}
+
+.product-card__action {
+    align-items: center;
+    background: #fff;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tarifa-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+.tarifa-price>p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+
+}
+
+.tarifa-price__regularity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tarifa-price__regularity .mes {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.tarifa-price__regularity .iva {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tarifa-price__regularity .tariff-message {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 5px;
+    color: gray;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    padding: 0;
+}
+
+.fas.fa-check-circle {
+    font-size: 0.9rem;
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+a.interes {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.625rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Ajustes para el hover del botón */
+a.interes:hover {
+    background-color: var(--highlight);
+    box-shadow: var(--button-hover-box-shadow);
+
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 100%;
+
+        max-width: 100%;
+
+    }
+}
+
+/* INICIO MENU ICON */
+
+.bg-highlighted {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.accelerator {
+    display: flex;
+    justify-content: center;
+
+}
+
+.accelerator-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.accelerator-item {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.accelerator-item__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.accelerator-item__icons img {
+    width: 48px;
+    height: 48px;
+
+}
+
+.text-p-02-regular {
+    font-size: 16px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* FIN MENU ICON */
+
+
+
+/* INICIO BANNERS */
+.image-section {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 3vw;
+    padding: 20px 0;
+
+}
+
+.banner {
+    max-width: 500px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* FIN BANNERS */
+
+/* INICIO DE LA SECCIÓN */
+
+.p-section {
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title-module {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.discovery-card__grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
+}
+
+/* Estilos para las tarjetas */
+.discovery-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.discovery-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes a la derecha y en la parte superior */
+.discovery-card__img {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.discovery-card__img img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Estilo para la información dentro de las tarjetas */
+.discovery-card__info {
+    text-align: left;
+    flex: 1;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .discovery-card__grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .discovery-card {
+        flex-basis: 100%;
+        /* Tarjetas ocupan todo el ancho */
+    }
+
+    .discovery-card__img {
+        justify-content: flex-end;
+        /* Imágenes siempre a la derecha */
+    }
+
+    .discovery-card__img img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.bg-highlighted {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.accelerator {
+    display: flex;
+    justify-content: center;
+
+}
+
+.accelerator-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.accelerator-item {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.accelerator-item__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.accelerator-item__icons img {
+    width: 48px;
+    height: 48px;
+}
+
+.text-p-02-regular {
+    font-size: 16px;
+    margin: 0;
+    padding-top: 10px;
+
+}
+
+/* FIN MENU ICON */
+
+/* INICIO BANNERS */
+.image-section {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 3vw;
+    padding: 20px 0;
+}
+
+.banner {
+    max-width: 500px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.banner:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* FIN BANNERS */
+
+/* INICIO DE LA SECCIÓN */
+.p-section {
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title-module {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title-module h2 {
+    font-family: var(--fuente-titulo);
+}
+
+.title-module p {
+    font-family: var(--fuente-cuerpo);
+}
+
+
+.discovery-card__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Ajustes para tarjetas */
+.discovery-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: var(--background);
+    flex-basis: 48%;
+}
+
+.discovery-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.discovery-card h3 {
+    font-family: var(--fuente-titulo);
+}
+
+.discovery-card p {
+    font-family: var(--fuente-cuerpo);
+}
+
+/* Posicionamiento para las imágenes en la esquina superior derecha */
+.discovery-card__img {
+    display: flex;
+    justify-content: flex-end;
     align-items: flex-start;
 
 }
 
-.card {
-    flex: 1 1 auto;
-    min-width: 200px;
-    max-width: 300px;
-    margin: 0 auto;
+.discovery-card__img img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Ajustes para la información dentro de las tarjetas */
+.discovery-card__info {
+    text-align: left;
+    flex: 1;
 
 }
 
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .discovery-card__grid {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.card-header {
-    background-color: var(--secondary);
-    border-radius: 5px 5px 0 0;
-    color: var(--background);
-    font-family: var(--fuente-titulo);
-    padding: 15px;
-    text-align: center;
-}
+    .discovery-card {
+        flex-basis: 100%;
 
-.card-body {
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* Para que los elementos se alineen verticalmente */
-    justify-content: space-between;
-    /* Espacio entre contenido y botón */
-}
+    }
 
+    .discovery-card__img {
+        justify-content: flex-end;
 
-.card-body h1 {
-    font-size: 2.5em;
-    font-weight: 800;
-    font-family: var(--fuente-titulo);
-    color: var(--primary);
+        align-items: flex-start;
 
-}
+    }
 
-.card-body h1>strong {
-    color: var(--text);
-    font-size: 1.2rem;
-}
+    .discovery-card__img img {
+        width: 50px;
 
-.card-body h1>small {
-    font-size: 1.2rem;
-}
-
-.data {
-    font-size: 1.2em;
-    color: var(--secondary);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    /* Centrar el botón */
-    margin-top: auto;
-    /* Empuja el botón al final de la tarjeta */
-}
-
-.button a {
-    text-decoration: none;
-    color: white;
-    background-color: var(--accent);
-    border-radius: 5px;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    width: 80%;
-    /* Mantener el ancho */
-    transition: background-color 0.3s;
-}
-
-.button a:hover {
-    background-color: var(--vibrant);
-}
-
-.image-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-
-    max-height: 300px;
-
-}
-
-.chatea img {
-    max-height: 400px;
-
-
-}
-
-.alta img {
-    max-height: 400px;
+        height: 50px;
+    }
 }

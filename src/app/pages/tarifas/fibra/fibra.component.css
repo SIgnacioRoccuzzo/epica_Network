@@ -1,9 +1,9 @@
 /* Importar estilos globales */
 @import url('../../../../styles.css');
 
+/* Contenedor general */
 .container {
     padding: 20px;
-    /* Espacio interno */
 }
 
 .cards {
@@ -13,6 +13,7 @@
     gap: 50px;
 }
 
+/* Estilo para tarjetas de producto */
 .product-card {
     flex: 1 1 300px;
     max-width: 300px;
@@ -29,67 +30,30 @@
 
 .product-card:hover {
     box-shadow: var(--card-hover-box-shadow);
-
 }
 
 .product-card__info {
     padding: 5px;
-
-}
-
-.product-card__info .text {
-    color: #666;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    gap: .5rem;
-    font-family: var(--fuente-cuerpo);
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 2rem;
 }
 
 .product-card__type {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
 .product-card__type .product-info {
-    --min-height: 2rem;
-    align-items: baseline;
     display: flex;
     justify-content: center;
+    align-items: baseline;
     min-height: 2rem;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .product-card__type .product-info .icon {
     height: 1.5rem;
     width: 1.5rem;
-}
-
-.product-card__type .text-p-02-medium {
-    font-family: var(--fuente-cuerpo);
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-}
-
-.product-card__type .text-subheading-01 {
-    font-family: var(--fuente-cuerpo);
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 2rem;
-}
-
-.product-card__type .text-p-01-regular {
-    font-family: var(--fuente-titulo);
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.125rem;
-
 }
 
 .product-card__action {
@@ -107,95 +71,64 @@
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
-    /* Menor espacio entre elementos */
     padding: 10px;
-    color: var(--text-color);
 }
 
 .tarifa-price>p {
     font-size: 3rem;
     font-weight: 700;
     margin: 0;
-    /* Eliminar margen para evitar separación */
 }
 
 .tarifa-price__regularity {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
 }
 
-.tarifa-price__regularity .mes {
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.tarifa-price__regularity .iva {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.tarifa-price__regularity .tariff-message {
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-top: 5px;
-    color: gray;
-}
-
 .checklist {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
+}
 
+.checklist li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    padding: 0;
 }
 
 .fas.fa-check-circle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-right: 5px;
     color: var(--primary);
-    margin: 5px;
 }
 
 a.interes {
     background-color: var(--accent);
     color: white;
     padding: 0.625rem;
-    /* Ajusta el padding según sea necesario */
     text-align: center;
     text-decoration: none;
     display: block;
-    /* Asegura que el botón ocupa todo el ancho */
     font-size: 0.875rem;
     cursor: pointer;
     border-radius: 0.625rem;
     transition: background-color 0.3s ease;
     width: 100%;
-    /* Ocupa todo el ancho disponible */
 }
 
-/* Ajustes para el hover del botón */
 a.interes:hover {
     background-color: var(--highlight);
-    /* Cambia el color al pasar el cursor */
     box-shadow: var(--button-hover-box-shadow);
-    /* Sombra al pasar el cursor */
 }
 
-@media (max-width: 768px) {
-    .product-card {
-        flex: 1 1 100%;
-
-        max-width: 100%;
-
-    }
-}
-
-
-
-
-
-.bloque_faq {
-    background: var(--background);
+/* Estilos para secciones FAQ */
+.fqa {
     padding: 64px 0 20px 0;
+    background: var(--background);
 }
 
 .bloque_faq h2 {
@@ -212,16 +145,6 @@ a.interes:hover {
     max-width: 1350px;
 }
 
-#accordion h3 {
-    color: var(--text);
-    font-size: 51.88px;
-    line-height: 51.88px;
-    display: block;
-    letter-spacing: 1px;
-    text-align: center;
-    margin: 40px 0;
-}
-
 #accordion .card {
     background: var(--background);
     border: none;
@@ -230,19 +153,18 @@ a.interes:hover {
 }
 
 #accordion .card-header {
-    border-bottom: none;
-    background-color: var(--background);
+    background: var(--background);
     display: flex;
     justify-content: space-between;
-
+    border-bottom: none;
 }
 
 #accordion .card-header h5 a {
     color: var(--secondary);
     font-size: 21px;
     line-height: 30px;
-    display: block;
     text-decoration: none;
+    display: block;
 }
 
 #accordion .card-body {
@@ -255,15 +177,11 @@ a.interes:hover {
 #accordion [data-toggle="collapse"]:after {
     display: inline-block;
     font: normal normal normal 16px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\f078";
     transform: rotate(180deg);
     transition: all linear 0.25s;
     color: var(--accent);
-    margin-top: 5px;
+    position: relative;
 }
 
 #accordion [data-toggle="collapse"].collapsed:after {
@@ -286,18 +204,20 @@ a.interes:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 
+    .checklist li {
+        font-size: 0.91259rem;
+    }
+}
 
-/* Estilos responsivos */
+/* Ajustes responsivos para pantallas más pequeñas */
 @media (min-width: 300px) and (max-width: 1200px) {
     h1 {
         margin-top: 12rem;
-        /* Ajusta el margen superior para pantallas pequeñas */
-    }
-
-    .pricing-card {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 }

@@ -2,105 +2,200 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../../styles.css');
 
-.tarjetas {
+.container {
+    padding: 20px;
+    /* Espacio interno */
+}
+
+.cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    align-items: flex-start;
+    gap: 50px;
+}
+
+.product-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: var(--card-transition);
+    padding: 5px;
+}
+
+.product-card:hover {
+    box-shadow: var(--card-hover-box-shadow);
 
 }
 
-.movil-image {
-    height: 4rem;
+.product-card__info {
+    padding: 5px;
+
+}
+
+.product-card__info .text {
+    color: #666;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 0.625rem;
-
-}
-
-.image {
-    width: 15.625rem;
-    height: auto;
-}
-
-.data {
-    font-size: 2rem;
-    color: var(--background);
-    font-family: var(--fuente-titulo);
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-
-.tarifa_precio p {
-    font-size: 2rem;
-    color: var(--text);
-    font-weight: bold;
-    margin: 0;
-}
-
-.tarifa_precio strong {
+    margin-bottom: 1rem;
+    gap: .5rem;
+    font-family: var(--fuente-cuerpo);
     font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
 }
 
-.tarifa_precio small {
-    font-size: 0.8rem;
-    display: inline-block;
-    margin: 0;
-    /* Sin margen adicional */
+.product-card__type {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-p span {
+.product-card__type .product-info {
+    --min-height: 2rem;
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    min-height: 2rem;
+    gap: .5rem;
+}
+
+.product-card__type .product-info .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.product-card__type .text-p-02-medium {
+    font-family: var(--fuente-cuerpo);
     font-size: 1rem;
-    font-weight: normal;
-    display: inline-block;
-    gap: 0.3125rem;
-    color: var(--text);
+    font-weight: 500;
+    line-height: 1.5rem;
 }
 
-#name {
-    background-color: #fb8fe0;
-    border-radius: 0.9375rem;
-    width: 13.75rem;
+.product-card__type .text-subheading-01 {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.product-card__type .text-p-01-regular {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.125rem;
 
 }
 
-#name p {
-    color: #881c9e;
-    font-size: 1.2rem;
-    margin: 0 auto;
+.product-card__action {
+    align-items: center;
+    background: #fff;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
 }
 
-strong {
-    font-weight: bold;
+.tarifa-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    /* Menor espacio entre elementos */
+    padding: 10px;
+    color: var(--text-color);
 }
 
-ul {
+.tarifa-price>p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    /* Eliminar margen para evitar separación */
+}
+
+.tarifa-price__regularity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tarifa-price__regularity .mes {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.tarifa-price__regularity .iva {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tarifa-price__regularity .tariff-message {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 5px;
+    color: gray;
+}
+
+.checklist {
     list-style: none;
     padding: 0;
-
+    margin: 0;
 }
 
-ul li {
-    color: var(--text);
-    text-align: start;
-    margin: 15px;
+.checklist li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    padding: 0;
 }
-
 
 .fas.fa-check-circle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-right: 5px;
     color: var(--primary);
-    margin: 5px;
 }
 
-
-.button-container {
-    width: 90%;
+a.interes {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.625rem;
+    /* Ajusta el padding según sea necesario */
     text-align: center;
+    text-decoration: none;
+    display: block;
+    /* Asegura que el botón ocupa todo el ancho */
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+}
+
+/* Ajustes para el hover del botón */
+a.interes:hover {
+    background-color: var(--highlight);
+    /* Cambia el color al pasar el cursor */
+    box-shadow: var(--button-hover-box-shadow);
+    /* Sombra al pasar el cursor */
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 100%;
+
+        max-width: 100%;
+
+    }
 }
 
 .bloque_cards {
@@ -179,12 +274,6 @@ ul li {
 @media (min-width: 18.75rem) and (max-width: 75rem) {
     h1 {
         margin-top: 14rem;
-    }
-
-    .pricing-card {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .bloque_cards {

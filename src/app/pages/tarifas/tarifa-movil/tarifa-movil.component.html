@@ -1,43 +1,47 @@
-<section class="container tarifas">
-    <h1 class="mb-3 text-center">Tarifas de Móvil de Épica</h1>
-    <div class="tarjetas">
-        <div *ngFor="let plan of tarifasMovil">
-        </div>
-        <div class="pricing-card col-12 col-md-6 col-xl-3 mb-4 text-center" *ngFor="let movil of tarifasMovil">
-            <div class="movil-image">
-                <img class="image"
-                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2026.png?alt=media&token=d1012426-607f-45db-86a7-d29c77633b18"
-                    alt="movil">
-            </div>
-            <h3 class="data">{{ movil.gb }}</h3>
-            <div id="name" class="container">
-                <p><strong> {{movil.name}}</strong></p>
-            </div>
-            <ul class="lista_checks">
-                <li>
-                    <i class="fas fa-check-circle"></i>
-                    <strong>Sin permanencia.</strong>
-                </li>
-                <li>
-                    <i class="fas fa-check-circle"></i>
-                    <strong>Llamadas ilimitadas.</strong>
-                </li>
-                <li>
-                    <i class="fas fa-check-circle"></i>
-                    <strong>Cobertura en todo el territorio nacional.</strong>
-                </li>
-            </ul>
-            <div class="tarifa_precio">
-                <p>{{ movil.price }}<strong>€ </strong><small>IVA incl.</small></p>
-            </div>
-            <div class="button-container">
-                <a class="interes" [href]="whatsappLink">Me interesa</a>
-            </div>
+<section class="container">
+    <h1 class="text-center mb-5">Tarifas de Móvil</h1>
+    <div class="cards"> <!-- Contenedor para las tarjetas -->
+        <div class="product-card" *ngFor="let tarifa of tarifasMovil">
+            <div class="product-card__info">
+                <h2 class="text">{{ tarifa.type }}</h2>
+                <div class="product-card__type">
+                    <div class="product-info mb-3">
+                        <img class="icon"
+                            src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-fourth-generation-cellular-plus-and-internet-connectivity-logotype-96.png?alt=media&token=051d8eb3-74c1-414a-89b1-603c7ef335a8"
+                            alt="Móvil" loading="lazy">
+                        <span class="text-p-02-medium">Móvil</span>
+                        <span class="text-subheading-01">{{ tarifa.gb }}</span>
+                    </div>
+                    <span class="text-subheading-01">Llamadas {{ tarifa.minutes }}</span>
+                    <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
+                </div>
+                <div class="product-card__action">
+                    <div class="tarifa-price mb-4">
+                        <p>{{ tarifa.price }}</p>
+                        <div class="tarifa-price__regularity">
+                            <span class="mes">€/mes</span>
+                            <span class="iva">IVA incl.</span>
+                            <small class="tariff-message">Precio final</small>
+                        </div>
+                    </div>
 
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Sin coste de línea fija, nada de cuotas extras.</li>
+                        <li><i class="fas fa-check-circle"></i> Con o sin permanencia. Tú eliges.</li>
+                        <li><i class="fas fa-check-circle"></i> Velocidad simétrica según disponibilidad geográfica.
+                        </li>
+                    </ul>
+                    <div class="container">
+                        <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
-<section class="container cards info">
+<section class="container swipper info">
     <article class="bloque_cards text-center">
         <div class="container">
             <h2 class="mb-3 text-center">Un servicio móvil sencillo</h2>

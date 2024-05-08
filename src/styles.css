@@ -24,7 +24,7 @@
     --font-size-large: 1.5em;
 
     /* Espaciados y dimensiones */
-    --margin-top: 11.375rem;
+    --margin-top: 10.375rem;
     /* Espaciado superior */
     --radio-pequeno: 0.3125rem;
     /* Radio pequeño */
@@ -232,28 +232,13 @@ body {
 h1 {
     font-family: var(--fuente-titulo);
     margin-top: var(--margin-top);
+    margin-bottom: 50px;
     font-weight: var(--font-weight);
     font-size: var(--font-size);
     color: var(--text);
     /* Uso de la variable para el color del texto */
 }
 
-/* Estilos para tarjetas */
-.pricing-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    /*  border: 2px solid black; */
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--card-box-shadow);
-    padding: var(--card-padding);
-    margin: 1.25rem;
-    text-align: center;
-    width: 20.625rem;
-
-}
 
 
 

@@ -1,59 +1,187 @@
 <section class="header"> <!-- Contenedor principal, ancho fijo y centrado -->
-    <div class="titulo text-center"> <!-- Mantener el texto centrado -->
+    <div class="titulo"> <!-- Mantener el texto centrado -->
         <h2>Selecciona tu plan</h2>
         <h4>Todos nuestros planes incluyen tecnología 5G</h4>
     </div>
-    <article class="tarifas">
-        <div class="container">
-            <ul class="filtros-menu">
-                <li (click)="filtrarTarifas('Fibra y Móvil')" [class.selected]="filtroActual === 'Fibra y Móvil'">Fibra
-                    y
-                    Móvil</li>
-                <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
-                <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
-            </ul>
-            <div class="cards">
-
-                <div class="card" *ngFor="let tarifa of tarifasFiltradas">
-                    <div>
-                        <div class="card-header">
-                            <h4>{{ tarifa.name }}</h4>
+    <article class="container">
+        <ul class="filtros-menu">
+            <li (click)="filtrarTarifas('Fibra y Móvil')" [class.selected]="filtroActual === 'Fibra y Móvil'">Fibra
+                y
+                Móvil</li>
+            <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
+            <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
+        </ul>
+        <div class="cards mb-6"> <!-- Contenedor para las tarjetas -->
+            <div class="product-card" *ngFor="let tarifa of tarifasFiltradas"> <!-- Clase corregida -->
+                <div class="product-card__info">
+                    <h2 class="text">{{ tarifa.type }}</h2>
+                    <div class="product-card__type">
+                        <div class="product-info mb-3">
+                            <img class="icon"
+                                src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
+                                alt="Fibra" loading="lazy">
+                            <span class="text-subheading-01">{{ tarifa.speed }}</span>
+                            <span class="text-subheading-01">{{ tarifa.gb }}</span>
                         </div>
-                        <div class="card-body">
-                            <div class="price">
-                                <h1 class="my-0 font-weight-normal">
-                                    {{ tarifa.price }} <strong class="text-muted">€</strong>
-                                    <small class="text-muted">/mes</small>
-                                </h1>
+                        <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
+                    </div>
+                    <div class="product-card__action">
+                        <div class="tarifa-price mb-4">
+                            <p>{{ tarifa.price }}</p>
+                            <div class="tarifa-price__regularity">
+                                <span class="mes">€/mes</span>
+                                <span class="iva">IVA incl.</span>
+                                <small class="tariff-message">Precio final</small>
                             </div>
+                        </div>
 
-                            <div class="data">
-                                <p>{{ tarifa.gb }}</p>
-                            </div>
-
-                            <div class="button">
-                                <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
-                            </div>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check-circle"></i> Sin coste de línea fija, nada de cuotas extras.</li>
+                            <li><i class="fas fa-check-circle"></i> Con o sin permanencia. Tú eliges.</li>
+                            <li><i class="fas fa-check-circle"></i> Velocidad simétrica según disponibilidad geográfica.
+                            </li>
+                        </ul>
+                        <div class="container">
+                            <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </article>
+</section>
+<section class="bg-highlighted">
+    <div class="accelerator">
+        <div class="accelerator-grid">
+            <a routerLink="/fibra-y-movil" class="accelerator-item" title="Ofertas Fibra y Móvil: epica-network">
+                <div class="accelerator-item__icons">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
+                        alt="Fibra" loading="lazy">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO3aQQrCMBSE4Vn1BnoX9XJutHo7vUPrNUYKKRQ3zmgTBOeDQBel6SP/MsAf6wBcATwAcOU1AujLHtVdKgzwus4tBhnLZjvh3ePi56bnd/aLk6lu/jHFFsAdwA3ApsL3v1J7I2YQU05ExKRlSloiJi1T0hIxaZmSlohJy5S0RExapqQlYtIyJS0Rk5YpaYmYtExJS8SkZUpaIiYtU9ISMWmZkpaIScuUtERMWh9e4ZiuW6ztUL49oIG+waWaU4tBujLMfDJrrqEM0eSa0096Av/rFDNorFGxAAAAAElFTkSuQmCC">
+                </div>
+                <h4 class="text-p-02-regular">Fibra + Móvil</h4>
+            </a>
 
+            <a routerLink="/movil" class="accelerator-item" title="Tarifas móvil a precios increíbles, epica-network">
+                <div class="accelerator-item__icons">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO3aQQrCMBSE4Vn1BnoX9XJutHo7vUPrNUYKKRQ3zmgTBOeDQBel6SP/MsAf6wBcATwAcOU1AujLHtVdKgzwus4tBhnLZjvh3ePi56bnd/aLk6lu/jHFFsAdwA3ApsL3v1J7I2YQU05ExKRlSloiJi1T0hIxaZmSlohJy5S0RExapqQlYtIyJS0Rk5YpaYmYtExJS8SkZUpaIiYtU9ISMWmZkpaIScuUtERMWh9e4ZiuW6ztUL49oIG+waWaU4tBujLMfDJrrqEM0eSa0096Av/rFDNorFGxAAAAAElFTkSuQmCC">
+                </div>
+                <h4 class="text-p-02-regular">Móvil</h4>
+            </a>
+            <a routerLink="/fibra" class="accelerator-item"
+                title="Sólo Fibra Óptica: Ofertas de internet en casa | epica-network">
+                <div class="accelerator-item__icons">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
+                        alt="Fibra" loading="lazy">
+                </div>
+                <h4 class="text-p-02-regular">Fibra</h4>
+            </a>
+        </div>
+    </div>
 </section>
 <section class="image-section">
-    <div class="chatea">
+    <div class="banner">
         <figure>
-            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2016.png?alt=media&token=c984cb9a-b678-4384-ad55-795ce8cce886"
-                alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3359.PNG?alt=media&token=5233afa6-e175-4743-b3db-773fc28e269d"
+                alt="planes">
         </figure>
     </div>
-    <div class="alta">
+    <div class="banner">
         <figure>
-            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fplanes%2FArtboard%2017.png?alt=media&token=49a7d110-4127-4f3a-bcb5-e76114cf6449"
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3362.PNG?alt=media&token=865f4995-00cb-47eb-a980-6332bca6f60c"
                 alt="Imagen">
         </figure>
+    </div>
+    <div class="banner">
+        <figure>
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3361.PNG?alt=media&token=874ebb2b-1c56-4ea4-9447-ae9b17d4f36c"
+                alt="planes">
+        </figure>
+    </div>
+</section>
+
+<section class="p-section">
+    <div class="container">
+        <div class="title-module text-center m-block-g">
+            <h2 class="text-eyebrow color-font-mid">Únete a Épica Network</h2>
+            <h2 class="text-heading-02">¿Qué significa ser parte de Épica Network?</h2>
+            <p class="text-p-02-regular">
+                Ser de Épica Network te permite elegir y personalizar tus planes, con ventajas y sin complicaciones. ¡Es
+                tu red, tú
+                decides!
+            </p>
+        </div>
+        <div id="ventajas-home" class="discovery-card__grid">
+            <div class="discovery-card is-right area1">
+                <div class="discovery-card__info">
+                    <h3 class="text-heading-01 mb-5">Sin restricciones</h3>
+                    <p class="text-p-02-regular">En Épica Network, no te imponemos contratos largos ni cláusulas
+                        complicadas. Disfruta de nuestros planes móviles sin compromiso de permanencia, y para la fibra,
+                        solo hay una permanencia mínima de 3 meses. ¡Sin ataduras!
+                    </p>
+                </div>
+                <div class="discovery-card__img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-meditacio%CC%81n-guru%CC%81-64.png?alt=media&token=9fcfcce3-2d03-472b-854e-03af8b101815"
+                        alt="Sin restricciones" loading="lazy">
+                </div>
+            </div>
+
+            <div class="discovery-card is-right area2">
+                <div class="discovery-card__info">
+                    <h3 class="text-heading-01 mb-5">Precios transparentes</h3>
+                    <p class="text-p-02-regular">Con Épica Network, el precio que ves es el que pagarás, sin cargos
+                        ocultos ni sorpresas. Obtén la mejor calidad al precio más justo, pagando solo por lo que
+                        realmente usas.
+                    </p>
+                </div>
+                <div class="discovery-card__img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-euro-etiqueta-de-precio-80.png?alt=media&token=25226920-a6a2-48e1-8dfc-1ef6d70fae2e"
+                        alt="Precios transparentes" loading="lazy">
+                </div>
+            </div>
+
+            <div class="discovery-card">
+                <div class="discovery-card__info">
+                    <h3 class="text-heading-01 mb-5">Soporte al cliente 24/7</h3>
+                    <p class="text-p-02-regular">En Épica Network, creemos en un servicio de atención al cliente
+                        excepcional. Nuestro equipo está disponible 24/7 para resolver tus dudas y ayudarte con
+                        cualquier problema que puedas tener. La asistencia que necesitas, siempre a tu alcance.
+                    </p>
+                </div>
+                <div class="discovery-card__img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-24-7-signo-abierto-96.png?alt=media&token=ad727103-98d9-4579-b74f-e29d52e30979"
+                        alt="Soporte al cliente" loading="lazy">
+                </div>
+            </div>
+
+            <div class="discovery-card">
+                <div class="discovery-card__info">
+                    <h3 class="text-heading-01 mb-5">Roaming global</h3>
+                    <p class="text-p-02-regular">Con Épica Network, puedes disfrutar de roaming internacional de
+                        calidad. Siempre que estés en un país de la Zona 1, usa tus datos como si estuvieras en casa.
+                        Mantente conectado en cualquier parte del mundo.
+                    </p>
+                </div>
+                <div class="discovery-card__img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-traveler-64.png?alt=media&token=40c3667d-1c20-45b5-af11-eae18cef1a30"
+                        alt="Roaming global" loading="lazy">
+                </div>
+            </div>
+
+            <div class="discovery-card is-large area5">
+                <div class="discovery-card__info">
+                    <h3 class="text-heading-01 mb-5">Conexión 4G+</h3>
+                    <p class="text-p-02-regular">Disfruta de una conexión rápida y confiable con Épica Network. La
+                        tecnología 4G+ te permite descargar y compartir contenido rápidamente, sin interrupciones.
+                    </p>
+                </div>
+                <figure class="discovery-card__img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-cohete-64.png?alt=media&token=aa96c7e8-9e4a-48aa-a014-2d5d7493224f"
+                        alt="Conexión 4G+" loading="lazy">
+                </figure>
+            </div>
+        </div>
     </div>
 </section>
