@@ -1,99 +1,66 @@
 @import url('../../../../../styles.css');
 
-/* Importa el CSS adicional */
-/* Estilos para la tarjeta */
 .card-body {
     background-color: var(--background);
     border-radius: 8px;
     padding: 20px;
-    /* Espacio interno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para profundidad */
     font-size: 1rem;
-    /* Tamaño del texto */
     width: 50%;
-    /* Ancho más amplio para acomodar columnas */
     margin: 20px auto;
-    /* Centra la tarjeta */
     margin-top: var(--margin-top);
 }
 
-/* Estilo para la fila con separación de columnas */
 .row {
     display: flex;
-    /* Usar Flexbox para la fila */
     justify-content: space-between;
-    /* Separar las columnas */
     align-items: center;
-    /* Alinear verticalmente */
     flex-wrap: nowrap;
-    /* No permitir que las columnas se ajusten automáticamente */
 }
 
-/* Estilo para la columna */
 .col-4 {
     flex: 0 0 33.33%;
-    /* Ancho para columnas col-4 */
     max-width: 33.33%;
-    /* Máximo ancho para las columnas */
 }
 
-/* Estilo para el título */
 .card-body h2 {
     font-family: var(--fuente-titulo);
     color: var(--primary);
     font-size: 2.9rem;
-    /* Ajustar tamaño del título */
     margin: 0;
-    /* Sin margen adicional */
 }
 
-/* Estilo para el cuerpo del texto */
 .card-body p {
     color: var(--text);
     font-size: 1rem;
     font-weight: bold;
-    /* Ajuste del tamaño del texto */
     margin: 0;
-    /* Sin margen adicional */
 }
 
-/* Estilo para el precio y elementos asociados */
 .tarifa_precio {
     white-space: nowrap;
-    /* Evitar que el texto se rompa */
     font-size: 1.2rem;
-    /* Tamaño del texto para el precio */
 }
 
 .tarifa_precio p {
     display: inline-block;
-    font-size: 2rem;
-    /* Tamaño para el precio */
+    font-size: 1.825rem;
     font-weight: 700;
     margin: 0;
-    /* Sin margen adicional */
 }
 
 strong {
-    font-size: 1.5rem;
-    /* Tamaño para el texto en negrita */
+    font-size: 1.3rem;
 }
 
 .tarifa_precio small {
     display: inline-block;
-    font-size: 0.8rem;
-    /* Tamaño pequeño para detalles */
-    margin: 0;
-    /* Sin margen adicional */
+    font-size: 0.725rem;
 }
 
-/* Estilo para íconos y el botón */
 .iconos {
     display: inline-flex;
-    /* Mantener íconos en línea */
     gap: 10px;
-    /* Espacio entre íconos */
 }
 
 .cta {
@@ -101,81 +68,55 @@ strong {
     color: var(--background);
     border-radius: 8px;
     padding: 10px;
-    /* Espacio para el botón */
     font-size: 1rem;
-    /* Tamaño del texto */
     transition: background-color 0.3s;
 }
 
 .cta:hover {
     background-color: var(--vibrant);
-    /* Cambio de color al pasar el ratón */
 }
 
-/* Estilo para la lista de beneficios */
 .lista_checks {
     font-family: var(--fuente-cuerpo);
-    /* Fuente para el cuerpo */
     font-size: var(--size-text);
-    /* Tamaño del texto */
     color: var(--text);
-    /* Color del texto */
     padding: 10px;
-    /* Espacio interno */
     border-radius: 8px;
-    /* Bordes redondeados */
     background-color: var(--accent);
-    /* Fondo */
 }
 
 .lista_checks ul {
     list-style-type: disc;
-    /* Estilo de lista */
     padding-left: 20px;
-    /* Espacio a la izquierda */
 }
 
 .lista_checks li {
     margin-bottom: 10px;
-    /* Espacio entre elementos de la lista */
     color: var(--background);
-    /* Color del texto */
 }
 
-/* Configuración para el diseño responsivo */
 .row {
-    display: flex;
-    /* Habilita el modelo flex */
     flex-wrap: wrap;
-    /* Permite ajuste automático */
 }
 
 .col-12 {
     flex: 0 0 100%;
-    /* Ocupa todo el ancho */
     max-width: 100%;
-    /* Máximo ancho */
 }
 
-/* Estilo para la columna para mantener el diseño compacto */
 .col-md-6,
 .col-lg-4,
 .col-lg-6 {
     flex: 0 0 100%;
-    /* Todas las columnas ocupan el 100% del ancho */
     max-width: 100%;
-    /* Máximo ancho */
 }
 
-/* Estilo para la lista responsiva */
 @media (max-width: 768px) {
     .card-body {
         width: 100%;
-        /* Ancho reducido para la tarjeta */
     }
 
     .card-body .cta {
         font-size: 1rem;
-        /* Tamaño del texto del botón */
     }
 }

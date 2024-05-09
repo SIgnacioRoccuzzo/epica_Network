@@ -28,6 +28,8 @@ import { FibraMovilDetailComponent } from './pages/tarifas/fibra-movil/fibra-mov
 import { MovilDetailComponent } from './pages/tarifas/tarifa-movil/movil-detail/movil-detail.component';
 import { TvDetailComponent } from './pages/tarifas/tv/tv-detail/tv-detail.component';
 import { TarifasComponent } from './components/tarifas/tarifas.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 register();
@@ -60,7 +62,8 @@ register();
     CommonModule, // Necesario para directivas como *ngFor
     AppRoutingModule, // Importa las rutas de la aplicación
     HttpClientModule, // Para llamadas HTTP
-    RouterModule, // Para rutas dinámicas
+    RouterModule, provideFirebaseApp(() => initializeApp({ "projectId": "epica-network", "appId": "1:940276320481:web:dbf7200664ed42875d0fa0", "databaseURL": "https://epica-network-default-rtdb.europe-west1.firebasedatabase.app", "storageBucket": "epica-network.appspot.com", "apiKey": "AIzaSyDMe-S_zitBzFSw1XPsQl-gDk0AyW3gqDA", "authDomain": "epica-network.firebaseapp.com", "messagingSenderId": "940276320481" })), provideStorage(() => getStorage()), // Para rutas dinámicas
+
 
   ],
   providers: [],

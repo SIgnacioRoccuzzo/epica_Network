@@ -2,101 +2,99 @@
 
 .card-body {
     background-color: var(--background);
-    /* Fondo de la tarjeta */
-    border: 1px solid var(--secondary);
-    /* Borde */
     border-radius: 8px;
-    /* Bordes redondeados */
     padding: 20px;
-    /* Espacio interno */
-    margin: 20px auto;
-    /* Margen para separación */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para profundidad */
-    font-family: var(--fuente-cuerpo);
-    /* Fuente del cuerpo del texto */
-    font-size: var(--size-text);
-    /* Tamaño del cuerpo del texto */
+    font-size: 1rem;
+    width: 50%;
+    margin: 20px auto;
+    margin-top: var(--margin-top);
 }
 
-/* Estilo para el título */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
 .card-body h2 {
     font-family: var(--fuente-titulo);
     color: var(--primary);
-    font-size: 3rem;
-    margin-bottom: 10px;
-
+    font-size: 2.9rem;
+    margin: 0;
 }
 
-/* Estilo para el cuerpo del texto */
 .card-body p {
     color: var(--text);
-    /* Color del texto */
-    margin: 5px 0;
-    /* Margen para separación */
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
 }
 
-.card-body .tarifa_datos p {
-    font-size: 3.5rem;
-    font-weight: 900;
+.tarifa_precio {
+    white-space: nowrap;
+    font-size: 1.2rem;
 }
 
-/* Botón de acción (CTA) */
-.card-body .cta {
+.tarifa_precio p {
+    display: inline-block;
+    font-size: 1.825rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+strong {
+    font-size: 1.3rem;
+}
+
+.tarifa_precio small {
+    display: inline-block;
+    font-size: 0.725rem;
+}
+
+.iconos {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.cta {
     background-color: var(--accent);
-    /* Color de acento */
     color: var(--background);
-    /* Color de fondo */
-    border: none;
-    /* Sin borde */
     border-radius: 8px;
-    /* Bordes redondeados */
-    padding: 10px 20px;
-    /* Espacio interno */
-    font-size: var(--size-text);
-    /* Tamaño del texto */
-    cursor: pointer;
-    /* Cursor en forma de mano */
+    padding: 10px;
+    font-size: 1rem;
     transition: background-color 0.3s;
-    /* Transición suave */
 }
 
-.card-body .cta:hover {
+.cta:hover {
     background-color: var(--vibrant);
-    /* Color al pasar el ratón */
 }
 
-/* Estilo para la lista de beneficios */
 .lista_checks {
     font-family: var(--fuente-cuerpo);
-    /* Fuente del cuerpo */
     font-size: var(--size-text);
-    /* Tamaño del texto */
     color: var(--text);
-    /* Color del texto */
     padding: 10px;
-    /* Espacio interno */
     border-radius: 8px;
-    /* Bordes redondeados */
-    background-color: var(--secondary);
-    /* Color de fondo de la lista */
+    background-color: var(--accent);
 }
 
 .lista_checks ul {
     list-style-type: disc;
-    /* Tipo de lista */
     padding-left: 20px;
-    /* Espacio para la sangría */
 }
 
 .lista_checks li {
     margin-bottom: 10px;
-    /* Espacio entre elementos */
     color: var(--background);
-    /* Color del texto en la lista */
 }
 
-/* Configuración para el diseño responsivo con Bootstrap */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -107,34 +105,19 @@
     max-width: 100%;
 }
 
-.col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.col-lg-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-}
-
-.col-lg-8 {
-    flex: 0 0 66.67%;
-    max-width: 66.67%;
+.col-md-6,
+.col-lg-4,
+.col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .card-body {
+        width: 100%;
     }
 
-    .col-lg-4 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .col-lg-8 {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .card-body .cta {
+        font-size: 1rem;
     }
 }

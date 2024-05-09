@@ -75,6 +75,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+    margin-top: 60px;
 }
 
 .product-card {
@@ -99,6 +100,7 @@
 .product-card__info {
     padding: 5px;
 
+
 }
 
 .product-card__info .text {
@@ -108,7 +110,7 @@
     margin-bottom: 1rem;
     gap: .5rem;
     font-family: var(--fuente-cuerpo);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 2rem;
 }
@@ -143,14 +145,14 @@
 
 .product-card__type .text-subheading-01 {
     font-family: var(--fuente-cuerpo);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 2rem;
 }
 
 .product-card__type .text-p-01-regular {
     font-family: var(--fuente-titulo);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.125rem;
 
@@ -158,7 +160,7 @@
 
 .product-card__action {
     align-items: center;
-    background: #fff;
+    background: var(--background);
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -256,6 +258,95 @@ a.interes:hover {
     }
 }
 
+/* RED Epica */
+
+.baner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background);
+    margin-top: 50px;
+    border-radius: 25px;
+
+}
+
+.area1 {
+    margin-right: 10px;
+    /* Espacio entre la imagen y el texto */
+}
+
+.area2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    /* Hacer "Red Épica" en negrita */
+}
+
+.area3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.area4 {
+    margin-right: 10px;
+}
+
+.area5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+    flex: 1;
+    /* Permitir que el texto se ajuste al espacio disponible */
+}
+
+.cober {
+    width: 70%;
+}
+
+.cobertura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--background);
+    border-radius: 25px;
+
+}
+
+.area4 {
+    margin: 0;
+
+}
+
+.area5 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a.interesa {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.625rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    transition: background-color 0.3s ease;
+    width: 20%;
+}
+
+/* Ajustes para el hover del botón */
+a.interesa:hover {
+    background-color: var(--highlight);
+    box-shadow: var(--button-hover-box-shadow);
+
+}
+
 /* INICIO MENU ICON */
 
 .bg-highlighted {
@@ -322,6 +413,8 @@ a.interes:hover {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
+    border-radius: 25px;
+
 }
 
 figure {
@@ -359,25 +452,25 @@ img {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+
 }
 
 /* Estilos para las tarjetas */
 .discovery-card {
     border: 1px solid #ddd;
-    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    background: #fff;
     flex-basis: 48%;
     display: flex;
     flex-direction: column;
+
 }
 
 .discovery-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Imágenes a la derecha y en la parte superior */
+
 .discovery-card__img {
     align-self: flex-end;
     display: flex;
@@ -389,15 +482,16 @@ img {
     width: 70px;
     height: 70px;
     object-fit: contain;
+
 }
 
-/* Estilo para la información dentro de las tarjetas */
+
 .discovery-card__info {
     text-align: left;
     flex: 1;
 }
 
-/* Responsividad para pantallas más pequeñas */
+
 @media (max-width: 768px) {
     .discovery-card__grid {
         flex-direction: column;
@@ -406,17 +500,29 @@ img {
 
     .discovery-card {
         flex-basis: 100%;
-        /* Tarjetas ocupan todo el ancho */
+
     }
 
     .discovery-card__img {
         justify-content: flex-end;
-        /* Imágenes siempre a la derecha */
+
     }
 
     .discovery-card__img img {
         width: 50px;
         height: 50px;
+    }
+
+    .cobertura {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px;
+
+    }
+
+    a.interesa {
+        width: 100%;
+
     }
 }
 
@@ -436,13 +542,21 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
 }
 
 .accelerator-item {
     text-decoration: none;
     color: black;
     text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease;
+
+}
+
+.accelerator-item:hover {
+    transform: scale(1.05);
+    /* Efecto de hover para mejorar la interacción */
 }
 
 .accelerator-item__icons {
@@ -585,6 +699,14 @@ img {
 
 }
 
+.discovery-card:last-child {
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 /* Responsividad para pantallas más pequeñas */
 @media (max-width: 768px) {
     .discovery-card__grid {
@@ -608,5 +730,9 @@ img {
         width: 50px;
 
         height: 50px;
+    }
+
+    .accelerator-grid {
+        gap: 50px;
     }
 }

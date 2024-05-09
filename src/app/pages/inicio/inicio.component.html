@@ -1,5 +1,5 @@
-<section class="header"> <!-- Contenedor principal, ancho fijo y centrado -->
-    <div class="titulo"> <!-- Mantener el texto centrado -->
+<section class="header">
+    <div class="titulo">
         <h2>Selecciona tu plan</h2>
         <h4>Todos nuestros planes incluyen tecnología 5G</h4>
     </div>
@@ -11,11 +11,13 @@
             <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
             <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
         </ul>
-        <div class="cards mb-6"> <!-- Contenedor para las tarjetas -->
-            <div class="product-card" *ngFor="let tarifa of tarifasFiltradas"> <!-- Clase corregida -->
+        <div class="cards mb-6">
+            <div class="product-card" *ngFor="let tarifa of tarifasFiltradas">
                 <div class="product-card__info">
                     <h2 class="text">{{ tarifa.type }}</h2>
+
                     <div class="product-card__type">
+                        <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
                         <div class="product-info mb-3">
                             <img class="icon"
                                 src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
@@ -23,7 +25,8 @@
                             <span class="text-subheading-01">{{ tarifa.speed }}</span>
                             <span class="text-subheading-01">{{ tarifa.gb }}</span>
                         </div>
-                        <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
+                        <span class="text-subheading-01 mb-4">{{ tarifa.minutes }}</span>
+
                     </div>
                     <div class="product-card__action">
                         <div class="tarifa-price mb-4">
@@ -36,9 +39,9 @@
                         </div>
 
                         <ul class="checklist">
-                            <li><i class="fas fa-check-circle"></i> Sin coste de línea fija, nada de cuotas extras.</li>
-                            <li><i class="fas fa-check-circle"></i> Con o sin permanencia. Tú eliges.</li>
-                            <li><i class="fas fa-check-circle"></i> Velocidad simétrica según disponibilidad geográfica.
+                            <li *ngFor="let item of checklist[tarifa.type]">
+                                <i class="fas fa-check-circle"></i>
+                                {{ item }}
                             </li>
                         </ul>
                         <div class="container">
@@ -50,6 +53,49 @@
         </div>
     </article>
 </section>
+
+<section>
+    <div class="container ba">
+        <div class="baner">
+            <figure class="area1">
+                <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-internet-60.png?alt=media&token=a849005d-e321-49d6-9cdc-3ac507276301"
+                    alt="Darse de Alta" width="60" height="60">
+            </figure>
+            <div class="content">
+                <p class="area2">Red Épica</p>
+                <p class="area3">Todas nuestras tarifas cuentan con la calidad de los expertos en fibra, con la
+                    cobertura móvil e internet de Épica en el 99% del territorio nacional</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="image-section">
+    <div class="banner">
+        <figure>
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3359.PNG?alt=media&token=5233afa6-e175-4743-b3db-773fc28e269d"
+                alt="planes">
+        </figure>
+    </div>
+    <div class="banner">
+        <figure>
+            <a href="{{ whatsappLink }}"><img
+                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3362.PNG?alt=media&token=865f4995-00cb-47eb-a980-6332bca6f60c"
+                    alt="Imagen"></a>
+
+        </figure>
+    </div>
+    <div class="banner">
+        <figure>
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3361.PNG?alt=media&token=874ebb2b-1c56-4ea4-9447-ae9b17d4f36c"
+                alt="planes">
+        </figure>
+    </div>
+</section>
+
 <section class="bg-highlighted">
     <div class="accelerator">
         <div class="accelerator-grid">
@@ -81,26 +127,20 @@
         </div>
     </div>
 </section>
-<section class="image-section">
-    <div class="banner">
-        <figure>
-            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3359.PNG?alt=media&token=5233afa6-e175-4743-b3db-773fc28e269d"
-                alt="planes">
-        </figure>
-    </div>
-    <div class="banner">
-        <figure>
-            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3362.PNG?alt=media&token=865f4995-00cb-47eb-a980-6332bca6f60c"
-                alt="Imagen">
-        </figure>
-    </div>
-    <div class="banner">
-        <figure>
-            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3361.PNG?alt=media&token=874ebb2b-1c56-4ea4-9447-ae9b17d4f36c"
-                alt="planes">
-        </figure>
+
+<section>
+    <div class="container cober">
+        <div class="cobertura">
+            <figure class="area4">
+                <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-direccio%CC%81n-100.png?alt=media&token=52658451-90fe-4e97-b9de-34b584384e64"
+                    alt="Map" width="60" height="60">
+            </figure>
+            <p class="area5">Descubre si la fibra de Épica llega a tu domicilio</p>
+            <a class="interesa" href="{{ whatsappLink }}">Comprobar Cobertura</a>
+        </div>
     </div>
 </section>
+
 
 <section class="p-section">
     <div class="container">
@@ -113,8 +153,8 @@
                 decides!
             </p>
         </div>
-        <div id="ventajas-home" class="discovery-card__grid">
-            <div class="discovery-card is-right area1">
+        <div class="discovery-card__grid">
+            <div class="discovery-card area1">
                 <div class="discovery-card__info">
                     <h3 class="text-heading-01 mb-5">Sin restricciones</h3>
                     <p class="text-p-02-regular">En Épica Network, no te imponemos contratos largos ni cláusulas
@@ -128,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="discovery-card is-right area2">
+            <div class="discovery-card area2">
                 <div class="discovery-card__info">
                     <h3 class="text-heading-01 mb-5">Precios transparentes</h3>
                     <p class="text-p-02-regular">Con Épica Network, el precio que ves es el que pagarás, sin cargos

@@ -7,8 +7,8 @@
 }
 
 .carousel-item {
-    height: 400px;
-    /* Ajusta la altura según tus necesidades */
+    height: 730px;
+
 }
 
 .carousel-item img {
@@ -16,5 +16,5 @@
     background-position: center;
     background-size: cover;
     height: 100%;
-    /* Para que ocupen toda la altura */
+
 }
