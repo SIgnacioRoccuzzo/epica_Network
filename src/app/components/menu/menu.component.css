@@ -1,7 +1,7 @@
 @import url('../../../styles.css');
 
 /* Asegurar que el encabezado ocupe toda la pantalla a lo ancho */
-#main-header {
+.container-fluid {
     background-color: var(--text);
     position: fixed;
     top: 0;
@@ -45,23 +45,25 @@
 }
 
 .nav-container {
-    width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
+    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    transition: all 0.3s ease;
+    justify-content: space-between;
 }
 
 .logo-wrapper {
+    height: 60px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo-header {
-    width: 115px;
-    transition: all 0.3s ease;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(20px);
+
 }
 
 .menu-wrapper {
@@ -69,7 +71,9 @@
     align-items: center;
     justify-content: space-around;
     flex: 1;
-
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .burguer {
@@ -88,7 +92,10 @@
     justify-content: center;
     gap: 30px;
     font-size: 1.1rem;
-    color: white;
+    color: var(--background);
+    font-family: var(--fuente-cuerpo);
+    margin: 0;
+    padding: 0;
 }
 
 .menu-header ul {
@@ -101,6 +108,11 @@
     gap: 40px;
 }
 
+.menu-header ul {
+    transform: translateY(20px);
+    /* Desplaza hacia abajo */
+}
+
 .menu-header li {
     position: relative;
     cursor: pointer;
@@ -110,11 +122,11 @@
 .menu-header li::before {
     content: '';
     position: absolute;
-    bottom: -46.5px;
+    bottom: -16.5px;
     left: 50%;
     width: 0;
-    height: 3px;
-    background-color: white;
+    height: 3.3px;
+    background-color: var(--background);
     transition: width 0.3s ease, left 0.3s ease;
     border-radius: 5px;
 }
@@ -140,6 +152,7 @@
     border-radius: 4px;
     padding: 7px 10px;
     margin-top: 1px;
+    transform: translateY(20px);
 
 }
 
@@ -152,6 +165,7 @@
         background: none;
         border: none;
         cursor: pointer;
+        transform: translateY(20px);
     }
 
     .menu-header {
@@ -185,6 +199,7 @@
     .menu-header ul {
         flex-direction: column;
         gap: 10px;
+        transform: translateY(-5px);
     }
 
 
@@ -199,6 +214,7 @@
         text-align: center;
         color: var(--text);
         border: 1.5px solid var(--text);
+        transform: translateY(-5px);
     }
 
     .buttom.is-open {

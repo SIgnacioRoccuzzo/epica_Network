@@ -32,7 +32,7 @@ export class MenuComponent {
     { label: 'TV', route: '/tv', submenuType: '' },
   ];
   secondMenu = [
-    { label: 'Sobre Epica', route: 'sobre-epica' },
+    { label: 'Sobre Épica', route: 'sobre-epica' },
     /*    { label: 'Ayuda', route: 'ayuda' }, */
     { label: 'Contacto', route: 'contacto' },
   ]

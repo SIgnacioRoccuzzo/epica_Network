@@ -365,7 +365,7 @@ a.interesa:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 40px;
+
 }
 
 .accelerator-item {
@@ -378,7 +378,7 @@ a.interesa:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+
 }
 
 .accelerator-item__icons img {

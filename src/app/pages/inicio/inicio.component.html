@@ -1,7 +1,7 @@
 <section class="header">
     <div class="titulo">
         <h2>Selecciona tu plan</h2>
-        <h4>Todos nuestros planes incluyen tecnología 5G</h4>
+        <h4>Todos nuestros planes incluyen tecnología 4G+</h4>
     </div>
     <article class="container">
         <ul class="filtros-menu">
@@ -25,8 +25,10 @@
                             <span class="text-subheading-01">{{ tarifa.speed }}</span>
                             <span class="text-subheading-01">{{ tarifa.gb }}</span>
                         </div>
-                        <span class="text-subheading-01 mb-4">{{ tarifa.minutes }}</span>
 
+                        <span [hidden]="tarifa.type === 'Fibra'" class="text-subheading-01 mb-4">
+                            {{ tarifa.minutes }} <i class="fa-solid fa-phone"></i>
+                        </span>
                     </div>
                     <div class="product-card__action">
                         <div class="tarifa-price mb-4">
@@ -99,6 +101,14 @@
 <section class="bg-highlighted">
     <div class="accelerator">
         <div class="accelerator-grid">
+            <a routerLink="/movil" class="accelerator-item" title="Tarifas móvil a precios increíbles, epica-network">
+                <div class="accelerator-item__icons">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO3aQQrCMBSE4Vn1BnoX9XJutHo7vUPrNUYKKRQ3zmgTBOeDQBel6SP/MsAf6wBcATwAcOU1AujLHtVdKgzwus4tBhnLZjvh3ePi56bnd/aLk6lu/jHFFsAdwA3ApsL3v1J7I2YQU05ExKRlSloiJi1T0hIxaZmSlohJy5S0RExapqQlYtIyJS0Rk5YpaYmYtExJS8SkZUpaIiYtU9ISMWmZkpaIScuUtERMWh9e4ZiuW6ztUL49oIG+waWaU4tBujLMfDJrrqEM0eSa0096Av/rFDNorFGxAAAAAElFTkSuQmCC">
+                </div>
+                <h4 class="text-p-02-regular">Móvil</h4>
+            </a>
+
             <a routerLink="/fibra-y-movil" class="accelerator-item" title="Ofertas Fibra y Móvil: epica-network">
                 <div class="accelerator-item__icons">
                     <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
@@ -109,13 +119,6 @@
                 <h4 class="text-p-02-regular">Fibra + Móvil</h4>
             </a>
 
-            <a routerLink="/movil" class="accelerator-item" title="Tarifas móvil a precios increíbles, epica-network">
-                <div class="accelerator-item__icons">
-                    <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO3aQQrCMBSE4Vn1BnoX9XJutHo7vUPrNUYKKRQ3zmgTBOeDQBel6SP/MsAf6wBcATwAcOU1AujLHtVdKgzwus4tBhnLZjvh3ePi56bnd/aLk6lu/jHFFsAdwA3ApsL3v1J7I2YQU05ExKRlSloiJi1T0hIxaZmSlohJy5S0RExapqQlYtIyJS0Rk5YpaYmYtExJS8SkZUpaIiYtU9ISMWmZkpaIScuUtERMWh9e4ZiuW6ztUL49oIG+waWaU4tBujLMfDJrrqEM0eSa0096Av/rFDNorFGxAAAAAElFTkSuQmCC">
-                </div>
-                <h4 class="text-p-02-regular">Móvil</h4>
-            </a>
             <a routerLink="/fibra" class="accelerator-item"
                 title="Sólo Fibra Óptica: Ofertas de internet en casa | epica-network">
                 <div class="accelerator-item__icons">
