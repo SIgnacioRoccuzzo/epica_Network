@@ -1,44 +1,6 @@
 <section class="container">
     <h1 class="text-center mb-5">Tarifas de Móvil</h1>
-    <div class="cards"> <!-- Contenedor para las tarjetas -->
-        <div class="product-card" *ngFor="let tarifa of tarifasMovil">
-            <div class="product-card__info">
-                <h2 class="text">{{ tarifa.type }}</h2>
-                <div class="product-card__type">
-                    <div class="product-info mb-3">
-                        <img class="icon"
-                            src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-fourth-generation-cellular-plus-and-internet-connectivity-logotype-96.png?alt=media&token=051d8eb3-74c1-414a-89b1-603c7ef335a8"
-                            alt="Móvil" loading="lazy">
-                        <span class="text-p-02-medium">Móvil</span>
-                        <span class="text-subheading-01">{{ tarifa.gb }}</span>
-                    </div>
-                    <span class="text-subheading-01">Llamadas {{ tarifa.minutes }}</span>
-                    <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
-                </div>
-                <div class="product-card__action">
-                    <div class="tarifa-price mb-4">
-                        <p>{{ tarifa.price }}</p>
-                        <div class="tarifa-price__regularity">
-                            <span class="mes">€/mes</span>
-                            <span class="iva">IVA incl.</span>
-                            <small class="tariff-message">Precio final</small>
-                        </div>
-                    </div>
-
-                    <ul class="checklist">
-                        <li><i class="fas fa-check-circle"></i> Sin permanencia.</li>
-                        <li><i class="fas fa-check-circle"></i> Llamadas ilimitadas.</li>
-                        <li><i class="fas fa-check-circle"></i> Cobertura en todo el territorio nacional.
-                        </li>
-                    </ul>
-                    <div class="container">
-                        <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-tarifas [tipo]="'Móvil'"></app-tarifas>
 
 </section>
 <section class="container swipper info">

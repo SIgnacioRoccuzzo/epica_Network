@@ -10,21 +10,6 @@ import { TarifasService } from 'src/app/services/tarifas.service';
   styleUrls: ['./tarifa-movil.component.css']
 })
 export class TarifaMovilComponent {
-  tarifasMovil: Tarifas[];
-  tarifasService = inject(TarifasService)
-
-  constructor() {
-    this.tarifasMovil = [];
-  }
-
-  async ngOnInit() {
-    try {
-      const response = await this.tarifasService.getBytype('Móvil');
-      this.tarifasMovil = response;
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   mobileCards = [
     { title: 'Tecnología 5G', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-5g-50.png?alt=media&token=7024db98-66f6-4b21-8df4-6900ab290768' },
@@ -33,7 +18,6 @@ export class TarifaMovilComponent {
     { title: 'Tendrás razón por defecto', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-pulgar-para-arriba-50.png?alt=media&token=15ce0624-fd8c-4ca6-a49c-e0138242910d' }
   ];
 
-  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=%C2%A1Hola%2C%20Luis!%20Ayud%C3%A1me%20a%20comparar%20mis%20tarifas%20de%20mis%20servicios%20de%20internet%20y%20telefon%C3%ADa.';
 
   isLastCard(index: number): boolean {
     return index === this.mobileCards.length - 1;

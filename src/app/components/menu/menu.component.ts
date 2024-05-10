@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
@@ -12,18 +12,18 @@ interface MenuSection {
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush // Mejora en la detección de cambios
 })
-
-export class MenuComponent {
-  router = inject(Router)
+export class MenuComponent implements OnInit {
+  router = inject(Router);
   isMenuOpen = false;
   subMenu = false;
   submenus: { [key: string]: Tarifas[] } = {};
   activeSubmenu: string | null = null;
   loading = true; // Indicador de carga
   error = '';     // Manejo de errores
-  tarifasService = inject(TarifasService)
+  tarifasService = inject(TarifasService);
 
   firstMenu: MenuSection[] = [
     { label: 'Fibra y Móvil', route: '/fibra-y-movil', submenuType: 'Fibra y Móvil' },
@@ -31,20 +31,17 @@ export class MenuComponent {
     { label: 'Fibra', route: '/fibra', submenuType: 'Fibra' },
     { label: 'TV', route: '/tv', submenuType: '' },
   ];
+
   secondMenu = [
-    { label: 'Sobre Épica', route: 'sobre-epica' },
-    /*    { label: 'Ayuda', route: 'ayuda' }, */
-    { label: 'Contacto', route: 'contacto' },
-  ]
+    { label: 'Sobre Épica', route: '/sobre-epica' },
+    { label: 'Contacto', route: '/contacto' },
+  ];
+
   async ngOnInit() {
     try {
-      // Esperar a que la promesa se resuelva para obtener tarifas
       const tarifas = await this.tarifasService.getAll();
-      // Agrupar tarifas por tipo para crear submenús
       this.submenus = tarifas.reduce((acc: { [x: string]: any[]; }, tarifa: { type: string | number; }) => {
-        if (!acc[tarifa.type]) {
-          acc[tarifa.type] = [];
-        }
+        acc[tarifa.type] = acc[tarifa.type] || [];
         acc[tarifa.type].push(tarifa);
         return acc;
       }, {});
@@ -52,11 +49,12 @@ export class MenuComponent {
       this.error = 'Error al cargar las tarifas.';
       console.error(err);
     } finally {
-      this.loading = false; // Detener indicador de carga
+      this.loading = false;
     }
   }
+
   getSubmenuItems(type: string): Tarifas[] {
-    return this.submenus[type] || []; // Devolver elementos o lista vacía
+    return this.submenus[type] || [];
   }
 
   toggleSubmenu(submenuType: string): void {
@@ -67,11 +65,15 @@ export class MenuComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  scrollTo(sectionId: string) {
+  scrollTo(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       this.router.navigate([], { fragment: sectionId });
     }
+  }
+
+  trackByItems(index: number, item: any): number {
+    return item.id; // Asumiendo que cada item tiene un 'id' único
   }
 }

@@ -7,23 +7,12 @@ import { TarifasService } from 'src/app/services/tarifas.service';
   templateUrl: './fibra.component.html',
   styleUrls: ['./fibra.component.css']
 })
-export class FibraComponent implements OnInit {
-  tarifasFibra: Tarifas[] = [];
-  tarifasService = inject(TarifasService);
+export class FibraComponent {
+
   loading = true; // Indicador de carga
   errorMessage = ''; // Mensaje de error
 
-  async ngOnInit() {
-    try {
-      const response = await this.tarifasService.getBytype('Fibra');
-      this.tarifasFibra = response;
-    } catch (error) {
-      this.errorMessage = 'Error al cargar tarifas de fibra. Inténtalo de nuevo más tarde.';
-      console.error(error);
-    } finally {
-      this.loading = false; // Finaliza la carga
-    }
-  }
+
   mobileCards = [
     { title: 'Tecnología 5G', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-5g-50.png?alt=media&token=7024db98-66f6-4b21-8df4-6900ab290768' },
     { title: 'Sin sorpresas en tu factura', description: 'Nuestro servicio tiene un precio mensual fijo, que no varía, salvo que ese mes realices llamadas de tarificación especial o que estén fuera de las condiciones descritas. En el proceso de compra se ajustarán los impuestos según la provincia de contratación.', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-recibo-euro-80.png?alt=media&token=01d27da5-6ba5-4c60-bdbe-8a9c67d0abd4' },

@@ -53,6 +53,7 @@
 
 .logo-wrapper {
     height: 60px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,12 +77,12 @@
     margin: 0;
 }
 
-.burguer {
+.burger {
     display: none;
 
 }
 
-.burguer .fa-bars {
+.burger .fa-bars {
     font-size: 40px;
     color: white;
 }
@@ -143,7 +144,7 @@
 
 }
 
-.buttom {
+.button {
     font-size: 1rem;
     line-height: 24px;
     color: var(--accent);
@@ -156,9 +157,9 @@
 
 }
 
-@media (min-width: 300px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
 
-    .burguer {
+    .burger {
         display: block;
         position: absolute;
         right: 10px;
@@ -209,7 +210,7 @@
         width: 100%;
     }
 
-    .buttom {
+    .button {
         display: none;
         text-align: center;
         color: var(--text);
@@ -217,7 +218,7 @@
         transform: translateY(-5px);
     }
 
-    .buttom.is-open {
+    .button.is-open {
         display: block;
         padding: 10px;
         margin-top: 20px;

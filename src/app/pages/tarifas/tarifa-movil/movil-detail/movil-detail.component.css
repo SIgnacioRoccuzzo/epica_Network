@@ -1,66 +1,64 @@
-@import url('../../../../../styles.css');
-
 .card-body {
     background-color: var(--background);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
     font-size: 1rem;
     width: 50%;
     margin: 20px auto;
-    margin-top: var(--margin-top);
+    margin-top: var(--margin-top)
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap
 }
 
 .col-4 {
     flex: 0 0 33.33%;
-    max-width: 33.33%;
+    max-width: 33.33%
 }
 
 .card-body h2 {
     font-family: var(--fuente-titulo);
     color: var(--primary);
     font-size: 2.9rem;
-    margin: 0;
+    margin: 0
 }
 
 .card-body p {
     color: var(--text);
     font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
+    font-weight: 700;
+    margin: 0
 }
 
 .tarifa_precio {
     white-space: nowrap;
-    font-size: 1.2rem;
+    font-size: 1.2rem
 }
 
 .tarifa_precio p {
     display: inline-block;
     font-size: 1.825rem;
     font-weight: 700;
-    margin: 0;
+    margin: 0
 }
 
 strong {
-    font-size: 1.3rem;
+    font-size: 1.3rem
 }
 
 .tarifa_precio small {
     display: inline-block;
-    font-size: 0.725rem;
+    font-size: .725rem
 }
 
 .iconos {
     display: inline-flex;
-    gap: 10px;
+    gap: 10px
 }
 
 .cta {
@@ -69,11 +67,11 @@ strong {
     border-radius: 8px;
     padding: 10px;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: background-color .3s
 }
 
 .cta:hover {
-    background-color: var(--vibrant);
+    background-color: var(--vibrant)
 }
 
 .lista_checks {
@@ -82,42 +80,42 @@ strong {
     color: var(--text);
     padding: 10px;
     border-radius: 8px;
-    background-color: var(--accent);
+    background-color: var(--accent)
 }
 
 .lista_checks ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 20px
 }
 
 .lista_checks li {
     margin-bottom: 10px;
-    color: var(--background);
+    color: var(--background)
 }
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .col-12 {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 100%
 }
 
-.col-md-6,
 .col-lg-4,
-.col-lg-6 {
+.col-lg-6,
+.col-md-6 {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 100%
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .card-body {
-        width: 100%;
+        width: 100%
     }
 
     .card-body .cta {
-        font-size: 1rem;
+        font-size: 1rem
     }
 }

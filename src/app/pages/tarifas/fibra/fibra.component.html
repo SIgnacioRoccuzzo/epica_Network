@@ -1,44 +1,6 @@
 <section class="container">
-    <h1 class="text-center mb-4">Tarifas de Fibra</h1>
-    <div class="cards mb-6"> <!-- Contenedor para las tarjetas -->
-        <div class="product-card" *ngFor="let tarifa of tarifasFibra"> <!-- Clase corregida -->
-            <div class="product-card__info">
-                <h2 class="text">{{ tarifa.type }}</h2>
-                <div class="product-card__type">
-                    <div class="product-info mb-3">
-                        <img class="icon"
-                            src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
-                            alt="Fibra" loading="lazy">
-                        <span class="text-p-02-medium">Fibra</span>
-                        <span class="text-subheading-01">{{ tarifa.speed }}</span>
-
-                    </div>
-                    <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
-                </div>
-                <div class="product-card__action">
-                    <div class="tarifa-price mb-4">
-                        <p>{{ tarifa.price }}</p>
-                        <div class="tarifa-price__regularity">
-                            <span class="mes">€/mes</span>
-                            <span class="iva">IVA incl.</span>
-                            <small class="tariff-message">Precio final</small>
-                        </div>
-                    </div>
-
-                    <ul class="checklist">
-                        <li><i class="fas fa-check-circle"></i> Sin coste de línea fija, nada de cuotas extras.</li>
-                        <li><i class="fas fa-check-circle"></i> Con o sin permanencia. Tú eliges.</li>
-                        <li><i class="fas fa-check-circle"></i> Velocidad simétrica según disponibilidad geográfica.
-                        </li>
-                    </ul>
-                    <div class="container">
-                        <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 class="text-center">Tarifas de Fibra</h1>
+    <app-tarifas [tipo]="'Fibra'"></app-tarifas>
 
 </section>
 
