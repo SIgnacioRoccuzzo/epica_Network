@@ -53,7 +53,8 @@ register();
     FibraMovilDetailComponent,
     MovilDetailComponent,
     TvDetailComponent,
-    TarifasComponent
+    TarifasComponent,
+
 
 
   ],
