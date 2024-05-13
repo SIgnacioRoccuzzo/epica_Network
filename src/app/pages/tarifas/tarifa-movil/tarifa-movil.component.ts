@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { Tarifas } from 'src/app/interfaces/tarifas.interface';
-import { TarifasService } from 'src/app/services/tarifas.service';
+import { Component } from '@angular/core';
+
 
 
 

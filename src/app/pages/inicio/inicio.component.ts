@@ -1,7 +1,8 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, ElementRef, Input, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -19,7 +20,8 @@ export class InicioComponent {
   router = inject(Router);
   whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.';
 
-  constructor() { }
+
+  constructor(private elRef: ElementRef) { }
 
   async ngOnInit() {
     try {
@@ -68,4 +70,5 @@ export class InicioComponent {
       );
     }
   }
+
 }

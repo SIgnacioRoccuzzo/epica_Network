@@ -1,6 +1,14 @@
-<section class="header">
-    <div class="titulo">
-        <h2>Selecciona tu plan</h2>
+<section class="banner-superior">
+    <div class="container-fluid">
+        <div class="banner_inicio">
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2Fcoversinlogo.png?alt=media&token=be65fbed-764f-4f19-8ab0-827f2a30c1e2"
+                alt="Banner Image">
+        </div>
+    </div>
+</section>
+<section class="selectTarifa">
+    <div class="titulo text-center">
+        <h1>Selecciona tu plan</h1>
         <h4>Todos nuestros planes incluyen tecnología 4G+</h4>
     </div>
     <article class="container">
@@ -10,31 +18,34 @@
             <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
             <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
         </ul>
-        <app-tarifas [tipo]="filtroActual"></app-tarifas>
+        <div class="desktop">
+            <app-tarifas [tipo]="filtroActual"></app-tarifas>
+        </div>
     </article>
 </section>
 
 
-<section>
-    <div class="container ba">
-        <div class="baner">
-            <figure class="area1">
-                <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-internet-60.png?alt=media&token=a849005d-e321-49d6-9cdc-3ac507276301"
-                    alt="Darse de Alta" width="60" height="60">
-            </figure>
-            <div class="content">
-                <p class="area2">Red Épica</p>
-                <p class="area3">Todas nuestras tarifas cuentan con la calidad de los expertos en fibra, con la
-                    cobertura móvil e internet de Épica en el 99% del territorio nacional</p>
-            </div>
+<section class="container ba">
+    <div class="baner">
 
+        <figure class="area1">
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-internet-60.png?alt=media&token=a849005d-e321-49d6-9cdc-3ac507276301"
+                alt="Darse de Alta">
+        </figure>
+        <div class="content">
+            <p class="area2">Red Épica</p>
+            <p class="area3">Todas nuestras tarifas cuentan con la calidad de los expertos en fibra, con la
+                cobertura móvil e internet de Épica en el 99% del territorio nacional</p>
         </div>
+
+
 
     </div>
 </section>
 
 
 <section class="image-section">
+
     <div class="banner">
         <figure>
             <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3359.PNG?alt=media&token=5233afa6-e175-4743-b3db-773fc28e269d"
@@ -45,7 +56,8 @@
         <figure>
             <a href="{{ whatsappLink }}"><img
                     src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3362.PNG?alt=media&token=865f4995-00cb-47eb-a980-6332bca6f60c"
-                    alt="Imagen"></a>
+                    alt="Imagen">
+            </a>
 
         </figure>
     </div>
@@ -55,6 +67,8 @@
                 alt="planes">
         </figure>
     </div>
+
+
 </section>
 
 <section class="bg-highlighted">
@@ -90,32 +104,32 @@
     </div>
 </section>
 
-<section>
-    <div class="container cober">
-        <div class="cobertura">
-            <figure class="area4">
-                <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-direccio%CC%81n-100.png?alt=media&token=52658451-90fe-4e97-b9de-34b584384e64"
-                    alt="Map" width="60" height="60">
-            </figure>
-            <p class="area5">Descubre si la fibra de Épica llega a tu domicilio</p>
-            <a class="interesa" href="{{ whatsappLink }}">Comprobar Cobertura</a>
-        </div>
+<section class="container cober">
+
+    <div class="cobertura">
+        <figure class="area4">
+            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-direccio%CC%81n-100.png?alt=media&token=52658451-90fe-4e97-b9de-34b584384e64"
+                alt="Map" width="60" height="60">
+        </figure>
+        <p class="area5">Descubre si la fibra de Épica llega a tu domicilio</p>
+        <a class="interesa" href="{{ whatsappLink }}">Comprobar Cobertura</a>
     </div>
+
 </section>
 
 
 <section class="p-section">
     <div class="container">
         <div class="title-module text-center m-block-g">
-            <h2 class="text-eyebrow color-font-mid">Únete a Épica Network</h2>
+            <h2 class="text-eyebrow">Únete a Épica Network</h2>
             <h2 class="text-heading-02">¿Qué significa ser parte de Épica Network?</h2>
-            <p class="text-p-02-regular">
+            <p class="subtitulo mt-3">
                 Ser de Épica Network te permite elegir y personalizar tus planes, con ventajas y sin complicaciones. ¡Es
                 tu red, tú
                 decides!
             </p>
         </div>
-        <div class="discovery-card__grid">
+        <div class="discovery-card__grid mt-5">
             <div class="discovery-card area1">
                 <div class="discovery-card__info">
                     <h3 class="text-heading-01 mb-5">Sin restricciones</h3>

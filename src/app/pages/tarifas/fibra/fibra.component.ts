@@ -9,10 +9,6 @@ import { TarifasService } from 'src/app/services/tarifas.service';
 })
 export class FibraComponent {
 
-  loading = true; // Indicador de carga
-  errorMessage = ''; // Mensaje de error
-
-
   mobileCards = [
     { title: 'Tecnología 5G', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-5g-50.png?alt=media&token=7024db98-66f6-4b21-8df4-6900ab290768' },
     { title: 'Sin sorpresas en tu factura', description: 'Nuestro servicio tiene un precio mensual fijo, que no varía, salvo que ese mes realices llamadas de tarificación especial o que estén fuera de las condiciones descritas. En el proceso de compra se ajustarán los impuestos según la provincia de contratación.', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-recibo-euro-80.png?alt=media&token=01d27da5-6ba5-4c60-bdbe-8a9c67d0abd4' },
@@ -22,7 +18,4 @@ export class FibraComponent {
   isLastCard(index: number): boolean {
     return index === this.mobileCards.length - 1;
   }
-
-
-  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=%C2%A1Hola%2C%20Luis!%20Ayud%C3%A1me%20a%20comparar%20mis%20tarifas%20de%20mis%20servicios%20de%20internet%20y%20telefon%C3%ADa.';
 }

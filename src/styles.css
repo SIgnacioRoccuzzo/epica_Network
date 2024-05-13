@@ -187,6 +187,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+
 }
 
 /* Ajustes para elementos HTML5 */
@@ -207,14 +208,16 @@ section {
 /* Estilos para el cuerpo */
 html {
     font-size: 16px;
-    /* Tamaño base de fuente */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     line-height: 1;
     overflow-x: hidden;
     width: 100%;
-    /*  background-color: var(--background) !important; */
 }
 
 /* Estilos para contenedores */
@@ -236,7 +239,7 @@ h1 {
     font-weight: var(--font-weight);
     font-size: var(--font-size);
     color: var(--text);
-    /* Uso de la variable para el color del texto */
+
 }
 
 

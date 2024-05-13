@@ -32,7 +32,7 @@
 }
 
 .submenu a:hover {
-    color: var(--vibrant)
+    color: var(--accent)
 }
 
 @media (max-width:768px) {

@@ -1,9 +1,7 @@
 @import url('../../../../styles.css');
 
 /* Contenedor general */
-.container {
-    padding: 20px;
-}
+
 
 /* Estilos para secciones FAQ */
 .fqa {
@@ -11,7 +9,11 @@
     background: var(--background);
 }
 
-.bloque_faq h2 {
+.container {
+    padding: 20px;
+}
+
+.container h2 {
     font-size: 36px;
     line-height: 44px;
     font-family: var(--fuente-titulo);
@@ -20,26 +22,27 @@
     text-align: center;
 }
 
-#accordion {
+
+.accordion {
     margin: 40px auto;
     max-width: 1350px;
 }
 
-#accordion .card {
+.accordion .card {
     background: var(--background);
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-#accordion .card-header {
+.accordion .card-header {
     background: var(--background);
     display: flex;
     justify-content: space-between;
     border-bottom: none;
 }
 
-#accordion .card-header h5 a {
+.accordion .card-header h5 a {
     color: var(--secondary);
     font-size: 21px;
     line-height: 30px;
@@ -47,7 +50,7 @@
     display: block;
 }
 
-#accordion .card-body {
+.accordion .card-body {
     background: var(--background);
     line-height: 24px;
     color: var(--text);
@@ -64,7 +67,7 @@
     position: relative;
 }
 
-#accordion [data-toggle="collapse"].collapsed:after {
+.accordion [data-toggle="collapse"].collapsed:after {
     transform: rotate(360deg);
     color: var(--accent);
 }

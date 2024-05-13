@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -8,18 +8,6 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'epica';
-  isInicioPage = false;
-  router = inject(Router)
-
-  constructor() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        // Determinar si la ruta actual es el menú (puedes ajustar esta lógica según tu enrutamiento)
-        this.isInicioPage = event.url === '/inicio'; // Cambia esto por la ruta de tu menú
-      }
-    });
-  }
-
-
+  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.';
 
 }

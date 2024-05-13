@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AngularFireStorage } from '@angular/fire/compat/storage';  // Módulo correcto para Firebase Storage
+import { Component } from '@angular/core';
+
 
 
 @Component({

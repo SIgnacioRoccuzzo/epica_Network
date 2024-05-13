@@ -1,0 +1,41 @@
+@keyframes bounce-and-squash {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1, 1);
+        /* En posición original y sin aplastar */
+    }
+
+    25% {
+        transform: translateY(-20px) scale(1, 1.1);
+        /* Sube y se estira ligeramente */
+    }
+
+    50% {
+        transform: translateY(0) scale(1.1, 0.9);
+        /* Baja, se aplasta y se ensancha */
+    }
+
+    75% {
+        transform: translateY(-10px) scale(1, 1.05);
+        /* Sube nuevamente y se estira ligeramente */
+    }
+}
+
+.whatsapp a {
+    display: block;
+    color: #25D366;
+    font-size: 400%;
+    position: fixed;
+    bottom: 4.375rem;
+    right: 9rem;
+    animation: bounce-and-squash 2s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .whatsapp a {
+        font-size: 300%;
+        right: 1rem;
+        /* Menor distancia al borde derecho en móviles */
+    }
+}
