@@ -4,111 +4,6 @@
 
 </section>
 
-<section class="fqa">
-    <div class="container my-5">
-        <h2>Preguntas frecuentes</h2>
-        <div class="accordion" id="accordionExample">
-            <!-- Primera pregunta -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        ¿Qué tarifa de fibra y fijo me conviene?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Si haces un uso normal de tu conexión, con la tarifa de 300Mb por 27€ al mes, podrás ver
-                        películas y
-                        navegar por Internet sin problema. En cambio, si necesitas conectar varios dispositivos,
-                        juegas
-                        online o descargas archivos con frecuencia, la mejor tarifa para ti será la de 1Gb por
-                        31€ al mes.
-                    </div>
-                </div>
-            </div>
-            <!-- Segunda pregunta -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿Tengo compromiso de permanencia con mi tarifa de solo fibra?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        No. En Epica Networks no existe permanencia. Puedes irte o cambiar de tarifa cuando
-                        quieras.
-                    </div>
-                </div>
-            </div>
-            <!-- Tercera pregunta -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ¿Cómo es el proceso de instalación de la fibra óptica?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Un instalador acudirá a tu domicilio para realizar la instalación del servicio y te
-                        proporcionará el
-                        router HGU y todo lo necesario.
-                    </div>
-                </div>
-            </div>
-            <!-- Cuarta pregunta -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        ¿Incluye llamadas telefónicas mi tarifa de fibra?
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Sí. Las tarifas de fibra incluyen llamadas ilimitadas a fijos y móviles nacionales desde
-                        la línea
-                        fija.
-                    </div>
-                </div>
-            </div>
-            <!-- Quinta pregunta -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        ¿Cómo puedo comprobar si tengo cobertura de fibra óptica?
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Durante el proceso de contratación comprobaremos si dispones de cobertura de fibra en la
-                        dirección
-                        que nos indiques.
-                    </div>
-                </div>
-            </div>
-            <!-- Sexta pregunta -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        ¿Puedo obtener asistencia para comparar tarifas?
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Puedes contactarnos para obtener asistencia y comparar tarifas de Internet y telefonía.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <section class="container swipper info">
     <article class="bloque_cards text-center">
         <div class="container">
@@ -142,4 +37,24 @@
             </div>
         </swiper-slide>
     </swiper-container>
+</section>
+<section class="fqa">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="accordion" id="accordionExample">
+            <div *ngFor="let question of questions; let i = index" class="accordion-item">
+                <h2 class="accordion-header" [id]="'heading' + i">
+                    <button class="accordion-button" type="button" [attr.aria-expanded]="isActive(i) ? 'true' : 'false'"
+                        [attr.aria-controls]="'collapse' + i" (click)="toggle(i)">
+                        {{ question.title }}
+                    </button>
+                </h2>
+                <div [id]="'collapse' + i" [class]="getClass(i)" [attr.aria-labelledby]="'heading' + i">
+                    <div class="accordion-body">
+                        {{ question.content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

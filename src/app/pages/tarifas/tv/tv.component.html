@@ -1,22 +1,23 @@
 <section class="container">
-    <h1 class="text-center mb-4">Tarifas de Tv</h1>
-    <div class="cards"> <!-- Contenedor para las tarjetas -->
-        <div class="product-card" *ngFor="let tarifa of tarifasTv"> <!-- Clase corregida -->
+    <h1 class="text-center mb-5">Tarifas de Tv</h1>
+    <div class="cards">
+        <div class="product-card" *ngFor="let tarifa of tarifasTv">
             <div class="product-card__info">
                 <h2 class="text">{{ tarifa.type }}</h2>
+
                 <div class="product-card__type">
+                    <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
                     <div class="product-info mb-3">
+                        <!-- Ocultar cuando el tipo sea "TV" o "Móvil" -->
                         <img class="icon"
                             src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-televisio%CC%81n-48.png?alt=media&token=cc15969f-dd8a-452c-ad81-ed8339df31a0"
-                            alt="Tv" loading="lazy">
-                        <span class="text-subheading-01">{{ tarifa.channels }}</span>
-                        <span class="text-p-02-medium">Canales</span>
+                            alt="Fibra" loading="lazy">
+
                     </div>
-                    <p class="Cine-p-01-regular">Cine</p>
-                    <p class="Series-p-01-regular">Series</p>
-                    <p class="Doc-p-01-regular">Documentales</p>
-                    <p class="Music-p-01-regular mb-3">Música</p>
-                    <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
+                    <span class="text-subheading-01 mb-4">
+                        {{ tarifa.channels }} Canales
+                    </span>
+
                 </div>
                 <div class="product-card__action">
                     <div class="tarifa-price mb-4">
@@ -27,13 +28,18 @@
                             <small class="tariff-message">Precio final</small>
                         </div>
                     </div>
+
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Cine</li>
+                        <li><i class="fas fa-check-circle"></i> Series</li>
+                        <li><i class="fas fa-check-circle"></i> Documentales</li>
+                        <li><i class="fas fa-check-circle"></i> Música</li>
+                    </ul>
                     <div class="container">
                         <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </section>

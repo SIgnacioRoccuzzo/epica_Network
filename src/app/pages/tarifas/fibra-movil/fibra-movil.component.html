@@ -3,3 +3,58 @@
     <app-tarifas [tipo]="'Fibra y Móvil'"></app-tarifas>
 
 </section>
+<section class="container swipper info">
+    <article class="bloque_cards text-center">
+        <div class="container">
+            <h2 class="mb-3 text-center">Un servicio móvil sencillo</h2>
+            <h5 class="subtitle text-center">Y si quieres hablar con nosotros estaremos ahí para ayudarte</h5>
+            <div class="d-sm-block">
+                <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let card of mobileCards; let i = index">
+                        <div class="card h-100" [ngClass]="{'last-card': isLastCard(i)}">
+                            <img class="card-img-top" [src]="card.imageUrl" [alt]="card.title">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ card.title }}</h5>
+                                <p class="card-text">{{ card.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <swiper-container class="mobil" navigation="true" pagination="true" pagination-clickable="true">
+        <swiper-slide *ngFor="let card of mobileCards">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" [src]="card.imageUrl" [alt]="card.title">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ card.title }}</h5>
+                        <p class="card-text">{{ card.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+</section>
+
+<section class="fqa">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="accordion" id="accordionExample">
+            <div *ngFor="let question of questions; let i = index" class="accordion-item">
+                <h2 class="accordion-header" [id]="'heading' + i">
+                    <button class="accordion-button" type="button" [attr.aria-expanded]="isActive(i) ? 'true' : 'false'"
+                        [attr.aria-controls]="'collapse' + i" (click)="toggle(i)">
+                        {{ question.title }}
+                    </button>
+                </h2>
+                <div [id]="'collapse' + i" [class]="getClass(i)" [attr.aria-labelledby]="'heading' + i">
+                    <div class="accordion-body">
+                        {{ question.content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

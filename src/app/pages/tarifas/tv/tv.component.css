@@ -1,40 +1,40 @@
-/* Importar estilos globales */
 @import url('../../../../styles.css');
 
-.container {
-    padding: 20px;
-    /* Espacio interno */
+h1 {
+    font-family: var(--fuente-titulo);
+    margin-top: 10rem;
+    font-weight: var(--font-weight);
+    font-size: 3rem;
+    color: var(--text);
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 50px
 }
 
 .product-card {
     flex: 1 1 300px;
     max-width: 300px;
-    max-height: 480px;
+    max-height: 550px;
     display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1);
     overflow: hidden;
     transition: var(--card-transition);
-    padding: 5px;
+    padding: 5px
 }
 
 .product-card:hover {
-    box-shadow: var(--card-hover-box-shadow);
-
+    box-shadow: var(--card-hover-box-shadow)
 }
 
 .product-card__info {
-    padding: 5px;
-
+    padding: 5px
 }
 
 .product-card__info .text {
@@ -44,16 +44,16 @@
     margin-bottom: 1rem;
     gap: .5rem;
     font-family: var(--fuente-cuerpo);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 2rem
 }
 
 .product-card__type {
     align-items: center;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: relative
 }
 
 .product-card__type .product-info {
@@ -62,43 +62,35 @@
     display: flex;
     justify-content: center;
     min-height: 2rem;
-    gap: .5rem;
+    gap: .5rem
 }
 
 .product-card__type .product-info .icon {
-    height: 2.5rem;
-    width: 2.5rem;
-}
-
-.product-card__type .text-p-02-medium {
-    font-family: var(--fuente-cuerpo);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem
 }
 
 .product-card__type .text-subheading-01 {
     font-family: var(--fuente-cuerpo);
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    line-height: 2rem;
+    line-height: 2rem
 }
 
 .product-card__type .text-p-01-regular {
     font-family: var(--fuente-titulo);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    line-height: 1.125rem;
-
+    line-height: 1.125rem
 }
 
 .product-card__action {
     align-items: center;
-    background: #fff;
+    background: var(--background);
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 10px
 }
 
 .tarifa-price {
@@ -107,72 +99,79 @@
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
-    /* Menor espacio entre elementos */
     padding: 10px;
-    color: var(--text-color);
+    color: var(--text-color)
 }
 
 .tarifa-price>p {
     font-size: 3rem;
     font-weight: 700;
-    margin: 0;
-    /* Eliminar margen para evitar separación */
+    margin: 0
 }
 
 .tarifa-price__regularity {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
+.tarifa-price__regularity .iva,
 .tarifa-price__regularity .mes {
     font-size: 1rem;
-    font-weight: 700;
-}
-
-.tarifa-price__regularity .iva {
-    font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700
 }
 
 .tarifa-price__regularity .tariff-message {
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-weight: 400;
     margin-top: 5px;
-    color: gray;
+    color: gray
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.checklist li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    padding: 0;
+    font-weight: bold;
+}
+
+.fas.fa-check-circle {
+    font-size: .9rem;
+    margin-right: 5px;
+    color: var(--primary)
 }
 
 a.interes {
     background-color: var(--accent);
-    color: white;
-    padding: 0.625rem;
-    /* Ajusta el padding según sea necesario */
+    color: #fff;
+    padding: .625rem;
     text-align: center;
     text-decoration: none;
     display: block;
-    /* Asegura que el botón ocupa todo el ancho */
-    font-size: 0.875rem;
+    font-size: .875rem;
     cursor: pointer;
-    border-radius: 0.625rem;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    /* Ocupa todo el ancho disponible */
+    border-radius: .625rem;
+    transition: background-color .3s ease;
+    width: 100%
 }
 
-/* Ajustes para el hover del botón */
 a.interes:hover {
     background-color: var(--highlight);
-    /* Cambia el color al pasar el cursor */
-    box-shadow: var(--button-hover-box-shadow);
-    /* Sombra al pasar el cursor */
+    box-shadow: var(--button-hover-box-shadow)
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .product-card {
         flex: 1 1 100%;
-
-        max-width: 100%;
-
+        max-width: 100%
     }
 }

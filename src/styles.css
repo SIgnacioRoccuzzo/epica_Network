@@ -231,21 +231,6 @@ body {
 
 }
 
-/* Estilos para encabezados */
-h1 {
-    font-family: var(--fuente-titulo);
-    margin-top: var(--margin-top);
-    margin-bottom: 50px;
-    font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    color: var(--text);
-
-}
-
-
-
-
-/* Estilos para listas y tablas */
 ol,
 ul {
     list-style: none;

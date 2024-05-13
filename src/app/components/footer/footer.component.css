@@ -1,5 +1,28 @@
 @import url('../../../styles.css');
 
+.bloque_contacto_faldon {
+    background: var(--background);
+    padding: 3rem 0;
+    margin-top: 100px;
+}
+
+.bloque_contacto_faldon p,
+.bloque_contacto_faldon span {
+    font-size: 19px;
+    line-height: 30px;
+    color: var(--text);
+    font-family: var(--fuente-cuerpo);
+}
+
+.bloque_contacto_faldon span {
+    color: var(--highlight);
+
+}
+
+.bloque_contacto_faldon a {
+    color: var(--accent)
+}
+
 /* Estilo para el footer general */
 footer {
     background-color: var(--text);

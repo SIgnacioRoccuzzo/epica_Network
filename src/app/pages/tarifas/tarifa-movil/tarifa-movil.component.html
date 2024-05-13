@@ -37,3 +37,24 @@
         </swiper-slide>
     </swiper-container>
 </section>
+
+<section class="fqa">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="accordion" id="accordionExample">
+            <div *ngFor="let question of questions; let i = index" class="accordion-item">
+                <h2 class="accordion-header" [id]="'heading' + i">
+                    <button class="accordion-button" type="button" [attr.aria-expanded]="isActive(i) ? 'true' : 'false'"
+                        [attr.aria-controls]="'collapse' + i" (click)="toggle(i)">
+                        {{ question.title }}
+                    </button>
+                </h2>
+                <div [id]="'collapse' + i" [class]="getClass(i)" [attr.aria-labelledby]="'heading' + i">
+                    <div class="accordion-body">
+                        {{ question.content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

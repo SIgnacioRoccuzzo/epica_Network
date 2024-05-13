@@ -23,7 +23,7 @@ export class TarifasComponent implements OnChanges {
     this.cargarTarifas();
     this.checklist = {
       'Móvil': [
-        'Sin permanencia.',
+        'Sin permanencia ni penalizaciones.',
         'Llamadas ilimitadas.',
         'Cobertura en todo el territorio nacional.',
       ],
