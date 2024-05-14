@@ -3,7 +3,6 @@
         <div class="product-card" *ngFor="let tarifa of tarifas">
             <div class="product-card__info">
                 <h2 class="text">{{ tarifa.type }}</h2>
-
                 <div class="product-card__type">
                     <p class="text-p-01-regular mb-4">{{ tarifa.name }}</p>
                     <div class="product-info mb-3">
@@ -11,14 +10,12 @@
                         <img class="icon"
                             src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
                             alt="Fibra" loading="lazy" [hidden]="tarifa.type === 'TV' || tarifa.type === 'Móvil'">
-
                         <span class="text-subheading-01">{{ tarifa.speed }}</span>
                         <span class="text-subheading-01">{{ tarifa.gb }}</span>
                     </div>
                     <span [hidden]="tarifa.type === 'Fibra' || tarifa.type === 'TV'" class="text-subheading-01 mb-4">
                         {{ tarifa.minutes }} <i class="fa-solid fa-phone"></i>
                     </span>
-
                 </div>
                 <div class="product-card__action">
                     <div class="tarifa-price mb-4">

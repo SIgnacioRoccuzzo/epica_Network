@@ -340,7 +340,8 @@ img {
     }
 
     .titulo h1 {
-
+        font-size: 2.5rem;
         font-family: var(--fuente-titulo) !important;
     }
+
 }

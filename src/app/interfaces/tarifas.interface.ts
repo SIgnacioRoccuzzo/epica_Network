@@ -4,6 +4,7 @@ export interface Tarifas {
     gb: string;
     minutes: string;
     speed: string;
+    lines: number;
     channels: number;
     extras: [string];
     price: number;

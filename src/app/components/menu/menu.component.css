@@ -11,15 +11,19 @@
 
 }
 
-#top-bar {
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-bar {
     position: fixed;
     top: 0;
     left: 0;
-    right: 9rem;
+    right: 0rem;
     z-index: 1000;
     background-color: white;
-    display: flex;
-    justify-content: right;
+
 
 }
 
@@ -47,27 +51,24 @@
     color: var(--background);
 }
 
-.nav-container {
-    height: 100px;
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo-wrapper {
-    height: 60px;
-
+.wrapper {
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logo-header {
-    width: 150px;
+figure img {
+    max-width: 140px;
     height: auto;
     object-fit: contain;
     transform: translateY(20px);
-
 }
 
 .menu-wrapper {
@@ -75,9 +76,7 @@
     align-items: center;
     justify-content: space-around;
     flex: 1;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+
 }
 
 .burger {
@@ -98,8 +97,8 @@
     font-size: 1.1rem;
     color: var(--background);
     font-family: var(--fuente-cuerpo);
-    margin: 0;
-    padding: 0;
+    /*   margin: 0;
+    padding: 0; */
 }
 
 .menu-header ul {
@@ -107,14 +106,10 @@
     display: flex;
     align-items: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    /*     margin: 0;
+    padding: 0; */
     gap: 40px;
-}
-
-.menu-header ul {
     transform: translateY(20px);
-    /* Desplaza hacia abajo */
 }
 
 .menu-header li {
@@ -170,6 +165,7 @@
         border: none;
         cursor: pointer;
         transform: translateY(20px);
+
     }
 
     .menu-header {
@@ -218,7 +214,8 @@
         text-align: center;
         color: var(--text);
         border: 1.5px solid var(--text);
-        transform: translateY(-5px);
+        transform: translateY(5px);
+
     }
 
     .button.is-open {

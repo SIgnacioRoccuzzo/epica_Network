@@ -1,49 +1,70 @@
-<div class="container">
-    <div class="card-body">
-        <div *ngIf="tarifa" class="row justify-content-center">
-            <!-- Columna para la información del plan -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="row align-items-center"> <!-- Usar Flexbox para alinear elementos -->
-                    <!-- Información de la tarifa -->
-                    <div class="col-4"> <!-- Ajustar el espacio de cada columna -->
-                        <h2>{{ tarifa.name }}</h2> <!-- Título principal -->
-                        <p class="tarifa_title">Tarifa</p> <!-- Tarifa -->
-                        <p>{{ tarifa.speed }}</p> <!-- Información adicional -->
-                    </div>
-
-                    <!-- Sección de precio -->
-                    <div class="col-4">
-                        <div class="tarifa_precio">
-                            <p>{{ tarifa.price }} <strong>€</strong> <small class="iva">IVA incl.</small></p>
+<section>
+    <div class="container">
+        <div class="card-body">
+            <div *ngIf="tarifa" class="row justify-content-center">
+                <!-- Columna para la información del plan -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="row align-items-center">
+                        <!-- Información de la tarifa -->
+                        <div class="col-4">
+                            <h2>{{ tarifa.name }}</h2>
+                            <p class="tarifa_title">Tarifa</p>
+                            <p>{{ tarifa.speed }}</p>
                         </div>
+                        <!-- Sección de precio -->
+                        <div class="col-4">
+                            <div class="tarifa_precio">
+                                <p>{{ tarifa.price }} <strong>€</strong> <small class="iva">IVA incl.</small></p>
+                            </div>
 
-                        <div class="iconos">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1183/1183601.png" alt="Icono de velocidad"
-                                width="34" height="34">
-                        </div>
-                        <div>
-                            <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
-                        </div>
+                            <div class="iconos">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1183/1183601.png"
+                                    alt="Icono de velocidad" width="34" height="34">
+                            </div>
+                            <div>
+                                <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
+                            </div>
 
-                        <!-- Botón para más información -->
-                        <div>
-                            <a href="/checkout" class="btn btn-primary-green mt-3" aria-label="Más información">Más
-                                Información</a>
+                            <!-- Botón para más información -->
+                            <div>
+                                <a href="/checkout" class="btn btn-primary-green mt-3" aria-label="Más información">Más
+                                    Información</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Columna para detalles adicionales o beneficios -->
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="row lista_checks">
-                    <p class="mb-3" style="color: var(--background);">Beneficios de la Tarifa:</p>
-                    <ul>
-                        <li>Sin coste de línea fija, nada de cuotas extras.</li>
-                        <li>Con o sin Permanencia. Tú eliges...</li>
-                        <li>Velocidad simétrica según disponibilidad geográfica.</li>
-                    </ul>
+                <!-- Columna para detalles adicionales o beneficios -->
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="row lista_checks">
+                        <p class="mb-3" style="color: var(--background); font-size: 1.125rem;">Beneficios de la Tarifa:
+                        </p>
+                        <ul>
+                            <li>Sin coste de línea fija, nada de cuotas extras.</li>
+                            <li>Con o sin Permanencia. Tú eliges...</li>
+                            <li>Velocidad simétrica según disponibilidad geográfica.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<section class="container">
+    <div class="grid">
+        <div class="cardList">
+            <div class="card-header">
+                <div class="titulo">
+                    <h4>¿También quieres GB? Échale un vistazo a nuestra tarifa combinada</h4>
+                </div>
+                <ul class="checklist">
+                    <li> Sin cuota de línea fija.</li>
+                    <li> Velocidad simétrica según disponibilidad geográfica.</li>
+                    <li> Llamadas ilimitadas.</li>
+                </ul>
+                <app-tarifas [tipo]="'Fibra y Móvil'"></app-tarifas>
+            </div>
+
+        </div>
+
+    </div>
+</section>

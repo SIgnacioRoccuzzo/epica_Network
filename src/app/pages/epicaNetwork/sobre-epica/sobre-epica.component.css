@@ -7,9 +7,11 @@
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    padding: 10px;
 }
 
 h1 {
+    font-family: var(--fuente-titulo);
     text-align: center;
     margin-bottom: 25px;
 }
@@ -29,7 +31,7 @@ h2 {
 }
 
 .container a {
-    color: var(--color-principal);
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -39,7 +41,7 @@ h2 {
 }
 
 .text-link {
-    color: var(--color-principal);
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }

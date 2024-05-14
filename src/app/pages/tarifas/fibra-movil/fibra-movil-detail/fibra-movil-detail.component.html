@@ -5,11 +5,14 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="row align-items-center"> <!-- Usar Flexbox para alinear elementos -->
                     <!-- Información de la tarifa -->
-                    <div class="col-4"> <!-- Ajustar el espacio de cada columna -->
-                        <h2>{{ tarifa.name }}</h2> <!-- Título principal -->
-                        <p class="tarifa_title">Tarifa</p> <!-- Tarifa -->
-                        <p>{{ tarifa.gb }}</p> <!-- Información adicional -->
-                        <p>{{tarifa.speed}}</p>
+                    <div class="col-4">
+                        <h2>{{ tarifa.name }}</h2>
+                        <p class="tarifa_title">Tarifa</p>
+                        <p *ngIf="tarifa.speed">{{ tarifa.speed }}</p>
+                        <p *ngIf="!tarifa.lines && tarifa.gb">{{ tarifa.gb }}</p>
+                        <p *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{ tarifa.gb }}</p>
+                        <p>{{tarifa.minutes}}</p>
+
                     </div>
 
                     <!-- Sección de precio -->
@@ -17,16 +20,18 @@
                         <div class="tarifa_precio">
                             <p>{{ tarifa.price }} <strong>€</strong> <small class="iva">IVA incl.</small></p>
                         </div>
-
                         <div class="iconos">
                             <img src="https://cdn-icons-png.flaticon.com/512/1183/1183601.png" alt="Icono de velocidad"
                                 width="34" height="34">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-5g-50.png?alt=media&token=7024db98-66f6-4b21-8df4-6900ab290768"
+                            <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-fourth-generation-cellular-plus-and-internet-connectivity-logotype-96.png?alt=media&token=051d8eb3-74c1-414a-89b1-603c7ef335a8"
                                 alt="Icono de 5G" width="34" height="34">
                             <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Teléfono" width="32"
                                 height="32">
                         </div>
-                        <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
+                        <div>
+                            <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
+                        </div>
+
                         <!-- Botón para más información -->
                         <div>
                             <a href="/checkout" class="btn btn-primary-green mt-3" aria-label="Más información">Más
@@ -34,14 +39,13 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
             <!-- Columna para detalles adicionales o beneficios -->
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="row lista_checks">
-                    <p class="mb-3" style="color: var(--background);">Beneficios de la Tarifa:</p>
+                    <p class="mb-3" style="color: var(--background); font-size: 1.125rem;">Beneficios
+                        de la Tarifa:</p>
                     <ul>
                         <li>Sin cuota de línea fija.</li>
                         <li>Velocidad simétrica según disponibilidad geográfica.</li>
@@ -56,3 +60,40 @@
         </div>
     </div>
 </div>
+<section class="container">
+    <div class="grid">
+        <div class="content">
+            <div class="titulo">
+                <h2>¿Por qué elegir una tarifa Fibra y Móvil Épica Network?</h2>
+            </div>
+            <div class="content-center">
+                <div class="subtitulo">
+                    <span>Una vez que actives tus servicios, descubrirás un nuevo mundo de posibilidades</span>
+                </div>
+
+            </div>
+            <div class="content-body">
+                <div>
+                    <span>En Épica Network te ofrecemos algunas de las tarifas más competitivas del mercado español, con
+                        planes de internet y
+                        fibra que alcanzan velocidades de descarga de hasta 600Mbps. Además, nuestras tarifas móviles
+                        cuentan con la mejor
+                        cobertura 4G+.<br><br></span><span>De esta forma, podrás aprovechar nuestros planes convergentes
+                        de fibra y móvil, eligiendo la combinación que mejor se
+                        adapte a tus necesidades. Con precios imbatibles y prestaciones excepcionales, te ofrecemos
+                        líneas adicionales, sin
+                        permanencia.<br><br></span><span>Te garantizamos las mejores tarifas móviles junto con un
+                        excelente servicio de atención al cliente y la confianza que
+                        brinda Épica Network. Para contratar nuestros planes de tarifas móviles, puedes hacerlo a través
+                        de <a class="contacto" href="{{whatsappLink}}">WhatsApp.</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="foto">
+            <figure>
+                <img
+                    src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_7164.png?alt=media&token=44ccc649-11c4-4440-8072-7b99aa1db11c">
+            </figure>
+        </div>
+    </div>
+</section>

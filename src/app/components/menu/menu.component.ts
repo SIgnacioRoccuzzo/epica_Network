@@ -13,7 +13,7 @@ interface MenuSection {
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush // Mejora en la detección de cambios
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuComponent implements OnInit {
   router = inject(Router);

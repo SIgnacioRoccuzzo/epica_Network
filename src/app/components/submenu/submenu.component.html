@@ -1,5 +1,5 @@
 <!-- Contenedor principal -->
-<div class="container">
+<div class="container-fluid">
     <ul *ngIf="!selectedItem" class="submenu">
         <li *ngFor="let item of items" (click)="selectItem(item)">
             <a [routerLink]="getRouterLink(item)">{{ item.name }}</a>

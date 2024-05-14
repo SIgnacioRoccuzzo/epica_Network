@@ -18,9 +18,12 @@
             <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
             <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
         </ul>
-        <div class="desktop">
-            <app-tarifas [tipo]="filtroActual"></app-tarifas>
-        </div>
+
+
+        <app-tarifas [tipo]="filtroActual"></app-tarifas>
+
+
+
     </article>
 </section>
 

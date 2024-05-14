@@ -12,8 +12,8 @@ export class TarifasService {
   baseUrl: string;
 
   constructor() {
-    this.baseUrl = 'https://epica-network.onrender.com/api/tarifas'
-    /*  this.baseUrl = 'http://localhost:3000/api/tarifas/' */
+    /*   this.baseUrl = 'https://epica-network.onrender.com/api/tarifas' */
+    this.baseUrl = 'http://localhost:3000/api/tarifas/'
   }
 
 
@@ -30,9 +30,9 @@ export class TarifasService {
       this.httpClient.get<Tarifas | any>(`${this.baseUrl}/gb/${tarifasGb}`)
     );
   }
-  getBySpeed(tarifasSpeed: string): Promise<Tarifas[] | any> {
+  getBySpeed(speed: string): Promise<Tarifas[] | any> {
     return firstValueFrom(
-      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/speed/${tarifasSpeed}`)
+      this.httpClient.get<Tarifas | any>(`${this.baseUrl}/speed/${speed}`)
     );
   }
   getBytype(tarifastype: string): Promise<Tarifas[] | any> {

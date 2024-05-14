@@ -1,11 +1,11 @@
-.container {
+.container-fluid {
     display: flex;
     justify-content: center;
     align-items: center
 }
 
 .submenu {
-    background-color: transparent;
+    background-color: var(--text);
     padding: 8px;
     display: inline-flex;
     list-style-type: none;

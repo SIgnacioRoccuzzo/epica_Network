@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'epica';
+
   whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.';
 
 }
