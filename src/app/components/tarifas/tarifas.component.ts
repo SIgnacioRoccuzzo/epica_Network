@@ -57,4 +57,12 @@ export class TarifasComponent implements OnChanges {
       console.error('Error al obtener las tarifas:', error);
     }
   }
+  trackByTarifas(index: number, tarifa: any): any {
+    return tarifa.id; // Asegúrate de que cada 'tarifa' tenga una propiedad 'id' única.
+  }
+
+  trackByChecklistItems(index: number, item: any): any {
+    return item.id; // Similarmente, asegúrate de que cada 'item' en el checklist tenga un ID único.
+  }
+
 }

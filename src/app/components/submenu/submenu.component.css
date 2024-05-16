@@ -1,21 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
+@import url('../../../styles.css');
+
 .container-fluid {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
+/* Estilos para el submenú */
 .submenu {
-    background-color: var(--text);
+    background-color: transparent;
     padding: 8px;
     display: inline-flex;
     list-style-type: none;
     margin: 0;
-    transition: all .5s ease
+    transition: all 0.5s ease;
 }
 
+/* Estilos para los elementos del submenú */
 .submenu li {
     margin-right: 15px;
-    transition: transform .3s ease, opacity .3s ease
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
 }
 
 .submenu a {
@@ -23,27 +30,38 @@
     font-family: var(--fuente-cuerpo);
     text-decoration: none;
     font-size: var(--size-text);
-    margin: 15px
+    margin: 15px;
 }
 
 .submenu li:hover {
     transform: scale(1.1);
-    opacity: .8
+    opacity: 0.8;
+
 }
 
 .submenu a:hover {
-    color: var(--accent)
+    color: var(--accent);
 }
 
-@media (max-width:768px) {
+.scrollmenu {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .scrollmenu {
+        display: none;
+    }
+
     .submenu {
-        text-align: center
+        text-align: center;
+
     }
 
     .submenu a {
-        font-size: .85rem;
+        font-size: 0.85rem;
         margin: 0 auto;
         gap: 5px;
-        font-weight: 700
+        font-weight: bold;
     }
 }

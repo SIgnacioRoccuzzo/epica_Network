@@ -7,8 +7,9 @@ import { TarifasService } from 'src/app/services/tarifas.service';
 @Component({
   selector: 'app-submenu',
   templateUrl: './submenu.component.html',
-  styleUrl: './submenu.component.css'
+  styleUrls: ['./submenu.component.css']
 })
+
 export class SubmenuComponent {
   @Input() items: Tarifas[] = []
   selectedItem: Tarifas | null = null;
@@ -31,17 +32,17 @@ export class SubmenuComponent {
   getRouterLink(item: Tarifas): string[] {
 
     if (item.type === 'Fibra') {
-      return ['/fibra', item.speed];
+      return ['/fibra/detalle', item.speed];
     } else if (item.type === 'Fibra y Móvil') {
-      return ['/fibra-y-movil', item.gb];
+      return ['/fibra-y-movil/detalle', item.gb];
     } else if (item.type === 'Móvil') {
-      return ['/movil', item.gb];
+      return ['/movil/detalle', item.gb];
     } else {
       return ['/tv', item.name];
     }
   }
   toggleSubmenu(): void {
-    this.isSubmenuVisible = !this.isSubmenuVisible; // Alternar visibilidad del submenú
+    this.isSubmenuVisible = !this.isSubmenuVisible;
   }
 
 

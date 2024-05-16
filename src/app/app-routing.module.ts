@@ -16,23 +16,23 @@ import { SubmenuComponent } from './components/submenu/submenu.component';
 import { TarifasComponent } from './components/tarifas/tarifas.component';
 
 const routes: Routes = [
-  // Redireccionar a la página de inicio para la ruta raíz
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
-  // Página de inicio
   { path: 'inicio', component: InicioComponent },
 
   // Rutas de tarifas
   { path: 'fibra', component: FibraComponent },
-  { path: 'fibra/:speed', component: FibraDetailsComponent },
+  { path: 'fibra/detalle/:speed', component: FibraDetailsComponent },
   { path: 'fibra-y-movil', component: FibraMovilComponent },
-  { path: 'fibra-y-movil/:gb', component: FibraMovilDetailComponent },
+  { path: 'fibra-y-movil/detalle/:gb', component: FibraMovilDetailComponent },
+
   { path: 'movil', component: TarifaMovilComponent },
-  { path: 'movil/:gb', component: MovilDetailComponent },
+  { path: 'movil/detalle/:gb', component: MovilDetailComponent }, // Detalle de Móvil por GB
+
   { path: 'tv', component: TvComponent },
-  { path: 'detalle/:name', component: SubmenuComponent },
-  { path: 'tarifas', component: TarifasComponent },
+  { path: 'tv/detalle/:name', component: SubmenuComponent }, // Detalle de TV por nombre
 
   // Rutas generales
+  { path: 'tarifas', component: TarifasComponent },
   { path: 'ayuda', component: AyudaComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'sobre-epica', component: SobreEpicaComponent },
@@ -46,3 +46,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

@@ -10,15 +10,6 @@ h1 {
     color: var(--text);
 }
 
-@media (max-width: 768px) {
-    .product-card {
-        flex: 1 1 100%;
-
-        max-width: 100%;
-
-    }
-}
-
 .bloque_cards {
     margin-top: 3.125rem;
     display: block;
@@ -150,7 +141,8 @@ h1 {
 
 @media (min-width: 18.75rem) and (max-width: 75rem) {
     h1 {
-        margin-top: 14rem;
+
+        font-size: 2.5rem;
     }
 
     .bloque_cards {
@@ -160,4 +152,23 @@ h1 {
     .mobil {
         display: block;
     }
+
+    .product-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .fqa .container {
+        width: 100%;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+
+    }
+
 }

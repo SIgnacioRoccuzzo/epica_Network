@@ -40,18 +40,22 @@ export class MenuComponent implements OnInit {
   async ngOnInit() {
     try {
       const tarifas = await this.tarifasService.getAll();
+
       this.submenus = tarifas.reduce((acc: { [x: string]: any[]; }, tarifa: { type: string | number; }) => {
         acc[tarifa.type] = acc[tarifa.type] || [];
         acc[tarifa.type].push(tarifa);
         return acc;
       }, {});
     } catch (err) {
+
       this.error = 'Error al cargar las tarifas.';
       console.error(err);
     } finally {
+
       this.loading = false;
     }
   }
+
 
   getSubmenuItems(type: string): Tarifas[] {
     return this.submenus[type] || [];
@@ -74,6 +78,6 @@ export class MenuComponent implements OnInit {
   }
 
   trackByItems(index: number, item: any): number {
-    return item.id; // Asumiendo que cada item tiene un 'id' único
+    return item.id;
   }
 }

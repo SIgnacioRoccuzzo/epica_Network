@@ -50,7 +50,7 @@
                     </button>
                 </h2>
                 <div [id]="'collapse' + i" [class]="getClass(i)" [attr.aria-labelledby]="'heading' + i">
-                    <div class="accordion-body">
+                    <div class="accordion-body" [innerHTML]="question.content">
                         {{ question.content }}
                     </div>
                 </div>

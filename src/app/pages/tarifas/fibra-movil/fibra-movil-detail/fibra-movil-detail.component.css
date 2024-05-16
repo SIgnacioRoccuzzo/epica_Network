@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../../../styles.css');
 
 .card-body {
@@ -63,6 +65,7 @@ strong {
 .iconos {
     display: inline-flex;
     gap: 7px;
+    width: 110px;
 }
 
 .cta {
@@ -195,6 +198,8 @@ strong {
 }
 
 @media (max-width: 480px) {
+
+
     .titulo h2 {
         font-size: 1.5em;
     }
@@ -223,6 +228,7 @@ strong {
 @media (max-width: 768px) {
     .card-body {
         width: 100%;
+
     }
 
     .card-body .cta {

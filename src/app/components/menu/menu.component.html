@@ -16,32 +16,38 @@
                 </a>
             </figure>
             <div class="menu-wrapper">
+
                 <button class="burger" aria-label="Toggle Menu" (click)="toggleMenu()"
                     [attr.aria-expanded]="isMenuOpen">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+
                 <div class="menu-header" id="menu-header" [ngClass]="{'is-open': isMenuOpen}" role="navigation">
                     <ul class="first-menu" role="menu">
-                        <li *ngFor="let section of firstMenu" [routerLink]="[section.route]" routerLinkActive="active"
-                            role="menuitem" (click)="toggleSubmenu(section.submenuType)">
+                        <li *ngFor="let section of firstMenu; trackBy: trackByItems" [routerLink]="[section.route]"
+                            routerLinkActive="active" role="menuitem" (click)="toggleSubmenu(section.submenuType)">
                             {{ section.label }}
                         </li>
                     </ul>
                     <ul class="second-menu" role="menu">
-                        <li *ngFor="let section of secondMenu" [routerLink]="[section.route]" routerLinkActive="active"
-                            role="menuitem" (click)="toggleMenu()">
+                        <li *ngFor="let section of secondMenu; trackBy: trackByItems" [routerLink]="[section.route]"
+                            routerLinkActive="active" role="menuitem" (click)="toggleMenu()">
                             {{ section.label }}
                         </li>
                     </ul>
+
                     <a class="button" href="https://clientesepicanetwork.ispgestion.com/site/login"
                         [ngClass]="{'is-open': isMenuOpen}">
                         Soy Cliente
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </nav>
-
-
     <app-submenu *ngIf="activeSubmenu" [items]="getSubmenuItems(activeSubmenu)"></app-submenu>
+
 </header>

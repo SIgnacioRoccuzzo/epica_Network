@@ -12,8 +12,8 @@ export class TarifasService {
   baseUrl: string;
 
   constructor() {
-    /*   this.baseUrl = 'https://epica-network.onrender.com/api/tarifas' */
-    this.baseUrl = 'http://localhost:3000/api/tarifas/'
+    this.baseUrl = 'https://epica-network.onrender.com/api/tarifas'
+    /*   this.baseUrl = 'http://localhost:3000/api/tarifas/' */
   }
 
 
