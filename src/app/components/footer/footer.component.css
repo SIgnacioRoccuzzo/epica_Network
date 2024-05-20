@@ -2,70 +2,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../styles.css');
 
+/* Bloque Contacto Faldon */
 .bloque_contacto_faldon {
     background: var(--background);
-    padding: 3rem 0;
-    margin-top: 100px;
+    padding: 1rem 0;
+    /* Reducir aún más el padding */
+    margin-top: 50px;
+    /* Mantener el margen superior reducido */
 }
 
 .bloque_contacto_faldon p,
 .bloque_contacto_faldon span {
-    font-size: 19px;
-    line-height: 30px;
+    font-size: 14px;
+    /* Reducir aún más el tamaño de fuente */
+    line-height: 20px;
+    /* Reducir la altura de línea */
     color: var(--text);
     font-family: var(--fuente-cuerpo);
 }
 
 .bloque_contacto_faldon span {
     color: var(--highlight);
-
 }
 
 .bloque_contacto_faldon a {
-    color: var(--accent)
+    color: var(--accent);
 }
 
 .bloque_contacto_faldon img {
-    width: 90px;
+    width: 50px;
+    /* Reducir aún más el tamaño de imagen */
 }
 
-/* Estilo para el footer general */
+/* Footer General */
 footer {
     background-color: var(--text);
     color: var(--background);
-
 }
 
 .logo img {
-    width: 200px;
+    width: 120px;
+    /* Reducir aún más el tamaño del logo */
     object-fit: contain;
-    transform: translateX(-40px);
+    transform: translateX(-25px);
+    /* Ajustar la transformación */
+}
+
+.logoo {
+    width: 50px;
+    /* Reducir aún más el tamaño de imagen */
+    object-fit: contain;
 }
 
 /* Primary Footer */
 .primary-footer {
-    margin-top: 100px;
+    margin-top: 30px;
+    /* Reducir el margen superior */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: auto;
+    row-gap: 10px;
+    /* Agregar espacio entre filas */
 }
 
 .primary-footer h5 {
-    font-size: var(--font-size-large);
+    font-size: 18px;
+    /* Incrementar un poco el tamaño de fuente */
     font-family: var(--fuente-titulo);
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    /* Reducir el margen inferior */
 }
 
 .primary-footer>div {
     flex: 1 1 25%;
-    padding: 20px;
+    padding: 5px;
+    /* Reducir aún más el padding */
 }
 
 .primary-footer .footer-logo {
-    height: 80px;
-    width: 100px;
+    height: 50px;
+    /* Reducir aún más el tamaño de imagen */
+    width: 70px;
 }
 
 .primary-footer ul {
@@ -74,7 +93,8 @@ footer {
 }
 
 .primary-footer ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    /* Reducir aún más el margen inferior */
 }
 
 .primary-footer a {
@@ -87,7 +107,7 @@ footer {
     color: var(--accent);
 }
 
-/* Estilo para redes sociales */
+/* Redes Sociales */
 .social-list {
     list-style: none;
     padding: 0;
@@ -99,7 +119,8 @@ footer {
 .social {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    /* Reducir aún más el margen inferior */
 }
 
 .social a {
@@ -107,52 +128,38 @@ footer {
     transition: 0.3s;
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 3px 8px;
+    /* Reducir el padding */
 }
 
 .social a:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    /* Mantener la transformación */
 }
 
 .social a i {
     margin-right: 5px;
-    font-size: 24px;
+    font-size: 18px;
+    /* Reducir aún más el tamaño del ícono */
     transition: color 0.3s;
 }
 
-/* Colores distintivos para cada icono de redes sociales */
-.social .fab.fa-youtube {
-    color: var(--background);
-}
-
-.social .fab.fa-facebook-f {
-    color: var(--background);
-}
-
-.social .fab.fa-instagram {
-    color: var(--background);
-}
-
-.social .fa-brands.fa-threads {
-    color: var(--background);
-}
-
-.social .fab.fa-tiktok {
-    color: var(--background);
-}
-
-.social .fa-brands.fa-x-twitter {
-    color: var(--background);
-}
-
+/* Colores Distintivos para Iconos de Redes Sociales */
+.social .fab.fa-youtube,
+.social .fab.fa-facebook-f,
+.social .fab.fa-instagram,
+.social .fa-brands.fa-threads,
+.social .fab.fa-tiktok,
+.social .fa-brands.fa-x-twitter,
 .social .fab.fa-linkedin {
     color: var(--background);
 }
 
 /* Secondary Footer */
 .secondary-footer {
-
     text-align: center;
+    padding: 5px 0;
+    /* Reducir aún más el padding */
 }
 
 .secondary-footer ul {
@@ -163,11 +170,15 @@ footer {
 }
 
 .secondary-footer ul li {
-    margin: 0 10px;
+    margin: 0 5px;
+    /* Reducir el margen */
+    font-size: 12px;
+    /* Reducir aún más el tamaño de fuente */
 }
 
 .secondary-footer .footer-logo {
-    height: 100px;
+    height: 50px;
+    /* Reducir aún más el tamaño de imagen */
     width: auto;
 }
 
@@ -183,12 +194,11 @@ footer {
     text-decoration: none;
 }
 
-/* Estilos responsivos */
+/* Estilos Responsivos */
 @media (max-width: 768px) {
     .bloque_contacto_faldon {
-
-        padding: 4rem 2rem;
-
+        padding: 1.5rem 1rem;
+        /* Ajustar el padding para pantallas pequeñas */
     }
 
     .primary-footer {
@@ -205,15 +215,24 @@ footer {
     }
 
     .social a {
-        font-size: 20px;
+        font-size: 16px;
+        /* Ajustar el tamaño de fuente */
     }
 
     .social a i {
-        font-size: 22px;
+        font-size: 18px;
+        /* Ajustar el tamaño del ícono */
     }
 
     .logo img {
+        display: block;
+        margin: 0 auto;
+        transform: none;
+    }
 
-        transform: translateX(85px);
+    .logoo {
+        flex-direction: column;
+        display: block;
+        margin: 0 auto;
     }
 }

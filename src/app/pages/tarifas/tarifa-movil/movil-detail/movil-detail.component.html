@@ -1,48 +1,49 @@
-<div class="container">
+<section class="container">
     <div class="card-body">
         <div *ngIf="tarifa" class="row justify-content-center">
             <!-- Columna para la información del plan -->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="row align-items-center"> <!-- Usar Flexbox para alinear elementos -->
+                <div class="row align-items-center">
                     <!-- Información de la tarifa -->
-                    <div class="col-4"> <!-- Ajustar el espacio de cada columna -->
-                        <h2>{{ tarifa.name }}</h2> <!-- Título principal -->
-                        <p class="tarifa_title">Tarifa</p> <!-- Tarifa -->
-                        <p class="gb">{{ tarifa.gb }}</p> <!-- Información adicional -->
-                        <p class="minutes">{{tarifa.minutes}}</p>
+                    <div class="col-12 col-sm-4">
+                        <h2>{{ tarifa.name }}</h2>
+                        <p class="tarifa_title">Tarifa</p>
+                        <p *ngIf="tarifa.speed">Fibra {{ tarifa.speed }}</p>
+                        <p *ngIf="!tarifa.lines && tarifa.gb">Móvil {{ tarifa.gb }}</p>
+                        <p *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{ tarifa.gb }}</p>
+                        <p>Llamadas {{tarifa.minutes}}</p>
                     </div>
-
                     <!-- Sección de precio -->
-                    <div class="col-4">
-                        <div class="tarifa_precio">
-                            <p>{{ tarifa.price }} <strong>€</strong> <small class="iva">IVA incl.</small></p>
-                        </div>
-
-                        <div class="iconos">
-                            <img src="../../../../../assets/images/4g+movil.svg" alt="Icono de 5G" width="34"
-                                height="34">
-
-                        </div>
+                    <div class="col-12 col-sm-8">
+                        <section class="tarifa_price">
+                            <p>{{ tarifa.price }}</p>
+                            <div class="tarifa-price__regularity">
+                                <span class="mes">€/mes</span>
+                                <span class="iva">IVA incl.</span>
+                                <small class="tariff-message">Precio final</small>
+                            </div>
+                            <div class="iconos">
+                                <img src="../../../../../assets/images/4g+movil.svg" alt="Icono de 5G" width="34"
+                                    height="34">
+                            </div>
+                        </section>
                         <div>
-                            <button class="cta" aria-label="Me interesa esta tarifa">Me interesa</button>
+                            <button class="cta btn" aria-label="Me interesa esta tarifa">Me interesa</button>
                         </div>
-
                         <!-- Botón para más información -->
                         <div>
-                            <a href="/checkout" class="btn btn-primary-green mt-3" aria-label="Más información">Más
+                            <a href="/checkout" class="btn mt-3" style="background-color: var(--primary);"
+                                aria-label="Más información">Más
                                 Información</a>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
             <!-- Columna para detalles adicionales o beneficios -->
             <div class="col-12 col-md-6 col-lg-6">
-                <div class="row lista_checks">
+                <div class="row lista_checks justify-content-center">
                     <p class="mb-3" style="color: var(--background); font-size: 1.125rem;">Beneficios de la Tarifa:</p>
-                    <ul>
+                    <ul class="checklist">
                         <li>Sin permanencia.</li>
                         <li>Incluye llamadas ilimitadas a fijos y móviles nacionales.</li>
                         <li>Cobertura en todo el territorio nacional.</li>
@@ -55,7 +56,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <section class="container">
     <div class="grid">
@@ -80,25 +81,31 @@
                         todo
                         ello
                         con los
-                        precios más competitivos del mercado. Nuestra tarifa móvil más potente incluye 150GB de datos y
+                        precios más competitivos del mercado. Nuestra tarifa móvil más potente incluye 150GB de
+                        datos y
                         Llamadas
                         Ilimitadas por
-                        tan solo 19,90€/mes, sin permanencia. Esta tarifa se convierte en la opción más económica dentro
+                        tan solo 19,90€/mes, sin permanencia. Esta tarifa se convierte en la opción más económica
+                        dentro
                         de
                         su
                         segmento, ideal
-                        para quienes buscan alta capacidad de datos a un precio accesible.<br><br></span><span>Además de
+                        para quienes buscan alta capacidad de datos a un precio
+                        accesible.<br><br></span><span>Además de
                         nuestras
                         tarifas competitivas, nos enorgullecemos de ofrecer un excelente servicio de atención al
                         cliente,
-                        siempre dispuesto a resolver tus dudas y ayudarte en lo que necesites. Con Épica Network, tienes
+                        siempre dispuesto a resolver tus dudas y ayudarte en lo que necesites. Con Épica Network,
+                        tienes
                         la
                         garantía
                         y confianza
-                        de estar respaldado por un servicio de calidad.<br><br></span><span>Te garantizamos las mejores
+                        de estar respaldado por un servicio de calidad.<br><br></span><span>Te garantizamos las
+                        mejores
                         tarifas móviles junto con un
                         excelente servicio de atención al cliente y la confianza que
-                        brinda Épica Network. Para contratar nuestros planes de tarifas móviles, puedes hacerlo a través
+                        brinda Épica Network. Para contratar nuestros planes de tarifas móviles, puedes hacerlo a
+                        través
                         de <a class="contacto" href="{{whatsappLink}}">WhatsApp.</a></span>
                 </div>
             </div>

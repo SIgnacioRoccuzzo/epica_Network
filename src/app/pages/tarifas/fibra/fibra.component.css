@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../../styles.css');
 
+/* Global Styles */
 h1 {
     font-family: var(--fuente-titulo);
     margin-top: 10rem;
@@ -10,6 +11,7 @@ h1 {
     color: var(--text);
 }
 
+/* FAQ Section */
 .fqa {
     padding: 30px;
 }
@@ -21,7 +23,6 @@ h1 {
     width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: auto;
-    /* Centrar el contenedor */
 }
 
 .fqa h2 {
@@ -31,6 +32,7 @@ h1 {
     font-size: var(--font-size);
 }
 
+/* Accordion Styles */
 .accordion-button {
     background-color: var(--primary);
     color: var(--text);
@@ -66,7 +68,7 @@ h1 {
     margin-bottom: 0;
 }
 
-
+/* Card Styles */
 .bloque_cards {
     margin-top: 3.125rem;
     display: block;
@@ -115,7 +117,6 @@ h1 {
     display: block;
     margin: 0 auto;
     margin-top: 0.5rem;
-
 }
 
 .card-title {
@@ -133,16 +134,17 @@ h1 {
 
 .card-body {
     padding: 1.25rem;
-
 }
 
+/* Mobile Specific Styles */
 .mobil {
     display: none;
 }
 
-@media (min-width: 18.75rem) and (max-width: 75rem) {
+/* Unified Media Query */
+@media (min-width: 300px) and (max-width: 1199px) {
     h1 {
-        margin-top: 14rem;
+        margin-top: 12rem;
         font-size: 2.5rem;
     }
 
@@ -153,9 +155,7 @@ h1 {
     .mobil {
         display: block;
     }
-}
 
-@media (max-width: 425px) {
     .fqa .container {
         width: 100%;
         /* Ajusta a pantalla completa para dispositivos móviles */
@@ -173,9 +173,7 @@ h1 {
         right: 20px;
         top: 20px;
     }
-}
 
-@media (max-width: 768px) {
     .product-card {
         flex: 1 1 100%;
         max-width: 100%;

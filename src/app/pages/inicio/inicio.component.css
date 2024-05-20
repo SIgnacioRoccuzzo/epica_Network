@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../styles.css');
 
-
+/* Banner Inicio */
 .banner_inicio img {
     width: 100%;
     height: 85vh;
     background-position: center center;
-    background-size: cover
+    background-size: cover;
 }
 
+/* Titulo */
 .titulo h1 {
     font-family: var(--fuente-titulo);
     margin-top: 20px;
@@ -24,9 +25,10 @@
     font-weight: 200;
     margin: 0;
     margin-top: 10px;
-    font-family: var(--fuente-cuerpo)
+    font-family: var(--fuente-cuerpo);
 }
 
+/* Filtros Menu */
 .filtros-menu {
     display: flex;
     justify-content: center;
@@ -34,7 +36,7 @@
     padding: 0;
     margin: 0;
     gap: 40px;
-    margin-top: 20px;
+
 }
 
 .filtros-menu li {
@@ -43,7 +45,7 @@
     color: var(--text);
     font-size: 1.1rem;
     font-weight: 400;
-    padding-bottom: 10px
+    padding-bottom: 5px;
 }
 
 .filtros-menu li::before {
@@ -69,10 +71,12 @@
     text-decoration: none;
 }
 
+/* Mobile */
 .mobile {
     display: none;
 }
 
+/* Baner */
 .baner {
     display: flex;
     align-items: center;
@@ -81,32 +85,33 @@
     background-color: var(--background);
     margin-top: 50px;
     border-radius: 25px;
-    width: 100%
+    width: 100%;
 }
 
-.area1 {
+.icon-container {
     margin-right: 20px;
-    flex-shrink: 0
+    flex-shrink: 0;
 }
 
-.area1 img {
+.icon-container img {
     width: 60px;
-    height: 60px
+    height: 60px;
 }
 
 .content {
-    flex: 1
+    flex: 1;
 }
 
-.area2,
-.area3 {
-    font-family: Montserrat, sans-serif
+.red,
+.frase {
+    font-family: Montserrat, sans-serif;
 }
 
-.area2 {
-    font-weight: 700
+.red {
+    font-weight: 700;
 }
 
+/* Cobertura */
 .cobertura {
     display: flex;
     justify-content: center;
@@ -116,21 +121,22 @@
     text-align: center;
     margin-top: 50px;
     background-color: var(--background);
-    border-radius: 25px
+    border-radius: 25px;
 }
 
-.area4 img {
+.coverage-icon img {
     margin: 0;
     width: 60px;
-    height: 60px
+    height: 60px;
 }
 
-.area5 {
+.coverage-text {
     font-family: var(--fuente-cuerpo);
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
+/* Interesa */
 a.interesa {
     background-color: var(--accent);
     color: #fff;
@@ -142,20 +148,22 @@ a.interesa {
     cursor: pointer;
     border-radius: .625rem;
     transition: background-color .3s ease;
-    width: 15%
+    width: 15%;
 }
 
 a.interesa:hover {
     background-color: var(--highlight);
-    box-shadow: var(--button-hover-box-shadow)
+    box-shadow: var(--button-hover-box-shadow);
 }
 
+/* Background Highlighted */
 .bg-highlighted {
     background-color: #f5f5f5;
     padding: 20px 0;
     margin-top: 50px;
 }
 
+/* Accelerator */
 .accelerator {
     display: flex;
     justify-content: center;
@@ -180,28 +188,26 @@ a.interesa:hover {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
-
 }
 
 .accelerator-item__icons img {
     width: 48px;
     height: 48px;
     transition: transform 0.3s ease;
-
 }
 
 .accelerator-item:hover .accelerator-item__icons img {
     transform: scale(1.1);
-
 }
 
-.text-p-02-regular {
+.text-p-03-regular {
     font-size: 16px;
     margin: 0;
     padding-top: 10px;
     font-family: var(--fuente-cuerpo);
 }
 
+/* Image Section */
 .image-section {
     display: flex;
     margin-top: 50px;
@@ -222,7 +228,6 @@ a.interesa:hover {
 .banner:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
-
 }
 
 .banner figure {
@@ -236,32 +241,34 @@ img {
     object-fit: cover;
 }
 
+/* P Section */
 .p-section {
     padding: 20px;
     margin-top: 50px;
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .title-module h2 {
     font-family: var(--fuente-titulo);
     font-size: 1.8rem;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .subtitulo {
     font-family: var(--fuente-cuerpo);
 }
 
+/* Discovery Card */
 .discovery-card__grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .discovery-card {
@@ -270,71 +277,85 @@ img {
     padding: 20px;
     flex-basis: 48%;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .discovery-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .2)
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+}
+
+.text-heading-01 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+
+}
+
+.text-p-02-regular {
+    font-size: 16px;
+    margin: 0;
+    padding-top: 10px;
+    font-family: var(--fuente-cuerpo);
 }
 
 .discovery-card__img {
     align-self: flex-end;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start
+    align-items: flex-start;
 }
 
 .discovery-card__img img {
     width: 70px;
     height: 70px;
-    object-fit: contain
+    object-fit: contain;
 }
 
 .discovery-card__info {
     text-align: left;
-    flex: 1
+    flex: 1;
 }
 
 .discovery-card.is-large,
 .discovery-card:last-child {
-    flex-basis: 100%
+    flex-basis: 100%;
 }
 
-@media (max-width:768px) {
+/* Media Queries */
+@media (max-width: 768px) {
     .discovery-card {
-        flex-basis: 100%
+        flex-basis: 100%;
     }
 
     .discovery-card__grid {
-        gap: 10px
+        gap: 10px;
     }
 
     .discovery-card__img {
-        justify-content: flex-end
+        justify-content: flex-end;
     }
 
     .discovery-card__img img {
         width: 50px;
-        height: 50px
+        height: 50px;
     }
 
     .cobertura {
         flex-direction: column;
         justify-content: flex-start;
-        gap: 15px
+        gap: 15px;
     }
 
     a.interesa {
-        width: 100%
+        width: 100%;
     }
 
     .image-section {
-        flex-direction: column
+        flex-direction: column;
     }
 
     .image-section .banner:first-child,
     .image-section .banner:last-child {
-        display: none
+        display: none;
     }
 
     .accelerator-grid {
@@ -345,5 +366,4 @@ img {
         font-size: 2.5rem;
         font-family: var(--fuente-titulo) !important;
     }
-
 }

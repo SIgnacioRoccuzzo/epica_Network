@@ -10,7 +10,10 @@
                             src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
                             alt="Fibra" loading="lazy" [hidden]="tarifa.type === 'TV' || tarifa.type === 'Móvil'">
                         <span class="text-subheading-01">{{ tarifa.speed }}</span>
-                        <span class="text-subheading-01" *ngIf="!tarifa.lines && tarifa.gb">{{ tarifa.gb }}</span>
+                        <img class="mobil" *ngIf="!tarifa.lines && tarifa.gb"
+                            src="../../../../../assets/images/4g+movil.svg" alt="Fibra" loading="lazy"
+                            [hidden]="tarifa.type === 'TV' || tarifa.type === 'Fibra'">
+                        <span class="text-subheading-01" *ngIf="!tarifa.lines && tarifa.gb"> {{ tarifa.gb }}</span>
                         <span class="text-subheading-01" *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{
                             tarifa.gb }}</span>
                     </div>

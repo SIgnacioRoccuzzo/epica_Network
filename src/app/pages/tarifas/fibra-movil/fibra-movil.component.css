@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../../styles.css');
 
+/* Global Styles */
 h1 {
     font-family: var(--fuente-titulo);
     margin-top: 10rem;
@@ -10,6 +11,7 @@ h1 {
     color: var(--text);
 }
 
+/* Bloque Cards */
 .bloque_cards {
     margin-top: 3.125rem;
     display: block;
@@ -29,14 +31,16 @@ h1 {
 .bloque_cards h5 {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--text);
+    color: var (--text);
 }
 
+/* Subtitulo */
 .subtitle {
     font-family: "Montserrat", sans-serif;
     color: white;
 }
 
+/* Card */
 .card {
     background-color: white;
     border-radius: 0.625rem;
@@ -58,7 +62,6 @@ h1 {
     display: block;
     margin: 0 auto;
     margin-top: 0.5rem;
-
 }
 
 .card-title {
@@ -76,13 +79,14 @@ h1 {
 
 .card-body {
     padding: 1.25rem;
-
 }
 
+/* Mobile */
 .mobil {
     display: none;
 }
 
+/* FAQ */
 .fqa {
     padding: 30px;
 }
@@ -94,7 +98,6 @@ h1 {
     width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: auto;
-    /* Centrar el contenedor */
 }
 
 .fqa h2 {
@@ -104,6 +107,7 @@ h1 {
     font-size: var(--font-size);
 }
 
+/* Accordion */
 .accordion-button {
     background-color: var(--primary);
     color: var(--text);
@@ -139,22 +143,19 @@ h1 {
     margin-bottom: 0;
 }
 
-/* Media Queries para diferentes tamaños de pantalla */
-@media (max-width: 768px) {
+/* Unified Media Query */
+@media (min-width: 300px) and (max-width: 1199px) {
     .fqa .container {
         width: 90%;
-
     }
 
     .product-card {
         flex: 1 1 100%;
         max-width: 100%;
-
     }
 
     h1 {
         font-size: 2.5rem;
-
     }
 
     .bloque_cards {
@@ -164,19 +165,13 @@ h1 {
     .mobil {
         display: block;
     }
-}
 
-
-
-@media (max-width: 480px) {
     .fqa .container {
         width: 100%;
-
     }
 
     h1 {
-        font-size: 2.5rem;
-
+        font-size: 2rem;
+        margin-top: 12rem;
     }
-
 }

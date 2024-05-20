@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../../styles.css');
 
+/* Container */
 .container {
     background-color: #ffffff;
     border-radius: 0.625rem;
@@ -10,6 +11,7 @@
     padding: 10px;
 }
 
+/* Headings */
 h1 {
     font-family: var(--fuente-titulo);
     text-align: center;
@@ -20,16 +22,16 @@ h2 {
     font-size: 1.5rem;
     color: var(--color-secundario);
     margin-bottom: 0.9375rem;
-
 }
 
+/* Container Text */
 .container p {
     line-height: 1.6;
     text-align: justify;
     margin-bottom: 0.9375rem;
-
 }
 
+/* Container Links */
 .container a {
     color: var(--accent);
     text-decoration: none;
@@ -40,6 +42,7 @@ h2 {
     text-decoration: underline;
 }
 
+/* Text Links */
 .text-link {
     color: var(--accent);
     text-decoration: none;
@@ -51,38 +54,31 @@ h2 {
     text-decoration: underline;
 }
 
-
+/* Media Queries */
 @media screen and (max-width: 37.5rem) {
-
-
     .container {
         padding: 0.9375rem;
         margin-top: 10.25rem;
-
     }
 
     h1 {
         font-size: 2rem;
         margin-bottom: 0.9375rem;
-
     }
 
     h2 {
         font-size: 1.25rem;
         margin-bottom: 0.625rem;
-
     }
 
     .content-section {
         margin-bottom: 0.9375rem;
-
     }
 
     .container p {
         font-size: 0.875rem;
         line-height: 1.4;
         margin-bottom: 0.625rem;
-
     }
 
     .text-link {
@@ -91,12 +87,9 @@ h2 {
 }
 
 @media screen and (min-width: 75rem) {
-
-
     .container {
         max-width: 62.5rem;
         margin-top: 15.625rem;
-
     }
 
     h1 {

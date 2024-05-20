@@ -6,6 +6,7 @@
         </div>
     </div>
 </section>
+
 <section class="selectTarifa">
     <div class="titulo text-center">
         <h1>Selecciona tu plan</h1>
@@ -18,37 +19,25 @@
             <li (click)="filtrarTarifas('Móvil')" [class.selected]="filtroActual === 'Móvil'">Móvil</li>
             <li (click)="filtrarTarifas('Fibra')" [class.selected]="filtroActual === 'Fibra'">Fibra</li>
         </ul>
-
-
         <app-tarifas [tipo]="filtroActual"></app-tarifas>
-
-
-
     </article>
 </section>
 
-
 <section class="container ba">
     <div class="baner">
-
-        <figure class="area1">
+        <figure class="icon-container">
             <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-internet-60.png?alt=media&token=a849005d-e321-49d6-9cdc-3ac507276301"
                 alt="Darse de Alta">
         </figure>
         <div class="content">
-            <p class="area2">Red Épica</p>
-            <p class="area3">Todas nuestras tarifas cuentan con la calidad de los expertos en fibra, con la
-                cobertura móvil e internet de Épica en el 99% del territorio nacional</p>
+            <p class="red">Red Épica</p>
+            <p class="frase">Todas nuestras tarifas cuentan con la calidad de los expertos en fibra, con la cobertura
+                móvil e internet de Épica en el 99% del territorio nacional</p>
         </div>
-
-
-
     </div>
 </section>
 
-
 <section class="image-section">
-
     <div class="banner">
         <figure>
             <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3359.PNG?alt=media&token=5233afa6-e175-4743-b3db-773fc28e269d"
@@ -59,9 +48,7 @@
         <figure>
             <a href="{{ whatsappLink }}"><img
                     src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fimagenes%2FIMG_3362.PNG?alt=media&token=865f4995-00cb-47eb-a980-6332bca6f60c"
-                    alt="Imagen">
-            </a>
-
+                    alt="Imagen"></a>
         </figure>
     </div>
     <div class="banner">
@@ -70,8 +57,6 @@
                 alt="planes">
         </figure>
     </div>
-
-
 </section>
 
 <section class="bg-highlighted">
@@ -82,7 +67,7 @@
                     <img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO3aQQrCMBSE4Vn1BnoX9XJutHo7vUPrNUYKKRQ3zmgTBOeDQBel6SP/MsAf6wBcATwAcOU1AujLHtVdKgzwus4tBhnLZjvh3ePi56bnd/aLk6lu/jHFFsAdwA3ApsL3v1J7I2YQU05ExKRlSloiJi1T0hIxaZmSlohJy5S0RExapqQlYtIyJS0Rk5YpaYmYtExJS8SkZUpaIiYtU9ISMWmZkpaIScuUtERMWh9e4ZiuW6ztUL49oIG+waWaU4tBujLMfDJrrqEM0eSa0096Av/rFDNorFGxAAAAAElFTkSuQmCC">
                 </div>
-                <h4 class="text-p-02-regular">Móvil</h4>
+                <h4 class="text-p-03-regular">Móvil</h4>
             </a>
 
             <a routerLink="/fibra-y-movil" class="accelerator-item" title="Ofertas Fibra y Móvil: epica-network">
@@ -92,7 +77,7 @@
                     <img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO3aQQrCMBSE4Vn1BnoX9XJutHo7vUPrNUYKKRQ3zmgTBOeDQBel6SP/MsAf6wBcATwAcOU1AujLHtVdKgzwus4tBhnLZjvh3ePi56bnd/aLk6lu/jHFFsAdwA3ApsL3v1J7I2YQU05ExKRlSloiJi1T0hIxaZmSlohJy5S0RExapqQlYtIyJS0Rk5YpaYmYtExJS8SkZUpaIiYtU9ISMWmZkpaIScuUtERMWh9e4ZiuW6ztUL49oIG+waWaU4tBujLMfDJrrqEM0eSa0096Av/rFDNorFGxAAAAAElFTkSuQmCC">
                 </div>
-                <h4 class="text-p-02-regular">Fibra + Móvil</h4>
+                <h4 class="text-p-03-regular">Fibra + Móvil</h4>
             </a>
 
             <a routerLink="/fibra" class="accelerator-item"
@@ -101,52 +86,40 @@
                     <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-wifi-48.png?alt=media&token=f95b73d2-e947-43fb-876b-4b2c036a77d5"
                         alt="Fibra" loading="lazy">
                 </div>
-                <h4 class="text-p-02-regular">Fibra</h4>
+                <h4 class="text-p-03-regular">Fibra</h4>
             </a>
         </div>
     </div>
 </section>
 
 <section class="container cober">
-
     <div class="cobertura">
-        <figure class="area4">
+        <figure class="coverage-icon">
             <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-direccio%CC%81n-100.png?alt=media&token=52658451-90fe-4e97-b9de-34b584384e64"
                 alt="Map" width="60" height="60">
         </figure>
-        <p class="area5">Descubre si la fibra de Épica llega a tu domicilio</p>
+        <p class="coverage-text">Descubre si la fibra de Épica llega a tu domicilio</p>
         <a class="interesa" href="{{ whatsappLink }}">Comprobar Cobertura</a>
     </div>
-
 </section>
-
 
 <section class="p-section">
     <div class="container">
         <div class="title-module text-center m-block-g">
-            <h2 class="text-eyebrow">¡SÉ PARTE DE EPICA NETWORK!
-            </h2>
+            <h2 class="title">¡SÉ PARTE DE EPICA NETWORK!</h2>
             <h2 class="text-heading-02">¿Qué significa?</h2>
-            <p class="subtitulo mt-3">
-                Ser parte de Épica Network hará la fusión perfecta de innovación, velocidad y atención proactiva. Cada
-                interacción con
-                nosotros es una inmersión en lo épico, desde la conexión más rápida hasta el servicio más amigable. ¡Es
-                tu red, tú
-                decides!
-
-            </p>
+            <p class="subtitulo mt-3">Ser parte de Épica Network hará la fusión perfecta de innovación, velocidad y
+                atención proactiva. Cada interacción con nosotros es una inmersión en lo épico, desde la conexión más
+                rápida hasta el servicio más amigable. ¡Es tu red, tú decides!</p>
         </div>
         <div class="discovery-card__grid mt-5">
-            <div class="discovery-card area1">
+            <div class="discovery-card no-restrictions">
                 <div class="discovery-card__info">
-                    <h3 class="text-heading-01 mb-5">Sin restricciones</h3>
+                    <h3 class="text-heading-01 mb-4">Sin restricciones</h3>
                     <p class="text-p-02-regular">En Épica Network, no te imponemos contratos largos ni cláusulas
-                        complicadas. Lo más importante para nosotros eres tú y
-                        tu servicio. Disfruta de nuestros planes móviles sin compromiso de permanencia. Para los Cofres,
-                        solo 3 meses, mientras
-                        que para la Fibra, 12 meses.
-
-                    </p>
+                        complicadas. Lo más importante para nosotros eres tú y tu servicio. Disfruta de nuestros planes
+                        móviles sin compromiso de permanencia. Para los Cofres, solo 3 meses, mientras que para la
+                        Fibra, 12 meses.</p>
                 </div>
                 <div class="discovery-card__img">
                     <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-meditacio%CC%81n-guru%CC%81-64.png?alt=media&token=9fcfcce3-2d03-472b-854e-03af8b101815"
@@ -154,27 +127,25 @@
                 </div>
             </div>
 
-            <div class="discovery-card area2">
+            <div class="discovery-card transparency">
                 <div class="discovery-card__info">
-                    <h3 class="text-heading-01 mb-5">Transparencia</h3>
+                    <h3 class="text-heading-01 mb-4">Transparencia</h3>
                     <p class="text-p-02-regular">Con Épica Network, el precio que ves es el que pagarás, sin cargos
                         ocultos ni sorpresas. Obtén la mejor calidad al precio más justo, pagando solo por lo que
-                        realmente usas.
-                    </p>
+                        realmente usas.</p>
                 </div>
                 <div class="discovery-card__img">
                     <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-euro-etiqueta-de-precio-80.png?alt=media&token=25226920-a6a2-48e1-8dfc-1ef6d70fae2e"
-                        alt="Precios transparentes" loading="lazy">
+                        alt="Transparencia" loading="lazy">
                 </div>
             </div>
 
-            <div class="discovery-card">
+            <div class="discovery-card customer-support">
                 <div class="discovery-card__info">
-                    <h3 class="text-heading-01 mb-5">Soporte al cliente 24/7</h3>
+                    <h3 class="text-heading-01 mb-4">Soporte al cliente 24/7</h3>
                     <p class="text-p-02-regular">En Épica Network, creemos en un servicio de atención al cliente
                         excepcional. Nuestro equipo está disponible 24/7 para resolver tus dudas y ayudarte con
-                        cualquier problema que puedas tener. La asistencia que necesitas, siempre a tu alcance.
-                    </p>
+                        cualquier problema que puedas tener. La asistencia que necesitas, siempre a tu alcance.</p>
                 </div>
                 <div class="discovery-card__img">
                     <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-24-7-signo-abierto-96.png?alt=media&token=ad727103-98d9-4579-b74f-e29d52e30979"
@@ -182,33 +153,27 @@
                 </div>
             </div>
 
-            <div class="discovery-card">
+            <div class="discovery-card people">
                 <div class="discovery-card__info">
-                    <h3 class="text-heading-01 mb-5">Personas</h3>
+                    <h3 class="text-heading-01 mb-4">Personas</h3>
                     <p class="text-p-02-regular">En Épica Network, valoramos la autenticidad y la cercanía en nuestras
-                        interacciones contigo. Por eso, cuando nos
-                        contactas, siempre serás atendido por personas reales, no por respuestas automatizadas. Nuestro
-                        equipo está ubicado en
-                        España y estamos aquí para ayudarte de forma gratuita. Queremos que te sientas escuchado y
-                        apoyado en cada consulta o
-                        problema que tengas.
-                    </p>
+                        interacciones contigo. Por eso, cuando nos contactas, siempre serás atendido por personas
+                        reales, no por respuestas automatizadas. Nuestro equipo está ubicado en España y estamos aquí
+                        para ayudarte de forma gratuita. Queremos que te sientas escuchado y apoyado en cada consulta o
+                        problema que tengas.</p>
                 </div>
                 <div class="discovery-card__img">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-traveler-64.png?alt=media&token=40c3667d-1c20-45b5-af11-eae18cef1a30"
-                        alt="Roaming global" loading="lazy">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-asistente-64.png?alt=media&token=2e1e935a-7da3-4a4f-9fdf-acc670b2e56a"
+                        alt="Personas" loading="lazy">
                 </div>
             </div>
 
-            <div class="discovery-card is-large area5">
+            <div class="discovery-card is-large mobile-connection">
                 <div class="discovery-card__info">
-                    <h3 class="text-heading-01 mb-5">Conexión Móvil</h3>
+                    <h3 class="text-heading-01 mb-4">Conexión Móvil</h3>
                     <p class="text-p-02-regular">En Épica Network te ofrecemos la mejor calidad red de Internet Móvil de
-                        España con cobertura nítida y velocidad de
-                        descarga de hasta 300Mbps para conectarte a Internet y hablar estés donde estés con los
-                        servicios más competitivos del
-                        mercado.
-                    </p>
+                        España con cobertura nítida y velocidad de descarga de hasta 300Mbps para conectarte a Internet
+                        y hablar estés donde estés con los servicios más competitivos del mercado.</p>
                 </div>
                 <figure class="discovery-card__img">
                     <img src="https://firebasestorage.googleapis.com/v0/b/epica-network.appspot.com/o/images%2Fredes%20sociales%2Ficons8-cohete-64.png?alt=media&token=aa96c7e8-9e4a-48aa-a014-2d5d7493224f"

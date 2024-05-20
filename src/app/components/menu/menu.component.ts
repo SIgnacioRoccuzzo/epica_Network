@@ -56,7 +56,6 @@ export class MenuComponent implements OnInit {
     }
   }
 
-
   getSubmenuItems(type: string): Tarifas[] {
     return this.submenus[type] || [];
   }
@@ -67,6 +66,11 @@ export class MenuComponent implements OnInit {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  handleMenuItemClick(submenuType?: string): void {
+    this.toggleSubmenu(submenuType || '');
+    this.isMenuOpen = false;  // Close the menu
   }
 
   scrollTo(sectionId: string): void {

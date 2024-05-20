@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sobre-epica.component.css']
 })
 export class SobreEpicaComponent {
-
+  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.';
 }

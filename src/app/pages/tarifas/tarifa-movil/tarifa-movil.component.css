@@ -24,12 +24,19 @@ h1 {
     font-size: var(--font-size);
     margin-bottom: 1.25rem;
     color: var(--text);
+
 }
 
 .bloque_cards h5 {
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--text);
+    text-align: center;
+}
+
+.card-img-top img {
+    display: flex;
+    align-items: center;
 }
 
 .subtitle {
@@ -167,8 +174,8 @@ h1 {
     }
 
     h1 {
-        font-size: 2.5rem;
-
+        font-size: 2rem;
+        margin-top: 12rem
     }
 
 }

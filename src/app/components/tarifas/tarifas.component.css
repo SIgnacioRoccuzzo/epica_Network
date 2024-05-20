@@ -3,7 +3,7 @@
 @import url('../../../styles.css');
 
 .tarjetas {
-    margin-top: 90px;
+    margin-top: 40px;
     padding: 10px
 }
 
@@ -69,6 +69,13 @@
     width: 1.5rem
 }
 
+.product-card__type .product-info .mobil {
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-right: -0.7rem;
+    margin-left: 0.4rem;
+}
+
 .product-card__type .text-subheading-01 {
     font-family: var(--fuente-cuerpo);
     font-size: 1.2rem;
@@ -131,8 +138,8 @@
 
 .checklist {
     list-style: none;
-    padding: 0;
-    margin: 0
+    padding: 10px;
+    margin: 0auto;
 }
 
 .checklist li {
@@ -145,7 +152,7 @@
 
 .fas.fa-check-circle {
     font-size: .9rem;
-    margin-right: 5px;
+    margin-right: 10px;
     color: var(--primary)
 }
 

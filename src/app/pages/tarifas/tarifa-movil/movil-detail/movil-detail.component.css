@@ -20,11 +20,6 @@
     flex-wrap: nowrap;
 }
 
-.col-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-}
-
 .card-body h2 {
     font-family: var(--fuente-titulo);
     color: var(--primary);
@@ -33,38 +28,52 @@
 }
 
 .card-body p {
-    font-family: var(--fuente-cuerpo);
     color: var(--text);
     font-size: 2rem;
+    font-family: var(--fuente-cuerpo);
     font-weight: bold;
-    font-weight: 800;
     margin: 0;
 }
 
-.tarifa_precio {
-    white-space: nowrap;
-    font-size: 1.2rem;
+.tarifa_price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    color: var(--text-color);
+    flex-wrap: nowrap;
 }
 
-.tarifa_precio p {
-    display: inline-block;
-    font-size: 1.825rem;
+.tarifa_price>p {
+    font-size: 3.5rem;
+    font-family: var(--fuente-titulo);
+    margin: 0;
+}
+
+.tarifa-price__regularity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tarifa-price__regularity .iva,
+.tarifa-price__regularity .mes {
+    font-size: 0.8rem;
     font-weight: 700;
-    margin: 0;
 }
 
-strong {
-    font-size: 1.3rem;
-}
-
-.tarifa_precio small {
-    display: inline-block;
-    font-size: 0.725rem;
+.tarifa-price__regularity .tariff-message {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 5px;
+    color: gray;
 }
 
 .iconos {
     display: inline-flex;
-    gap: 7px;
+    align-items: center;
     width: 50px;
 }
 
@@ -74,7 +83,10 @@ strong {
     border-radius: 8px;
     padding: 10px;
     font-size: 1rem;
+    width: 28%;
     transition: background-color 0.3s;
+    display: inline-block;
+
 }
 
 .cta:hover {
@@ -88,6 +100,12 @@ strong {
     padding: 10px;
     border-radius: 8px;
     background-color: var(--accent);
+}
+
+.lista_checks p {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    color: var(--background);
 }
 
 .lista_checks ul {
@@ -223,12 +241,16 @@ strong {
     }
 }
 
-@media (max-width: 768px) {
-    .card-body {
+@media (min-width: 300px) and (max-width: 768px) {
+    .cta {
         width: 100%;
-    }
+        height: auto;
+        max-width: 250px;
+        max-height: 250px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .card-body .cta {
-        font-size: 1rem;
     }
 }

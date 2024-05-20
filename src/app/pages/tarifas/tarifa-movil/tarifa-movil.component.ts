@@ -12,30 +12,19 @@ export class TarifaMovilComponent {
   activeIndex: number | null = null;
   questions = [
     {
-      title: '¿Qué es la fibra óptica y cómo funciona?',
-      content: 'La fibra óptica es un medio de transmisión de datos que utiliza luz pulsada a través de fibras muy finas de vidrio o plástico. La luz viaja por estas fibras en ángulos de reflexión total, lo que permite una transmisión de datos rápida y eficiente.'
+      title: '¿Qué es eso de la portabilidad y en qué consiste?',
+      content: 'El proceso es muy sencillo y queremos ponértelo fácil. Al acabar la contratación del servicio de móvil, se activa tu solicitud en nuestros sistemas y se pone en marcha la portabilidad desde tu operador actual a Épica Network.\n\nEste trámite requiere un tiempo estimado entre 48-72h, periodo durante el cual recibirás la tarjeta SIM junto con las instrucciones de activación en la dirección que nos indiques. Cuando tengas tu tarjeta activada, la portabilidad se hará efectiva.\n\nEsto ocurre de madrugada, así no te quedas sin servicio en ningún momento. Por la mañana, solo tendrás que sustituir la tarjeta SIM antigua por la de Épica Network y disfrutar de tu nueva tarifa.'
     },
     {
-      title: '¿Tengo compromiso de permanencia con mi tarifa de solo fibra?',
-      content: 'No. En Epica Networks no existe permanencia. Puedes irte o cambiar de tarifa cuando quieras.'
+      title: '¿Tendré Roaming y servicio cuando viaje al extranjero? ¿Cómo lo activo?',
+      content: 'Para poder disfrutar de tu tarifa móvil durante tus viajes al extranjero deberás tener activado el servicio de roaming. Es muy sencillo, accede a nuestra app y en configuración de tarifa podrás activar este servicio, así de fácil. Si aún no tienes nuestra app, descárgala aquí para iPhone o Android.'
     },
     {
-      title: '¿Cómo es el proceso de instalación de la fibra óptica?',
-      content: 'Un instalador acudirá a tu domicilio para realizar la instalación del servicio y te proporcionará el router HGU y todo lo necesario.'
-    },
-    {
-      title: '¿Incluye llamadas telefónicas mi tarifa de fibra?',
-      content: 'Sí. Las tarifas de fibra incluyen llamadas ilimitadas a fijos y móviles nacionales desde la línea fija.'
-    },
-    {
-      title: '¿Cómo puedo comprobar si tengo cobertura de fibra óptica?',
-      content: 'Durante el proceso de contratación comprobaremos si dispones de cobertura de fibra en la dirección que nos indiques.'
-    },
-    {
-      title: '¿Puedo obtener asistencia para comparar tarifas?',
-      content: 'Puedes contactarnos para obtener asistencia y comparar tarifas de Internet y telefonía.'
+      title: '¿Puedo cambiarme a otra tarifa diferente después de contratar una?',
+      content: 'Una vez activada tu línea móvil, puedes cambiar de tarifa sin coste una vez al mes. Así, puedes ajustar con flexibilidad tu consumo a las necesidades que puedas tener en cada momento. Llámanos y uno de nuestros agentes te ayudará en el proceso.'
     }
   ];
+
 
   toggle(index: number): void {
     this.activeIndex = this.activeIndex === index ? null : index;
@@ -49,9 +38,9 @@ export class TarifaMovilComponent {
   }
 
   mobileCards = [
-    { title: 'Tecnología 4G+', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: '../../../../assets/images/4g+black.svg' },
-    { title: 'Sin sorpresas en tu factura', description: 'Nuestro servicio tiene un precio mensual fijo, que no varía, salvo que ese mes realices llamadas de tarificación especial o que estén fuera de las condiciones descritas. En el proceso de compra se ajustarán los impuestos según la provincia de contratación.', imageUrl: '../../../../assets/images/reciboEuro.svg' },
-    { title: 'Sin permanencia', description: 'No existen claúsulas de permanencia ni penalizaciones ocultas en nuestro servicio. Si decides irte lo harás con total tranquilidad, sin intentos de retención por nuestra parte ni promociones temporales para retenerte.', imageUrl: '../../../../assets/images/padlock-open_icon-icons.com_56064.svg' },
+    { title: 'Conexión', description: 'Contamos con la red e infraestructura móvil de Telefónica que ofrece una cobertura excepcional en todo el territorio nacional. Además, nuestra red permite navegar mucho más deprisa y descargar archivos en cuestión de segundos, brindando una experiencia de velocidad superior. ¡Estamos aquí para mantenerte conectado en todo momento!', imageUrl: '../../../../assets/images/4g+flechas.svg' },
+    { title: 'Transparencia y sin sorpresa en tu factura', description: 'Nuestro servicio ofrece una tarifa mensual fija que solo cambia si realizas llamadas de tarificación especial o fuera de las condiciones establecidas. Además, garantizamos total transparencia, ajustando los impuestos según la provincia de contratación durante el proceso de compra.', imageUrl: '../../../../assets/images/reciboEuro.svg' },
+    { title: 'Sin permanencia', description: 'Nuestros servicios móviles no tienen cláusulas de permanencia ni penalizaciones ocultas. Si decides darte de baja, podrás hacerlo sin preocupaciones y sin que intentemos retenerte con promociones temporales ni ofertas especiales.', imageUrl: '../../../../assets/images/padlock-open_icon-icons.com_56064.svg' },
     { title: 'Tendrás razón por defecto', description: 'Ante una incidencia o una reclamación, te daremos la razón por defecto. A continuación, analizaremos tu caso y te explicaremos lo sucedido.', imageUrl: '../../../../assets/images/pulgar.svg' }
   ];
 

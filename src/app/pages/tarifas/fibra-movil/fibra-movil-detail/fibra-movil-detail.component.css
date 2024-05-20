@@ -20,11 +20,6 @@
     flex-wrap: nowrap;
 }
 
-.col-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-}
-
 .card-body h2 {
     font-family: var(--fuente-titulo);
     color: var(--primary);
@@ -36,36 +31,50 @@
     color: var(--text);
     font-size: 2rem;
     font-family: var(--fuente-cuerpo);
-    font-weight: 800;
     font-weight: bold;
     margin: 0;
 }
 
-.tarifa_precio {
-    white-space: nowrap;
-    font-size: 1.2rem;
+.tarifa_price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    color: var(--text-color);
+    flex-wrap: nowrap;
 }
 
-.tarifa_precio p {
-    display: inline-block;
-    font-size: 1.825rem;
-    font-weight: 700;
+.tarifa_price>p {
+    font-size: 3.5rem;
+    font-family: var(--fuente-titulo);
     margin: 0;
 }
 
-strong {
-    font-size: 1.3rem;
+.tarifa-price__regularity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.tarifa_precio small {
-    display: inline-block;
-    font-size: 0.725rem;
+.tarifa-price__regularity .iva,
+.tarifa-price__regularity .mes {
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
-.iconos {
+.tarifa-price__regularity .tariff-message {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 5px;
+    color: gray;
+}
+
+.iconos img {
     display: inline-flex;
-    gap: 7px;
-    width: 110px;
+    align-items: center;
+    width: 40px;
 }
 
 .cta {
@@ -74,11 +83,19 @@ strong {
     border-radius: 8px;
     padding: 10px;
     font-size: 1rem;
+    width: 32%;
     transition: background-color 0.3s;
+    display: inline-block;
 }
 
 .cta:hover {
     background-color: var(--accent);
+}
+
+.lista_checks p {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    color: var(--background);
 }
 
 .lista_checks {
@@ -116,6 +133,7 @@ strong {
     max-width: 100%;
 }
 
+/* Grid Layout */
 .grid {
     display: flex;
     align-items: center;
@@ -129,6 +147,7 @@ strong {
     text-align: left;
 }
 
+/* Titles */
 .titulo h2 {
     font-size: 2em;
     color: #2C3E50;
@@ -143,6 +162,7 @@ strong {
     margin-bottom: 20px;
 }
 
+/* Content Body */
 .content-body span {
     font-size: 1em;
     color: #2C3E50;
@@ -151,22 +171,49 @@ strong {
     margin-bottom: 10px;
 }
 
+/* Image */
 .foto figure img {
-    max-width: 400px;
+    max-width: 350px;
+    width: 350px;
     height: auto;
     border-radius: 10px;
 }
 
+/* Contact */
 .contacto {
     text-decoration: none;
     color: var(--accent);
 }
 
-@media (max-width: 1024px) {
+/* Breakpoint para pantallas de 300px a 768px */
+@media (min-width: 300px) and (max-width: 768px) {
+    .tarifa_price>p {
+        font-size: 2rem;
+    }
+
+    .cta {
+        width: 100%;
+        max-width: 230px;
+    }
+
+    .tarifa-price__regularity .iva,
+    .tarifa-price__regularity .mes {
+        font-size: 0.5rem;
+    }
+
+    .tarifa-price__regularity .tariff-message {
+        font-size: 0.5rem;
+    }
+
+    .iconos img {
+        width: 30px;
+    }
+
     .grid {
         flex-direction: column;
         align-items: flex-start;
         gap: 40px;
+        margin-top: 80px;
     }
 
     .content {
@@ -175,30 +222,8 @@ strong {
     }
 
     .foto figure img {
-        max-width: 60%;
+        width: 100%;
     }
-}
-
-@media (max-width: 768px) {
-    .titulo h2 {
-        font-size: 1.8em;
-    }
-
-    .subtitulo span {
-        font-size: 1.4em;
-    }
-
-    .content {
-        padding: 10px;
-    }
-
-    .content-body span {
-        font-size: 0.95em;
-    }
-}
-
-@media (max-width: 480px) {
-
 
     .titulo h2 {
         font-size: 1.5em;
@@ -208,30 +233,60 @@ strong {
         font-size: 1.2em;
     }
 
-    .content {
-        padding: 10px;
-    }
-
     .content-body span {
         font-size: 0.9em;
     }
+}
 
-    .foto figure img {
-        max-width: 100%;
+/* Breakpoint para pantallas de 769px a 1199px */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .tarifa_price>p {
+        font-size: 2.5rem;
+    }
+
+    .cta {
+        width: 40%;
+        max-width: 350px;
+    }
+
+    .tarifa-price__regularity .iva,
+    .tarifa-price__regularity .mes {
+        font-size: 0.6rem;
+    }
+
+    .tarifa-price__regularity .tariff-message {
+        font-size: 0.6rem;
+    }
+
+    .iconos img {
+        width: 35px;
     }
 
     .grid {
-        margin-top: 80px;
-    }
-}
-
-@media (max-width: 768px) {
-    .card-body {
-        width: 100%;
-
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin-top: 100px;
     }
 
-    .card-body .cta {
-        font-size: 1rem;
+    .content {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .foto figure img {
+        width: 80%;
+    }
+
+    .titulo h2 {
+        font-size: 1.8em;
+    }
+
+    .subtitulo span {
+        font-size: 1.4em;
+    }
+
+    .content-body span {
+        font-size: 1em;
     }
 }
