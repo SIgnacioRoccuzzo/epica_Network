@@ -23,7 +23,7 @@ export class FibraMovilComponent {
     },
     {
       title: '¿Cómo se activa mi pack fibra + móvil?',
-      content: 'En el momento de la contratación del pack, te indicaremos una fecha y hora de instalación, en la cual un técnico se desplazará a tu domicilio para instalar el servicio de fibra.\n\nUna vez que la fibra esté instalada se lanzará automáticamente la solicitud de portabilidad o activación del nuevo número de teléfono que hayas seleccionado para tu pack.'
+      content: 'En el momento de la contratación del pack, te indicaremos una fecha y hora de instalación, en la cual un técnico se desplazará a tu domicilio para instalar el servicio de fibra. Una vez que la fibra esté instalada se lanzará automáticamente la solicitud de portabilidad o activación del nuevo número de teléfono que hayas seleccionado para tu pack.'
     },
     {
       title: '¿Qué ocurre si finalmente no activo mi línea principal o rompo el pack?',
@@ -47,14 +47,9 @@ export class FibraMovilComponent {
     return this.isActive(index) ? 'accordion-collapse collapse show' : 'accordion-collapse collapse';
   }
   mobileCards = [
-    { title: 'Tecnología 4G+', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: '../../../../assets/images/4g+black.svg' },
-    { title: 'Sin sorpresas en tu factura', description: 'Nuestro servicio tiene un precio mensual fijo, que no varía, salvo que ese mes realices llamadas de tarificación especial o que estén fuera de las condiciones descritas. En el proceso de compra se ajustarán los impuestos según la provincia de contratación.', imageUrl: '../../../../assets/images/reciboEuro.svg' },
-    { title: 'Sin permanencia', description: 'No existen claúsulas de permanencia ni penalizaciones ocultas en nuestro servicio. Si decides irte lo harás con total tranquilidad, sin intentos de retención por nuestra parte ni promociones temporales para retenerte.', imageUrl: '../../../../assets/images/padlock-open_icon-icons.com_56064.svg' },
-    { title: 'Tendrás razón por defecto', description: 'Ante una incidencia o una reclamación, te daremos la razón por defecto. A continuación, analizaremos tu caso y te explicaremos lo sucedido.', imageUrl: '../../../../assets/images/pulgar.svg' }
+    { title: 'Tecnología 4G+', description: 'En Épica Network te ofrecemos la mejor calidad red de Internet Móvil de España con cobertura 4G+ y velocidad de descarga de hasta 300Mbps para conectarte a Internet y hablar estés donde estés.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-fourth-generation-network-plus-and-internet-connectivity-logotype-96 (1).webp' },
+    { title: 'Velocidad', description: 'En Épica Network te ofrecemos internet de calidad en una extensa red de Fibra. Podrás navegar por internet, jugar a videojuegos, realizar videoconferencias, descargar y subir archivos a la nube y transmitir en streaming, sin cortes ni interrupciones. Con nuestro servicio de Fibra tendrás una velocidad fija y podrás disfrutar de mayor capacidad en conexiones con velocidades de bajada entre 100Mb, 300Mb o 600Mb según tu tarifa elegida y velocidad de subida sujeta a tu disponibilidad geográfica.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-wifi-48.webp' },
+    { title: 'TRANSPARENCIA Y SIN SORPRESAS EN TU FACTURA', description: 'Nuestro servicio ofrece una tarifa mensual fija que solo cambia si realizas llamadas de tarificación especial o fuera de las condiciones establecidas. Además, garantizamos total transparencia, ajustando los impuestos según la provincia de contratación durante el proceso de compra.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-recibo-euro-80.webp' },
   ];
 
-
-  isLastCard(index: number): boolean {
-    return index === this.mobileCards.length - 1;
-  }
 }

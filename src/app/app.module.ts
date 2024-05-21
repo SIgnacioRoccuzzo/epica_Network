@@ -17,7 +17,6 @@ import { ContactoComponent } from './pages/epicaNetwork/contacto/contacto.compon
 import { FibraMovilComponent } from './pages/tarifas/fibra-movil/fibra-movil.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { FibraDetailsComponent } from './pages/tarifas/fibra/fibra-detail/fibra-detail.component';
 import { SubmenuComponent } from './components/submenu/submenu.component';
 
@@ -47,7 +46,6 @@ register();
     FibraMovilComponent,
     InicioComponent,
     FooterComponent,
-    CarrouselComponent,
     FibraDetailsComponent,
     SubmenuComponent,
     FibraMovilDetailComponent,

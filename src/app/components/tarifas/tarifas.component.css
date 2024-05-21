@@ -40,6 +40,7 @@
     padding: 5px;
 }
 
+
 .product-card__info .text {
     color: #666;
     display: flex;
@@ -115,6 +116,7 @@
     padding: 10px;
     color: var(--text-color);
 }
+
 
 .tarifa-price>p {
     font-size: 3rem;

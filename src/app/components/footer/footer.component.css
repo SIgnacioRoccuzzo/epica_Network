@@ -4,8 +4,9 @@
 
 .bloque_contacto_faldon {
     background: var(--background);
-    padding: 1rem 0px;
+    padding: 1rem 0;
     margin-top: 100px;
+    text-align: center;
 }
 
 .bloque_contacto_faldon p,
@@ -26,24 +27,21 @@
 
 .bloque_contacto_faldon img {
     width: 50px;
+    transform: translateX(170px);
 }
 
 /* Footer General */
 footer {
     background-color: var(--text);
     color: var(--background);
+    text-align: center;
 }
 
 /* Logo */
 .logo img {
-    width: 120px;
+    width: 170px;
     object-fit: contain;
     transform: translateX(-25px);
-}
-
-.logoo {
-    width: 50px;
-    object-fit: contain;
 }
 
 /* Primary Footer */
@@ -52,34 +50,40 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: auto;
     row-gap: 10px;
+    text-align: left;
+    /* Align text to the left */
 }
 
 .primary-footer h5 {
     font-size: 18px;
     font-family: var(--fuente-titulo);
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    /* Add more space below the titles */
+    text-align: left;
+    /* Align titles to the left */
 }
 
 .primary-footer>div {
     flex: 1 1 25%;
-    padding: 5px;
-}
-
-.primary-footer .footer-logo {
-    height: 50px;
-    width: 70px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
 }
 
 .primary-footer ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    /* Remove margin to align better */
+    text-align: left;
+    /* Align list items to the left */
 }
 
 .primary-footer ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    /* Add space between list items */
 }
 
 .primary-footer a {
@@ -96,6 +100,7 @@ footer {
 .social-list {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -104,7 +109,8 @@ footer {
 .social {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    /* Add more space between social links */
 }
 
 .social a {
@@ -139,7 +145,7 @@ footer {
 /* Secondary Footer */
 .secondary-footer {
     text-align: center;
-    padding: 5px 0;
+    padding: 15px 0;
 }
 
 .secondary-footer ul {
@@ -172,9 +178,63 @@ footer {
 }
 
 /* Estilos Responsivos */
+@media (max-width: 1199px) {
+    .primary-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .primary-footer>div {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .primary-footer h5 {
+        text-align: center;
+    }
+
+    .primary-footer ul {
+        text-align: center;
+    }
+
+    .social-list {
+        align-items: center;
+    }
+
+    .social a {
+        font-size: 16px;
+    }
+
+    .social a i {
+        font-size: 18px;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .logoo {
+        flex-direction: column;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .bloque_contacto_faldon img {
+        transform: translateX(0);
+        margin-bottom: 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .bloque_contacto_faldon {
         padding: 1.5rem 1rem;
+    }
+
+    .bloque_contacto_faldon img {
+        width: 50px;
+        transform: translateX(0);
     }
 
     .primary-footer {
@@ -184,6 +244,66 @@ footer {
 
     .primary-footer>div {
         flex: 1 1 100%;
+    }
+
+    .primary-footer h5 {
+        text-align: center;
+    }
+
+    .primary-footer ul {
+        text-align: center;
+    }
+
+    .social-list {
+        align-items: center;
+    }
+
+    .social a {
+        font-size: 16px;
+    }
+
+    .social a i {
+        font-size: 18px;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .logoo {
+        flex-direction: column;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 300px) {
+    .bloque_contacto_faldon {
+        padding: 1.5rem 1rem;
+    }
+
+    .bloque_contacto_faldon img {
+        width: 50px;
+        transform: translateX(0);
+    }
+
+    .primary-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .primary-footer>div {
+        flex: 1 1 100%;
+    }
+
+    .primary-footer h5 {
+        text-align: center;
+    }
+
+    .primary-footer ul {
+        text-align: center;
     }
 
     .social-list {

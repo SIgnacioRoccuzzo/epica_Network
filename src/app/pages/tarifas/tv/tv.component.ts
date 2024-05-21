@@ -3,8 +3,6 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
 
-
-
 @Component({
   selector: 'app-tv',
   templateUrl: './tv.component.html',

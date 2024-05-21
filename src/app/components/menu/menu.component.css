@@ -51,11 +51,23 @@ header .top-bar {
     color: var(--background);
 }
 
+a[href^="tel"] {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+a[href^="tel"]:hover {
+    text-decoration: underline;
+}
+
 /* Container */
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+
 }
 
 /* Wrapper */
@@ -63,7 +75,7 @@ header .top-bar {
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+
 }
 
 /* Image */
@@ -71,14 +83,16 @@ figure img {
     max-width: 180px;
     height: auto;
     object-fit: contain;
+    transform: translateX(-27px);
 }
 
 /* Menu Wrapper */
 .menu-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex: 1;
+    justify-content: space-between;
+
+
 }
 
 /* Burger */
@@ -96,7 +110,7 @@ figure img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 120px;
     font-size: 1.1rem;
     color: var(--background);
     font-family: var(--fuente-cuerpo);
@@ -224,7 +238,7 @@ figure img {
     }
 
     .atencion {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .atencion span {

@@ -72,9 +72,10 @@
 }
 
 .iconos img {
-    display: inline-flex;
+    display: inline;
     align-items: center;
     width: 40px;
+    margin: 3px;
 }
 
 .cta {
@@ -172,9 +173,9 @@
 }
 
 /* Image */
-.foto figure img {
-    max-width: 350px;
-    width: 350px;
+.foto img {
+    max-width: 600px;
+    width: 600px;
     height: auto;
     border-radius: 10px;
 }
