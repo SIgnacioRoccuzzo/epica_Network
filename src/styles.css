@@ -175,21 +175,20 @@ body {
     font-family: var(--fuente-cuerpo);
     color: var(--text);
     background-color: var(--background);
-    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* h1,
+h1,
 h2,
 h3 {
     font-family: var(--fuente-titulo);
-    font-weight: var(--font-weight);
-} */
+
+}
 
 .container {
-    max-width: 1350px;
+    max-width: 1350px !important;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px 15px;
     box-sizing: border-box;
     /* Consistente box-model para contenedores también */
 }

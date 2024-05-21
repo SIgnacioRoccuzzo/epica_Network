@@ -60,7 +60,7 @@ header .top-bar {
 
 /* Wrapper */
 .wrapper {
-    height: 30px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +120,7 @@ figure img {
 .menu-header li::before {
     content: '';
     position: absolute;
-    bottom: -27.5px;
+    bottom: -16.5px;
     left: 50%;
     width: 0;
     height: 3.3px;
@@ -199,7 +199,7 @@ figure img {
     }
 
     .wrapper {
-        height: 45px;
+        height: 55px;
     }
 
     .button {
@@ -215,15 +215,6 @@ figure img {
         margin-top: 20px;
     }
 
-    .atencion span {
-        font-size: 0.8rem;
-        padding: 5px 15px;
-    }
-
-    .atencion {
-        font-size: 0.852rem;
-    }
-
     .fa-phone {
         font-size: 20px;
     }
@@ -233,7 +224,7 @@ figure img {
     }
 
     .atencion {
-        font-size: 0.68rem;
+        font-size: 0.7rem;
     }
 
     .atencion span {

@@ -2,18 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../styles.css');
 
+/* Tarjetas */
 .tarjetas {
     margin-top: 40px;
-    padding: 10px
+    padding: 10px;
 }
 
+/* Cards */
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px
+    gap: 50px;
 }
 
+/* Product Card */
 .product-card {
     flex: 1 1 300px;
     max-width: 300px;
@@ -29,11 +32,12 @@
 }
 
 .product-card:hover {
-    box-shadow: var(--card-hover-box-shadow)
+    box-shadow: var(--card-hover-box-shadow);
 }
 
+/* Product Card Info */
 .product-card__info {
-    padding: 5px
+    padding: 5px;
 }
 
 .product-card__info .text {
@@ -45,28 +49,28 @@
     font-family: var(--fuente-cuerpo);
     font-size: 1rem;
     font-weight: 700;
-    line-height: 2rem
+    line-height: 2rem;
 }
 
+/* Product Card Type */
 .product-card__type {
     align-items: center;
     display: flex;
     flex-direction: column;
-    position: relative
+    position: relative;
 }
 
 .product-card__type .product-info {
-    --min-height: 2rem;
+    min-height: 2rem;
     align-items: baseline;
     display: flex;
     justify-content: center;
-    min-height: 2rem;
-    gap: .5rem
+    gap: .5rem;
 }
 
 .product-card__type .product-info .icon {
     height: 1.5rem;
-    width: 1.5rem
+    width: 1.5rem;
 }
 
 .product-card__type .product-info .mobil {
@@ -80,16 +84,17 @@
     font-family: var(--fuente-cuerpo);
     font-size: 1.2rem;
     font-weight: 500;
-    line-height: 2rem
+    line-height: 2rem;
 }
 
 .product-card__type .text-p-01-regular {
     font-family: var(--fuente-titulo);
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 1.125rem
+    line-height: 1.125rem;
 }
 
+/* Product Card Action */
 .product-card__action {
     align-items: center;
     background: var(--background);
@@ -97,9 +102,10 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
+/* Tarifa Price */
 .tarifa-price {
     display: flex;
     flex-direction: row;
@@ -107,39 +113,40 @@
     justify-content: flex-start;
     gap: 5px;
     padding: 10px;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 .tarifa-price>p {
     font-size: 3rem;
     font-weight: 700;
-    margin: 0
+    margin: 0;
 }
 
 .tarifa-price__regularity {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start
+    align-items: flex-start;
 }
 
 .tarifa-price__regularity .iva,
 .tarifa-price__regularity .mes {
     font-size: 1rem;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .tarifa-price__regularity .tariff-message {
     font-size: .8rem;
     font-weight: 400;
     margin-top: 5px;
-    color: gray
+    color: gray;
 }
 
+/* Checklist */
 .checklist {
     list-style: none;
     padding: 10px;
-    margin: 0auto;
+    margin: 0 auto;
 }
 
 .checklist li {
@@ -147,19 +154,21 @@
     align-items: baseline;
     margin-bottom: 10px;
     line-height: 1.2;
-    padding: 0
+    padding: 0;
 }
 
 .fas.fa-check-circle {
     font-size: .9rem;
     margin-right: 10px;
-    color: var(--primary)
+    color: var(--primary);
 }
 
+/* Enlace de Interés */
 a.interes {
     background-color: var(--accent);
     color: #fff;
     padding: .625rem;
+    margin: 0 auto;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -167,17 +176,18 @@ a.interes {
     cursor: pointer;
     border-radius: .625rem;
     transition: background-color .3s ease;
-    width: 100%
+    width: 90%;
 }
 
 a.interes:hover {
     background-color: var(--highlight);
-    box-shadow: var(--button-hover-box-shadow)
+    box-shadow: var(--button-hover-box-shadow);
 }
 
-@media (max-width:768px) {
+/* Media Query */
+@media (max-width: 768px) {
     .product-card {
         flex: 1 1 100%;
-        max-width: 100%
+        max-width: 100%;
     }
 }

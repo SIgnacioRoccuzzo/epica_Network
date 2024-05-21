@@ -1,3 +1,4 @@
+<!-- tarifas.component.html -->
 <div class="tarjetas">
     <div class="cards">
         <div class="product-card" *ngFor="let tarifa of tarifas; trackBy: trackByTarifas">
@@ -13,7 +14,7 @@
                         <img class="mobil" *ngIf="!tarifa.lines && tarifa.gb"
                             src="../../../../../assets/images/4g+movil.svg" alt="Fibra" loading="lazy"
                             [hidden]="tarifa.type === 'TV' || tarifa.type === 'Fibra'">
-                        <span class="text-subheading-01" *ngIf="!tarifa.lines && tarifa.gb"> {{ tarifa.gb }}</span>
+                        <span class="text-subheading-01" *ngIf="!tarifa.lines && tarifa.gb">{{ tarifa.gb }}</span>
                         <span class="text-subheading-01" *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{
                             tarifa.gb }}</span>
                     </div>
