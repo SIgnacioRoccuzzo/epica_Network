@@ -2,88 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../styles.css');
 
-.bloque_contacto_faldon {
-    background: var(--background);
-    padding: 1rem 0;
-    margin-top: 100px;
-    text-align: center;
-}
 
-.bloque_contacto_faldon p,
-.bloque_contacto_faldon span {
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--text);
-    font-family: var(--fuente-cuerpo);
-}
-
-.bloque_contacto_faldon span {
-    color: var(--highlight);
-}
-
-.bloque_contacto_faldon a {
-    color: var(--accent);
-}
-
-.bloque_contacto_faldon img {
-    width: 50px;
-    transform: translateX(170px);
-}
-
-/* Footer General */
 footer {
     background-color: var(--text);
     color: var(--background);
     text-align: center;
 }
 
-/* Logo */
-.logo img {
-    width: 170px;
-    object-fit: contain;
-    transform: translateX(-25px);
-}
+.img-fluid {
+    width: 150px;
+    transform: translateX(-30px);
 
-/* Primary Footer */
-.primary-footer {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 10px;
-    text-align: left;
-    /* Align text to the left */
 }
 
 .primary-footer h5 {
     font-size: 18px;
     font-family: var(--fuente-titulo);
     margin-bottom: 15px;
-    /* Add more space below the titles */
     text-align: left;
-    /* Align titles to the left */
-}
-
-.primary-footer>div {
-    flex: 1 1 25%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    /* Align items vertically */
 }
 
 .primary-footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* Remove margin to align better */
     text-align: left;
-    /* Align list items to the left */
 }
 
 .primary-footer ul li {
     margin-bottom: 10px;
-    /* Add space between list items */
 }
 
 .primary-footer a {
@@ -96,7 +43,15 @@ footer {
     color: var(--accent);
 }
 
-/* Redes Sociales */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .social-list {
     list-style: none;
     padding: 0;
@@ -110,7 +65,6 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    /* Add more space between social links */
 }
 
 .social a {
@@ -131,7 +85,6 @@ footer {
     transition: color 0.3s;
 }
 
-/* Colores Distintivos para Iconos de Redes Sociales */
 .social .fab.fa-youtube,
 .social .fab.fa-facebook-f,
 .social .fab.fa-instagram,
@@ -142,7 +95,6 @@ footer {
     color: var(--background);
 }
 
-/* Secondary Footer */
 .secondary-footer {
     text-align: center;
     padding: 15px 0;
@@ -160,11 +112,6 @@ footer {
     font-size: 12px;
 }
 
-.secondary-footer .footer-logo {
-    height: 50px;
-    width: auto;
-}
-
 .secondary-footer a {
     font-weight: bold;
     color: var(--accent);
@@ -172,161 +119,64 @@ footer {
     transition: color 0.3s ease;
 }
 
-.secondary-footer a:hover {
-    color: var(--primary);
-    text-decoration: none;
+.secondary-footer .list-inline-item {
+    margin: 5px 0;
+
 }
 
-/* Estilos Responsivos */
-@media (max-width: 1199px) {
-    .primary-footer {
-        flex-direction: column;
-        text-align: center;
-    }
+.secondary-footer .list-inline-item:not(:last-child)::after {
+    content: "•";
+    margin: 0 10px;
+    color: #ecf0f1;
 
-    .primary-footer>div {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    .primary-footer h5 {
-        text-align: center;
-    }
-
-    .primary-footer ul {
-        text-align: center;
-    }
-
-    .social-list {
-        align-items: center;
-    }
-
-    .social a {
-        font-size: 16px;
-    }
-
-    .social a i {
-        font-size: 18px;
-    }
-
-    .logo img {
-        display: block;
-        margin: 0 auto;
-        transform: none;
-    }
-
-    .logoo {
-        flex-direction: column;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .bloque_contacto_faldon img {
-        transform: translateX(0);
-        margin-bottom: 15px;
-    }
 }
 
 @media (max-width: 768px) {
-    .bloque_contacto_faldon {
-        padding: 1.5rem 1rem;
+    .img-fluid {
+        width: 140px;
+        transform: translateX(135px);
     }
 
-    .bloque_contacto_faldon img {
-        width: 50px;
-        transform: translateX(0);
-    }
-
-    .primary-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .primary-footer>div {
-        flex: 1 1 100%;
-    }
-
-    .primary-footer h5 {
-        text-align: center;
-    }
-
+    .primary-footer h5,
     .primary-footer ul {
         text-align: center;
     }
 
-    .social-list {
+    .list-unstyled {
         align-items: center;
     }
 
-    .social a {
-        font-size: 16px;
+    .img-fluid {
+        width: 140px;
+        transform: translateX(0);
     }
 
-    .social a i {
-        font-size: 18px;
-    }
-
-    .logo img {
-        display: block;
-        margin: 0 auto;
-        transform: none;
-    }
-
-    .logoo {
-        flex-direction: column;
-        display: block;
-        margin: 0 auto;
+    .social-list {
+        align-items: center;
     }
 }
 
-@media (max-width: 300px) {
-    .bloque_contacto_faldon {
-        padding: 1.5rem 1rem;
-    }
-
-    .bloque_contacto_faldon img {
-        width: 50px;
-        transform: translateX(0);
-    }
-
-    .primary-footer {
+@media (max-width: 480px) {
+    footer .container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    footer .link-column {
+        margin: 10px 0;
         text-align: center;
     }
 
-    .primary-footer>div {
-        flex: 1 1 100%;
+    .list-unstyled {
+        align-items: center;
     }
 
-    .primary-footer h5 {
-        text-align: center;
-    }
-
-    .primary-footer ul {
-        text-align: center;
+    .img-fluid {
+        width: 140px;
+        transform: translateX(0);
     }
 
     .social-list {
         align-items: center;
-    }
-
-    .social a {
-        font-size: 16px;
-    }
-
-    .social a i {
-        font-size: 18px;
-    }
-
-    .logo img {
-        display: block;
-        margin: 0 auto;
-        transform: none;
-    }
-
-    .logoo {
-        flex-direction: column;
-        display: block;
-        margin: 0 auto;
     }
 }

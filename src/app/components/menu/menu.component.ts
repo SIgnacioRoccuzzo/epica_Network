@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
 
@@ -24,6 +24,7 @@ export class MenuComponent implements OnInit {
   loading = true; // Indicador de carga
   error = '';     // Manejo de errores
   tarifasService = inject(TarifasService);
+  whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.';
 
   firstMenu: MenuSection[] = [
     { label: 'Fibra y Móvil', route: '/fibra-y-movil', submenuType: 'Fibra y Móvil' },
@@ -34,7 +35,7 @@ export class MenuComponent implements OnInit {
 
   secondMenu = [
     { label: 'Sobre Épica', route: '/sobre-epica' },
-    { label: 'Contacto', route: '/contacto' },
+    /*  { label: 'Contacto', route: 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.' }, */
   ];
 
   async ngOnInit() {

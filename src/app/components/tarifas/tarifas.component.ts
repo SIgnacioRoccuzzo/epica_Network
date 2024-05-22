@@ -49,7 +49,7 @@ export class TarifasComponent implements OnChanges {
   async cargarTarifas() {
     try {
       if (this.tipo) {
-        this.tarifas = await this.tarifasService.getBytype(this.tipo);
+        this.tarifas = await this.tarifasService.getByType(this.tipo);
       } else {
         this.tarifas = await this.tarifasService.getAll();
       }

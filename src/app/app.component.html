@@ -5,7 +5,23 @@
     <router-outlet></router-outlet>
 </main>
 
-
+<article class="subir">
+    <a (click)="scrollToTop()" class="btn subir-btn text-center" href="javascript:void(0);">Subir</a>
+</article>
+<article class="bloque_contacto_faldon">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-12 col-md-1">
+                <img src="../../../assets/images/imagenes webp/iconos/icons8-auriculares-80 (1).webp"
+                    alt="Otras formas de contacto" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-3">
+                <p><span>¿Necesitas ayuda?</span> Puedes contactar con nosotros clicando <a
+                        href="{{ whatsappLink }}">aquí.</a></p>
+            </div>
+        </div>
+    </div>
+</article>
 <app-footer></app-footer>
 <div class="whatsapp">
     <a href="{{whatsappLink}}">

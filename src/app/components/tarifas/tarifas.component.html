@@ -12,7 +12,12 @@
                         <span class="text-subheading-01">{{ tarifa.speed }}</span>
                         <img class="mobil" *ngIf="!tarifa.lines && tarifa.gb"
                             src="../../../assets/images/imagenes webp/iconos/icons8-advance-fourth-generation-cellular-connectivity-network-facility-96.webp"
-                            alt="Fibra" loading="lazy" [hidden]="tarifa.type === 'TV' || tarifa.type === 'Fibra'">
+                            alt="Fibra" loading="lazy"
+                            [hidden]="tarifa.type === 'TV' || tarifa.type === 'Fibra' || tarifa.type === 'Móvil'">
+                        <img class="mobil" *ngIf="tarifa.gb"
+                            src="../../../assets/images/imagenes webp/iconos/icon-movil-4g.webp" alt="Móvil"
+                            loading="lazy"
+                            [hidden]="tarifa.type === 'TV' || tarifa.type === 'Fibra' || tarifa.type === 'Fibra y Móvil'">
                         <span class="text-subheading-01" *ngIf="!tarifa.lines && tarifa.gb">{{ tarifa.gb }}</span>
                         <span class="text-subheading-01" *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{
                             tarifa.gb }}</span>

@@ -29,6 +29,7 @@ h1 {
 
 .bloque_cards h5 {
     font-size: 1.25rem;
+    font-family: var(--fuente-titulo);
     font-weight: bold;
     color: var(--text);
     text-align: center;
@@ -144,6 +145,13 @@ h1 {
 
 .accordion-header {
     margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .bloque_cards {
+        display: block;
+
+    }
 }
 
 @media (min-width: 18.75rem) and (max-width: 75rem) {

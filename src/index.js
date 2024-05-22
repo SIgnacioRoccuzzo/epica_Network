@@ -1,12 +1,12 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app"
+/* import { initializeApp } from "firebase/app"
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { collection, getFirestore, getDocs } from 'firebase/firestore'
+import { collection, getFirestore, getDocs } from 'firebase/firestore' */
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+/* const firebaseConfig = {
     apiKey: "AIzaSyDMe-S_zitBzFSw1XPsQl-gDk0AyW3gqDA",
     authDomain: "epica-network.firebaseapp.com",
     databaseURL: "https://epica-network-default-rtdb.europe-west1.firebasedatabase.app",
@@ -24,17 +24,17 @@ const snapshot = getDocs(todosCol);
 
 auth.onAuthStateChanged(user => {
 
-});
+}); */
 
 
-onAuthStateChanged(auth, user => {
+/* onAuthStateChanged(auth, user => {
     if (user !== null) {
         console.log('logged in!');
     } else {
         console.log('No user')
     }
 });
-
+ */
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+/* const app = initializeApp(firebaseConfig); */

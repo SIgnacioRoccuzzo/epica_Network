@@ -1,20 +1,20 @@
 <section class="container">
     <div class="card-body">
         <div *ngIf="tarifa" class="row justify-content-center">
-            <!-- Columna para la información del plan -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="row align-items-center">
+            <!-- Información del plan y precio -->
+            <div class="col-12 col-lg-8 mb-4">
+                <div class="row">
                     <!-- Información de la tarifa -->
-                    <div class="col-12 col-sm-4">
+                    <div class="col-6 col-sm-6">
                         <h2>{{ tarifa.name }}</h2>
                         <p class="tarifa_title">Tarifa</p>
                         <p *ngIf="tarifa.speed">Fibra {{ tarifa.speed }}</p>
                         <p *ngIf="!tarifa.lines && tarifa.gb">Móvil {{ tarifa.gb }}</p>
                         <p *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{ tarifa.gb }}</p>
-                        <p>Llamadas {{tarifa.minutes}}</p>
+                        <p>Llamadas {{ tarifa.minutes }}</p>
                     </div>
                     <!-- Sección de precio -->
-                    <div class="col-12 col-sm-8">
+                    <div class="col-6 col-sm-6">
                         <section class="tarifa_price">
                             <p>{{ tarifa.price }}</p>
                             <div class="tarifa-price__regularity">
@@ -23,24 +23,22 @@
                                 <small class="tariff-message">Precio final</small>
                             </div>
                             <div class="iconos">
-                                <img src="../../../../../assets/images/imagenes webp/iconos/icons8-advance-fourth-generation-cellular-connectivity-network-facility-96.webp"
+                                <img src="../../../../../assets/images/imagenes webp/iconos/icon-movil-4g.webp"
                                     alt="Icono de 5G" width="34" height="34">
                             </div>
                         </section>
                         <div>
                             <button class="cta btn" aria-label="Me interesa esta tarifa">Me interesa</button>
                         </div>
-                        <!-- Botón para más información -->
                         <div>
                             <a href="/checkout" class="btn mt-3" style="background-color: var(--primary);"
-                                aria-label="Más información">Más
-                                Información</a>
+                                aria-label="Más información">Más Información</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Columna para detalles adicionales o beneficios -->
-            <div class="col-12 col-md-6 col-lg-6">
+            <!-- Beneficios de la tarifa -->
+            <div class="col-12 col-lg-4">
                 <div class="row lista_checks justify-content-center">
                     <p class="mb-3" style="color: var(--background); font-size: 1.125rem;">Beneficios de la Tarifa:</p>
                     <ul class="checklist">
@@ -58,6 +56,8 @@
     </div>
 </section>
 
+
+
 <section class="container">
     <div class="grid">
         <div class="content">
@@ -66,46 +66,32 @@
             </div>
             <div class="content-center">
                 <div class="subtitulo">
-                    <span>Disfruta de la mejor Red a Velocidad 4G+ y Sin Permanencia</span>
+                    <span>Disfruta de la mejor Red a Velocidad 4G y Sin Permanencia</span>
                 </div>
 
             </div>
             <div class="content-body">
                 <div>
-                    <span>En Épica Network te ofrecemos la mejor calidad de red de Internet Móvil de España con
-                        cobertura 4G+ y
-                        una
-                        velocidad de
-                        descarga de hasta 300Mbps. Esto te permite conectarte a Internet y comunicarte estés donde
-                        estés,
-                        todo
-                        ello
-                        con los
-                        precios más competitivos del mercado. Nuestra tarifa móvil más potente incluye 150GB de
-                        datos y
-                        Llamadas
-                        Ilimitadas por
-                        tan solo 19,90€/mes, sin permanencia. Esta tarifa se convierte en la opción más económica
-                        dentro
-                        de
-                        su
-                        segmento, ideal
-                        para quienes buscan alta capacidad de datos a un precio
-                        accesible.<br><br></span><span>Además de
-                        nuestras
-                        tarifas competitivas, nos enorgullecemos de ofrecer un excelente servicio de atención al
-                        cliente,
-                        siempre dispuesto a resolver tus dudas y ayudarte en lo que necesites. Con Épica Network,
-                        tienes
-                        la
-                        garantía
-                        y confianza
-                        de estar respaldado por un servicio de calidad.<br><br></span><span>Te garantizamos las
-                        mejores
-                        tarifas móviles junto con un
-                        excelente servicio de atención al cliente y la confianza que
-                        brinda Épica Network. Para contratar nuestros planes de tarifas móviles, puedes hacerlo a
-                        través
+                    <span>En Épica Network contamos con la red e infraestructura móvil que ofrece una cobertura
+                        excepcional en todo el territorio
+                        nacional. Además, nuestra red permite navegar mucho más deprisa y descargar archivos en cuestión
+                        de segundos, brindando
+                        una experiencia de velocidad superior. ¡Estamos aquí para mantenerte conectado en todo momento!.
+                        Te ofrecemos la mejor
+                        calidad de red de Internet Móvil de España con cobertura 4G y una velocidad de descarga de hasta
+                        300Mbps. Esto te
+                        permite conectarte a Internet y comunicarte estés donde estés. Nuestra tarifa móvil más potente
+                        incluye 500GB y Llamadas
+                        ilimitadas por tan solo 18,95 €/mes, sin permanencia. Esta tarifa se convierte en la opción más
+                        económica dentro de su
+                        segmento, ideal para quienes buscan alta capacidad de datos a un precio
+                        accesible.<br><br></span><span>Además de nuestras tarifas competitivas, nos enorgullecemos de
+                        ofrecer un excelente servicio de atención al cliente,
+                        siempre dispuesto a resolver tus dudas y ayudarte en lo que necesites. Con Épica Network, tienes
+                        la garantía y confianza
+                        de estar respaldado por un servicio de calidad.<br><br></span><span>Te garantizamos las mejores
+                        tarifas móviles junto con un excelente servicio de atención al cliente y la confianza que
+                        brinda Épica Network. Para contratar nuestros planes de tarifas móviles, puedes hacerlo a través
                         de <a class="contacto" href="{{whatsappLink}}">WhatsApp.</a></span>
                 </div>
             </div>

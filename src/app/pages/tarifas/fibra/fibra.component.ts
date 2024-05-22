@@ -1,7 +1,6 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { Tarifas } from 'src/app/interfaces/tarifas.interface';
-import { TarifasService } from 'src/app/services/tarifas.service';
+
 
 @Component({
   selector: 'app-fibra',
@@ -63,14 +62,12 @@ export class FibraComponent {
   }
 
   mobileCards = [
-    { title: 'Tecnología 4G+', description: 'Contamos con la red e infraestructura móvil de Telefónica y con la ultravelocidad de su tecnología 5G un 133% más rápida que el 4G. Lo que permite navegar mucho más deprisa y descargar archivos en cuestión de segundos.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-wifi-48.webp' },
-    { title: 'Sin sorpresas en tu factura', description: 'Nuestro servicio tiene un precio mensual fijo, que no varía, salvo que ese mes realices llamadas de tarificación especial o que estén fuera de las condiciones descritas. En el proceso de compra se ajustarán los impuestos según la provincia de contratación.', imageUrl: '../../../../assets/images/reciboEuro.svg' },
-    { title: 'Sin permanencia', description: 'No existen claúsulas de permanencia ni penalizaciones ocultas en nuestro servicio. Si decides irte lo harás con total tranquilidad, sin intentos de retención por nuestra parte ni promociones temporales para retenerte.', imageUrl: '../../../../assets/images/padlock-open_icon-icons.com_56064.svg' },
-    { title: 'Tendrás razón por defecto', description: 'Ante una incidencia o una reclamación, te daremos la razón por defecto. A continuación, analizaremos tu caso y te explicaremos lo sucedido.', imageUrl: '../../../../assets/images/pulgar.svg' }
+    { title: 'Velocidad', description: 'En Épica Network te ofrecemos internet de calidad en una extensa red de Fibra. Podrás navegar por internet, jugar a videojuegos, realizar videoconferencias, descargar y subir archivos a la nube y transmitir en streaming, sin cortes ni interrupciones. Con nuestro servicio de Fibra tendrás una velocidad fija y podrás disfrutar de mayor capacidad en conexiones con velocidades de bajada entre 100Mb, 300Mb o 600Mb según tu tarifa elegida y velocidad de subida sujeta a tu disponibilidad geográfica.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-wifi-48.webp' },
+    { title: 'Tú eliges', description: 'Con o sin permanencia. En Épica Network te damos la opción de elegir, además tu tarifa de fibra es sin coste de línea fija, si no lo usas, ¿para qué tenerlo? Ninguna cuota extra y la velocidad es simétrica según la disponibilidad geográfica. ', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-desbloquear-50.webp' },
+    { title: 'Transparencia', description: 'Solo pagas lo que tienes contratado, en las tarifas de fibra siempre pagarás lo mismo mes a mes, sin sorpresas ni cosas raras.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-recibo-euro-80.webp' },
+
   ];
-  isLastCard(index: number): boolean {
-    return index === this.mobileCards.length - 1;
-  }
+
 
 }
 

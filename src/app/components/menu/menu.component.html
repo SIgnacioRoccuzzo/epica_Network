@@ -31,7 +31,11 @@
                         <li *ngFor="let section of secondMenu; trackBy: trackByItems" [routerLink]="[section.route]"
                             routerLinkActive="active" role="menuitem" (click)="handleMenuItemClick()">
                             {{ section.label }}
+
                         </li>
+                        <li role="menuitem" (click)="handleMenuItemClick()"><a
+                                style="text-decoration: none; color: var(--background) ;opacity: 0.7;"
+                                href="{{whatsappLink}}">Contacto</a></li>
                     </ul>
                     <a class="button" href="https://clientesepicanetwork.ispgestion.com/site/login"
                         [ngClass]="{'is-open': isMenuOpen}">

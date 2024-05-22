@@ -15,7 +15,7 @@ export class InicioComponent {
   tarifas: Tarifas[] = [];
   tarifasFiltradas: Tarifas[] = [];
   filtroActual: string = 'Fibra y Móvil';
-
+  tituloSubtitulo: string = 'Todos nuestros planes incluyen tecnología 4G+';
   tarifasService = inject(TarifasService);
   router = inject(Router);
   whatsappLink = 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.';
@@ -27,7 +27,7 @@ export class InicioComponent {
     try {
       // Obtener tarifas según el tipo (si se proporciona) o todas las tarifas si no hay tipo
       if (this.tipo) {
-        this.tarifas = await this.tarifasService.getBytype(this.tipo);
+        this.tarifas = await this.tarifasService.getByType(this.tipo);
       } else {
         this.tarifas = await this.tarifasService.getAll();
       }
@@ -62,6 +62,15 @@ export class InicioComponent {
   filtrarTarifas(filtro: string) {
     this.filtroActual = filtro;
 
+    // Cambiar el título según el filtro seleccionado
+    if (filtro === 'Móvil') {
+      this.tituloSubtitulo = 'Todos nuestros planes incluyen tecnología 4G';
+    } else if (filtro === 'Fibra') {
+      this.tituloSubtitulo = 'Todos nuestros planes incluyen la más alta tecnología';
+    } else {
+      this.tituloSubtitulo = 'Todos nuestros planes incluyen tecnología 4G+';
+    }
+
     if (filtro === 'todos') {
       this.tarifasFiltradas = this.tarifas;
     } else {
@@ -70,5 +79,6 @@ export class InicioComponent {
       );
     }
   }
-
 }
+
+
