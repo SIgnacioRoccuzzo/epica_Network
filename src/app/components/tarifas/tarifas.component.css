@@ -29,6 +29,12 @@
     overflow: hidden;
     transition: var(--card-transition);
     padding: 5px;
+
+}
+
+.product-card.mobile-tarifa .product-card__link {
+    margin-top: -5px;
+    color: var(--secondary);
 }
 
 .product-card:hover {
@@ -184,6 +190,11 @@ a.interes {
 a.interes:hover {
     background-color: var(--highlight);
     box-shadow: var(--button-hover-box-shadow);
+}
+
+.product-card__link {
+    display: flex;
+    justify-content: center;
 }
 
 /* Media Query */

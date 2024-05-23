@@ -4,23 +4,26 @@
 
 /* Container */
 .container {
-    background-color: #ffffff;
-    border-radius: 0.625rem;
+
+    border-radius: 25px;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    padding: 10px;
+    transform: translateY(-70px);
+    /*     background: linear-gradient(to top, var(--accent) 0%, #ffffff 100%); */
 }
+
+
 
 /* Headings */
 h1 {
     font-family: var(--fuente-titulo);
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 80px;
 }
 
 h2 {
     font-size: 1.5rem;
-    color: var(--color-secundario);
+    color: var(--accent);
     margin-bottom: 0.9375rem;
 }
 
@@ -33,7 +36,7 @@ h2 {
 
 /* Container Links */
 .container a {
-    color: var(--accent);
+    color: var(--secondary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -50,53 +53,94 @@ h2 {
 }
 
 .text-link:hover {
-    color: var(--color-destacado);
+    color: var(--highlight);
     text-decoration: underline;
 }
 
 /* Media Queries */
 @media screen and (max-width: 37.5rem) {
+
+    /* max-width: 600px */
     .container {
         padding: 0.9375rem;
-        margin-top: 10.25rem;
+        /* 15px */
+        margin-top: 11.25rem;
+        /* 180px */
     }
 
     h1 {
         font-size: 2rem;
-        margin-bottom: 0.9375rem;
+        /* 32px */
+        margin-bottom: 3.125rem;
+        /* 50px */
     }
 
     h2 {
         font-size: 1.25rem;
+        /* 20px */
         margin-bottom: 0.625rem;
+        /* 10px */
     }
 
     .content-section {
         margin-bottom: 0.9375rem;
+        /* 15px */
     }
 
     .container p {
         font-size: 0.875rem;
+        /* 14px */
         line-height: 1.4;
         margin-bottom: 0.625rem;
+        /* 10px */
     }
 
     .text-link {
         font-size: 0.875rem;
+        /* 14px */
     }
 }
 
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 37.5rem) and (max-width: 75rem) {
+
+    /* min-width: 600px and max-width: 1200px */
     .container {
-        max-width: 62.5rem;
-        margin-top: 15.625rem;
+        margin-top: 11rem;
+        /* 176px */
     }
 
     h1 {
         font-size: 3.5rem;
+        /* 56px */
+        margin-bottom: 5rem;
+        /* 80px */
     }
 
     h2 {
         font-size: 1.75rem;
+        /* 28px */
+    }
+}
+
+@media screen and (min-width: 75rem) {
+
+    /* min-width: 1200px */
+    .container {
+        max-width: 62.5rem;
+        /* 1000px */
+        margin-top: 15.625rem;
+        /* 250px */
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        /* 56px */
+        margin-bottom: 5rem;
+        /* 80px */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        /* 28px */
     }
 }

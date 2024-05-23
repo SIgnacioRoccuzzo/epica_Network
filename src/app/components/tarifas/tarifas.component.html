@@ -1,7 +1,8 @@
 <!-- tarifas.component.html -->
 <div class="tarjetas">
     <div class="cards">
-        <div class="product-card" *ngFor="let tarifa of tarifas; trackBy: trackByTarifas">
+        <div class="product-card" *ngFor="let tarifa of tarifas; trackBy: trackByTarifas"
+            [ngClass]="{'mobile-tarifa': tarifa.type === 'Móvil'}">
             <div class="product-card__info">
                 <h2 class="text">{{ tarifa.type }}</h2>
                 <div class="product-card__type">
@@ -19,7 +20,8 @@
                             loading="lazy"
                             [hidden]="tarifa.type === 'TV' || tarifa.type === 'Fibra' || tarifa.type === 'Fibra y Móvil'">
                         <span class="text-subheading-01" *ngIf="!tarifa.lines && tarifa.gb">{{ tarifa.gb }}</span>
-                        <span class="text-subheading-01" *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{
+                        <span class="text-subheading-01" *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x
+                            Móvil {{
                             tarifa.gb }}</span>
                     </div>
                     <span [hidden]="tarifa.type === 'Fibra' || tarifa.type === 'TV'" class="text-subheading-01 mb-4">
@@ -45,6 +47,8 @@
                         <a class="interes" href="{{ whatsappLink }}">Me interesa</a>
                     </div>
                 </div>
+                <a [routerLink]="getDetailLink(tarifa)" style="text-decoration: none; color: var(--secondary);"
+                    class="product-card__link">Mas detalles</a>
             </div>
         </div>
     </div>

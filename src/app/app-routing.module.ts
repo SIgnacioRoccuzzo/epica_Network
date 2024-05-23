@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'fibra', component: FibraComponent },
   { path: 'fibra/detalle/:speed', component: FibraDetailsComponent },
   { path: 'fibra-y-movil', component: FibraMovilComponent },
-  { path: 'fibra-y-movil/detalle/:gb', component: FibraMovilDetailComponent },
+  { path: 'fibra-y-movil/detalle/:name', component: FibraMovilDetailComponent },
 
   { path: 'movil', component: TarifaMovilComponent },
   { path: 'movil/detalle/:gb', component: MovilDetailComponent }, // Detalle de Móvil por GB

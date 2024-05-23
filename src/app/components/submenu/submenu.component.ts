@@ -48,7 +48,7 @@ export class SubmenuComponent implements OnInit {
     if (item.type === 'Fibra') {
       return ['/fibra/detalle', item.speed ?? '']; // Manejar undefined
     } else if (item.type === 'Fibra y Móvil') {
-      return ['/fibra-y-movil/detalle', item.gb ?? '']; // Manejar undefined
+      return ['/fibra-y-movil/detalle', item.name ?? '']; // Manejar undefined
     } else if (item.type === 'Móvil') {
       return ['/movil/detalle', item.gb ?? '']; // Manejar undefined
     } else {

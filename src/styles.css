@@ -195,7 +195,7 @@ h3 {
     margin: 0 auto;
     padding: 0px 15px;
     box-sizing: border-box;
-    /* Consistente box-model para contenedores también */
+
 }
 
 /* Media queries para dispositivos móviles */

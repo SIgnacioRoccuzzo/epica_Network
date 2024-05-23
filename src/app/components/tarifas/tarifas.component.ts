@@ -64,5 +64,19 @@ export class TarifasComponent implements OnChanges {
   trackByChecklistItems(index: number, item: any): any {
     return item.id; // Similarmente, asegúrate de que cada 'item' en el checklist tenga un ID único.
   }
+  getDetailLink(tarifa: any): string {
+    switch (tarifa.type) {
+      case 'Fibra':
+        return `/fibra/detalle/${tarifa.speed}`;
+      case 'Fibra y Móvil':
+        return `/fibra-y-movil/detalle/${tarifa.name}`;
+      case 'Móvil':
+        return `/movil/detalle/${tarifa.gb}`;
+      case 'TV':
+        return `/tv/detalle/${tarifa.name}`;
+      default:
+        return '/';
+    }
+  }
 
 }

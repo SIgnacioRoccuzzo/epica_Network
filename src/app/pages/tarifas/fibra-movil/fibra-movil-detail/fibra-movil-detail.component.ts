@@ -19,10 +19,10 @@ export class FibraMovilDetailComponent {
 
   async ngOnInit() {
     try {
-      const data = this.route.snapshot.paramMap.get('gb');
+      const data = this.route.snapshot.paramMap.get('name');
 
       if (data) {
-        const response = await this.tarifasService.getByGb(data);
+        const response = await this.tarifasService.getByName(data);
         if (response.length > 0) {
           this.tarifa = response[0]; // 
         } else {

@@ -23,13 +23,13 @@
 .card-body h2 {
     font-family: var(--fuente-titulo);
     color: var(--primary);
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     margin: 0;
 }
 
 .card-body p {
     color: var(--text);
-    font-size: 2rem;
+    font-size: 1.89rem;
     font-family: var(--fuente-cuerpo);
     font-weight: bold;
     margin: 0;

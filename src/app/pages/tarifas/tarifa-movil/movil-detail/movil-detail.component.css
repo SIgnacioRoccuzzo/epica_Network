@@ -71,10 +71,10 @@
     color: gray;
 }
 
-.iconos {
-    display: inline-flex;
-    align-items: center;
-    width: 50px;
+.iconos img {
+    display: block;
+    max-width: 60%;
+    height: auto;
 }
 
 .cta {
@@ -86,7 +86,6 @@
     width: 28%;
     transition: background-color 0.3s;
     display: inline-block;
-
 }
 
 .cta:hover {
@@ -239,6 +238,31 @@
     .grid {
         margin-top: 80px;
     }
+
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .col-6 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tarifa_price {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cta {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .iconos {
+        width: auto;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -251,6 +275,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 }

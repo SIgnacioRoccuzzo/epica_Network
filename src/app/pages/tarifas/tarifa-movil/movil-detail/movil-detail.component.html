@@ -8,15 +8,13 @@
                     <div class="col-6 col-sm-6">
                         <h2>{{ tarifa.name }}</h2>
                         <p class="tarifa_title">Tarifa</p>
-                        <p *ngIf="tarifa.speed">Fibra {{ tarifa.speed }}</p>
                         <p *ngIf="!tarifa.lines && tarifa.gb">Móvil {{ tarifa.gb }}</p>
-                        <p *ngIf="tarifa.lines && tarifa.gb">{{ tarifa.lines }} x Móvil {{ tarifa.gb }}</p>
                         <p>Llamadas {{ tarifa.minutes }}</p>
                     </div>
                     <!-- Sección de precio -->
-                    <div class="col-6 col-sm-6">
+                    <div class="col-12 col-lg-4">
                         <section class="tarifa_price">
-                            <p>{{ tarifa.price }}</p>
+                            <p class="mt-3">{{ tarifa.price }}</p>
                             <div class="tarifa-price__regularity">
                                 <span class="mes">€/mes</span>
                                 <span class="iva">IVA incl.</span>
@@ -24,7 +22,7 @@
                             </div>
                             <div class="iconos">
                                 <img src="../../../../../assets/images/imagenes webp/iconos/icon-movil-4g.webp"
-                                    alt="Icono de 5G" width="34" height="34">
+                                    alt="Icono de 4G" width="34" height="34">
                             </div>
                         </section>
                         <div>
@@ -55,6 +53,7 @@
         </div>
     </div>
 </section>
+
 
 
 
