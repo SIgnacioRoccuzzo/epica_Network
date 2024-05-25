@@ -5,7 +5,7 @@
 /* Global Styles */
 h1 {
     font-family: var(--fuente-titulo);
-    margin-top: 10rem;
+    margin-top: 6.5rem;
     font-weight: var(--font-weight);
     font-size: 3rem;
     color: var(--text);
@@ -13,7 +13,7 @@ h1 {
 
 /* Bloque Cards */
 .bloque_cards {
-    margin-top: 3.125rem;
+    margin-top: 100px;
     display: block;
 }
 
@@ -28,23 +28,17 @@ h1 {
     color: var(--text);
 }
 
-.bloque_cards h5 {
+.bloque_cards .subtitle {
     font-size: 1.25rem;
-    font-weight: bold;
-    font-family: var(--fuente-titulo);
+    font-family: var(--fuente-cuerpo);
     color: var (--text);
 }
 
-/* Subtitulo */
-.subtitle {
-    font-family: "Montserrat", sans-serif;
-    color: white;
-}
 
 /* Card */
 .card {
     background-color: white;
-    border-radius: 0.625rem;
+    border-radius: 25px;
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     max-width: 23.75rem;
@@ -67,7 +61,7 @@ h1 {
 
 .card-title {
     font-size: 1.25rem;
-    font-weight: bold;
+    font-family: var(--fuente-titulo);
     color: var(--text);
     margin-bottom: 10px;
     text-align: center;
@@ -90,6 +84,7 @@ h1 {
 /* FAQ */
 .fqa {
     padding: 30px;
+    margin-top: 100px;
 }
 
 .fqa .container {
@@ -101,18 +96,39 @@ h1 {
     margin: auto;
 }
 
-.fqa h2 {
+.title {
     color: var(--text);
     font-family: var(--fuente-titulo);
     text-align: center;
     font-size: var(--font-size);
+    margin-bottom: 40px;
 }
 
 /* Accordion */
 .accordion-button {
-    background-color: var(--primary);
+    background-color: var(--background);
     color: var(--text);
     font-weight: bold;
+}
+
+.accordion-header {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* Aplicar estilo al botón dentro del accordion-header */
+.accordion-header .accordion-button {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    color: var(--text);
+
+}
+
+/* Asegurarse de que los estilos no cambien al colapsar */
+.accordion-header .accordion-button:not(.collapsed) {
+    color: var(--text);
+    background-color: transparent;
 }
 
 .accordion-button:not(.collapsed) {
@@ -138,25 +154,14 @@ h1 {
     background-color: var(--background);
     color: var(--text);
     border-top: 1px solid var(--secondary);
+    padding: 10px;
 }
 
 .accordion-header {
     margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
-    .bloque_cards {
-        display: block;
-
-    }
-}
-
-/* Unified Media Query */
 @media (min-width: 300px) and (max-width: 1199px) {
-    .fqa .container {
-        width: 90%;
-    }
-
     .product-card {
         flex: 1 1 100%;
         max-width: 100%;
@@ -171,6 +176,7 @@ h1 {
     }
 
     .mobil {
+        margin-top: 50px;
         display: block;
     }
 
@@ -178,8 +184,5 @@ h1 {
         width: 100%;
     }
 
-    h1 {
-        font-size: 2rem;
-        margin-top: 12rem;
-    }
+
 }

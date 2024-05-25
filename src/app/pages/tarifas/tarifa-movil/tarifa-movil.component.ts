@@ -23,16 +23,16 @@ export class TarifaMovilComponent {
   ];
 
 
-  toggle(index: number): void {
-    this.activeIndex = this.activeIndex === index ? null : index;
-  }
-
-  isActive(index: number): boolean {
-    return this.activeIndex === index;
-  }
-  getClass(index: number): string {
-    return this.isActive(index) ? 'accordion-collapse collapse show' : 'accordion-collapse collapse';
-  }
+  /*   toggle(index: number): void {
+      this.activeIndex = this.activeIndex === index ? null : index;
+    }
+  
+    isActive(index: number): boolean {
+      return this.activeIndex === index;
+    }
+    getClass(index: number): string {
+      return this.isActive(index) ? 'accordion-collapse collapse show' : 'accordion-collapse collapse';
+    } */
 
   mobileCards = [
     { title: 'Conexión', description: 'Contamos con la red e infraestructura móvil de Telefónica que ofrece una cobertura excepcional en todo el territorio nacional. Además, nuestra red permite navegar mucho más deprisa y descargar archivos en cuestión de segundos, brindando una experiencia de velocidad superior. ¡Estamos aquí para mantenerte conectado en todo momento!', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-4g-100.webp' },

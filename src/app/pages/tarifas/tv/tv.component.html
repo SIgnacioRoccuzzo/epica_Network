@@ -48,19 +48,19 @@
 
 <section class="fqa">
     <div class="container">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="accordion" id="accordionExample">
+        <h2 class="title">Preguntas Frecuentes</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
             <div *ngFor="let question of questions; let i = index" class="accordion-item">
-                <h2 class="accordion-header" [id]="'heading' + i">
-                    <button class="accordion-button" type="button" [attr.aria-expanded]="isActive(i) ? 'true' : 'false'"
-                        [attr.aria-controls]="'collapse' + i" (click)="toggle(i)">
+                <h2 class="accordion-header" [id]="'flush-heading' + i">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#flush-collapse' + i" aria-expanded="false"
+                        [attr.aria-controls]="'flush-collapse' + i">
                         {{ question.title }}
                     </button>
                 </h2>
-                <div [id]="'collapse' + i" [class]="getClass(i)" [attr.aria-labelledby]="'heading' + i">
-                    <div class="accordion-body" [innerHTML]="question.content">
-                        {{ question.content }}
-                    </div>
+                <div [id]="'flush-collapse' + i" class="accordion-collapse collapse"
+                    [attr.data-bs-parent]="'#accordionFlushExample'" [attr.aria-labelledby]="'flush-heading' + i">
+                    <div class="accordion-body" [innerHTML]="question.content"></div>
                 </div>
             </div>
         </div>

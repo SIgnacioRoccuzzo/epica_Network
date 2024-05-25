@@ -28,19 +28,16 @@
                         </li>
                     </ul>
                     <ul class="second-menu" role="menu">
-                        <li *ngFor="let section of secondMenu; trackBy: trackByItems" [routerLink]="[section.route]"
-                            routerLinkActive="active" role="menuitem" (click)="handleMenuItemClick()">
-                            {{ section.label }}
-
+                        <li routerLinkActive="active" role="menuitem" (click)="handleMenuItemClick()">
+                            <a [routerLink]="['/sobre-epica']">Sobre Épica</a>
                         </li>
-                        <li role="menuitem">
-                            <a href="{{whatsappLink}}" target="_blank" rel="noopener noreferrer"
-                                style="text-decoration: none; color: var(--background); opacity: 0.7;"
-                                [ngClass]="{'is-open': isMenuOpen}">
+                        <li routerLinkActive="active" role="menuitem" (click)="handleMenuItemClick()">
+                            <a class="contacto" href="{{whatsappLink}}">
                                 Contacto
                             </a>
                         </li>
                     </ul>
+
                     <a class="button" href="https://clientesepicanetwork.ispgestion.com/site/login"
                         [ngClass]="{'is-open': isMenuOpen}">
                         Soy Cliente

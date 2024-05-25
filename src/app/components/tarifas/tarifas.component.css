@@ -32,8 +32,12 @@
 
 }
 
+.product-card.mobile-tarifa {
+    max-height: 560px;
+}
+
 .product-card.mobile-tarifa .product-card__link {
-    margin-top: -5px;
+    margin-top: 2px;
     color: var(--secondary);
 }
 

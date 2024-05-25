@@ -1,3 +1,19 @@
+header {
+    background-color: var(--background);
+    /* Puedes ajustar esto según sea necesario */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+main {
+    padding: 2rem 0;
+}
+
 .subir {
     display: flex;
     justify-content: center;
@@ -50,31 +66,6 @@
 
 .bloque_contacto_faldon img {
     width: 70px;
-
-}
-
-@keyframes bounce-and-squash {
-
-    0%,
-    100% {
-        transform: translateY(0) scale(1, 1);
-        /* En posición original y sin aplastar */
-    }
-
-    25% {
-        transform: translateY(-20px) scale(1, 1.1);
-        /* Sube y se estira ligeramente */
-    }
-
-    50% {
-        transform: translateY(0) scale(1.1, 0.9);
-        /* Baja, se aplasta y se ensancha */
-    }
-
-    75% {
-        transform: translateY(-10px) scale(1, 1.05);
-        /* Sube nuevamente y se estira ligeramente */
-    }
 }
 
 .whatsapp a {
@@ -87,10 +78,36 @@
     animation: bounce-and-squash 2s infinite ease-in-out;
 }
 
+@keyframes bounce-and-squash {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    25% {
+        transform: translateY(-20px) scale(1, 1.1);
+    }
+
+    50% {
+        transform: translateY(0) scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: translateY(-10px) scale(1, 1.05);
+    }
+}
+
 @media (max-width: 768px) {
     .whatsapp a {
         font-size: 300%;
         right: 1rem;
-        /* Menor distancia al borde derecho en móviles */
     }
+}
+
+footer {
+    background-color: var(--background);
+    /* Ajusta según sea necesario */
+    padding: 1rem 2rem;
+    text-align: center;
 }

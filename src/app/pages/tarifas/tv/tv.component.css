@@ -2,7 +2,7 @@
 
 h1 {
     font-family: var(--fuente-titulo);
-    margin-top: 10rem;
+    margin-top: 6.5rem;
     font-weight: var(--font-weight);
     font-size: 3rem;
     color: var(--text);
@@ -222,18 +222,39 @@ a.interes:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.fqa h2 {
+.title {
     color: var(--text);
     font-family: var(--fuente-titulo);
     text-align: center;
     font-size: var(--font-size);
+    margin-bottom: 40px;
 }
 
 .accordion-button {
-    background-color: var(--primary);
+    background-color: var(--background);
     color: var(--text);
     font-weight: bold;
 
+}
+
+.accordion-header {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* Aplicar estilo al botón dentro del accordion-header */
+.accordion-header .accordion-button {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    color: var(--text);
+
+}
+
+/* Asegurarse de que los estilos no cambien al colapsar */
+.accordion-header .accordion-button:not(.collapsed) {
+    color: var(--text);
+    background-color: transparent;
 }
 
 .accordion-button:not(.collapsed) {
@@ -259,6 +280,7 @@ a.interes:hover {
     background-color: var(--background);
     color: var(--text);
     border-top: 1px solid var(--secondary);
+    padding: 10px;
 
 }
 
@@ -281,7 +303,7 @@ a.interes:hover {
 
     h1 {
         font-size: 2.5rem;
-        margin-top: 14rem;
+
     }
 
     /* tv.component.css o el archivo CSS correspondiente */

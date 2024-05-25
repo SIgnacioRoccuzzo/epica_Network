@@ -1,14 +1,20 @@
 <header>
-    <app-menu></app-menu>
+    <nav>
+        <app-menu></app-menu>
+    </nav>
 </header>
+
 <main>
     <router-outlet></router-outlet>
 </main>
 
-<article class="subir">
-    <a (click)="scrollToTop()" class="btn subir-btn text-center" href="javascript:void(0);">Subir</a>
-</article>
-<article class="bloque_contacto_faldon">
+<aside class="subir">
+    <button (click)="scrollToTop()" class="btn subir-btn text-center" aria-label="Subir">
+        Subir
+    </button>
+</aside>
+
+<aside class="bloque_contacto_faldon">
     <div class="container">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12 col-md-1">
@@ -17,15 +23,16 @@
             </div>
             <div class="col-12 col-md-3">
                 <p><span>¿Necesitas ayuda?</span> Puedes contactar con nosotros clicando <a
-                        href="{{ whatsappLink }}">aquí.</a></p>
+                        [href]="whatsappLink">aquí.</a></p>
             </div>
         </div>
     </div>
-</article>
-<app-footer></app-footer>
-<div class="whatsapp">
-    <a href="{{whatsappLink}}">
-        <i class="fab fa-whatsapp"></i>
+</aside>
 
+<app-footer></app-footer>
+
+<div class="whatsapp">
+    <a [href]="whatsappLink" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 </div>

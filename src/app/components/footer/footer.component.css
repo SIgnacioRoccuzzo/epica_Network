@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital@0;1&family=Press+Start+2P&display=swap');
 @import url('../../../styles.css');
 
-
 footer {
     background-color: var(--text);
     color: var(--background);
@@ -12,6 +11,10 @@ footer {
 .img-fluid {
     width: 150px;
     transform: translateX(-30px);
+}
+
+.primary-footer {
+    transform: translateX(85px);
 
 }
 
@@ -98,6 +101,7 @@ footer {
 .secondary-footer {
     text-align: center;
     padding: 15px 0;
+    transform: translateX(-60px);
 }
 
 .secondary-footer ul {
@@ -121,17 +125,19 @@ footer {
 
 .secondary-footer .list-inline-item {
     margin: 5px 0;
-
 }
 
 .secondary-footer .list-inline-item:not(:last-child)::after {
     content: "•";
     margin: 0 10px;
     color: #ecf0f1;
-
 }
 
 @media (max-width: 768px) {
+    .primary-footer {
+        transform: translateX(0);
+    }
+
     .img-fluid {
         width: 140px;
         transform: translateX(135px);
@@ -154,9 +160,17 @@ footer {
     .social-list {
         align-items: center;
     }
+
+    .secondary-footer {
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 480px) {
+    .primary-footer {
+        transform: translateX(0);
+    }
+
     footer .container {
         flex-direction: column;
         align-items: center;
@@ -178,5 +192,9 @@ footer {
 
     .social-list {
         align-items: center;
+    }
+
+    .secondary-footer {
+        transform: translateX(0);
     }
 }

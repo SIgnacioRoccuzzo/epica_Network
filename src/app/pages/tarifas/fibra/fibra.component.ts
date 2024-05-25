@@ -50,16 +50,6 @@ export class FibraComponent {
       }
     ];
   }
-  toggle(index: number): void {
-    this.activeIndex = this.activeIndex === index ? null : index;
-  }
-
-  isActive(index: number): boolean {
-    return this.activeIndex === index;
-  }
-  getClass(index: number): string {
-    return this.isActive(index) ? 'accordion-collapse collapse show' : 'accordion-collapse collapse';
-  }
 
   mobileCards = [
     { title: 'Velocidad', description: 'En Épica Network te ofrecemos internet de calidad en una extensa red de Fibra. Podrás navegar por internet, jugar a videojuegos, realizar videoconferencias, descargar y subir archivos a la nube y transmitir en streaming, sin cortes ni interrupciones. Con nuestro servicio de Fibra tendrás una velocidad fija y podrás disfrutar de mayor capacidad en conexiones con velocidades de bajada entre 100Mb, 300Mb o 600Mb según tu tarifa elegida y velocidad de subida sujeta a tu disponibilidad geográfica.', imageUrl: '../../../../assets/images/imagenes webp/iconos/icons8-wifi-48.webp' },

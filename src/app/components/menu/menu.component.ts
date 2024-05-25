@@ -33,10 +33,6 @@ export class MenuComponent implements OnInit {
     { label: 'TV', route: '/tv', submenuType: '' },
   ];
 
-  secondMenu = [
-    { label: 'Sobre Épica', route: '/sobre-epica' },
-    /*  { label: 'Contacto', route: 'https://api.whatsapp.com/send?phone=34611558367&text=¡Hola! Necesito información sobre tarifas.' }, */
-  ];
 
   async ngOnInit() {
     try {

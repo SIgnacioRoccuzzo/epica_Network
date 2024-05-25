@@ -8,7 +8,7 @@
     <article class="bloque_cards text-center">
         <div class="container">
             <h2 class="mb-3 text-center">Un servicio fibra épico</h2>
-            <h5 class="subtitle text-center">Y si quieres hablar con nosotros estaremos ahí para ayudarte</h5>
+            <p class="subtitle text-center">Y si quieres hablar con nosotros estaremos ahí para ayudarte</p>
             <div class="d-sm-block">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let card of mobileCards; let i = index">
@@ -26,7 +26,7 @@
     </article>
     <swiper-container class="mobil" navigation="true" pagination="true" pagination-clickable="true">
         <swiper-slide *ngFor="let card of mobileCards">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 mb-4">
                 <div class="card h-100">
                     <img class="card-img-top" [src]="card.imageUrl" [alt]="card.title">
                     <div class="card-body">
@@ -40,16 +40,18 @@
 </section>
 <section class="fqa">
     <div class="container">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="accordion" id="accordionExample">
+        <h2 class="title">Preguntas Frecuentes</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample3">
             <div *ngFor="let question of questions; let i = index" class="accordion-item">
-                <h2 class="accordion-header" [id]="'heading' + i">
-                    <button class="accordion-button" type="button" [attr.aria-expanded]="isActive(i) ? 'true' : 'false'"
-                        [attr.aria-controls]="'collapse' + i" (click)="toggle(i)">
+                <h2 class="accordion-header" [id]="'flush-heading' + i">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#flush-collapse' + i" aria-expanded="false"
+                        [attr.aria-controls]="'flush-collapse' + i">
                         {{ question.title }}
                     </button>
                 </h2>
-                <div [id]="'collapse' + i" [class]="getClass(i)" [attr.aria-labelledby]="'heading' + i">
+                <div [id]="'flush-collapse' + i" class="accordion-collapse collapse"
+                    [attr.aria-labelledby]="'flush-heading' + i" data-bs-parent="#accordionFlushExample3">
                     <div class="accordion-body" [innerHTML]="question.content">
                         {{ question.content }}
                     </div>
