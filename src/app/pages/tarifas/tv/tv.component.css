@@ -100,11 +100,16 @@ h1 {
 }
 
 .product-card:first-of-type a.interes {
-    margin-top: 145px;
+    margin-top: 55px;
 
 }
 
 .product-card:nth-of-type(2) .product-card__action {
+    height: 330px;
+
+}
+
+.product-card:last-child .product-card__action {
     height: 330px;
 
 }

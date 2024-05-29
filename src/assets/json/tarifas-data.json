@@ -2,28 +2,28 @@
     {
         "type": "Móvil",
         "name": "Plan Oro",
-        "gb": "32GB",
+        "gb": "80GB",
         "minutes": "ilimitadas",
         "price": 8.95
     },
     {
         "type": "Móvil",
         "name": "Plan Esmeralda",
-        "gb": "70GB",
+        "gb": "120GB",
         "minutes": "ilimitadas",
         "price": 10.95
     },
     {
         "type": "Móvil",
         "name": "Plan Diamante",
-        "gb": "120GB",
+        "gb": "300GB",
         "minutes": "ilimitadas",
         "price": 12.95
     },
     {
         "type": "Móvil",
         "name": "Plan Maestro",
-        "gb": "160GB",
+        "gb": "500GB",
         "minutes": "ilimitadas",
         "price": 18.95
     },
@@ -72,7 +72,7 @@
         "type": "Fibra y Móvil",
         "name": "Cofre Legendario",
         "speed": "300Mb",
-        "gb": "Móvil 25GB",
+        "gb": "25GB",
         "lines": 2,
         "minutes": "ilimitadas",
         "price": 39.90
@@ -97,6 +97,11 @@
         "type": "TV",
         "name": "TV Básico",
         "channels": 100,
+        "extras": [
+            "Canales TDT",
+            "Canales TV Autonomicas",
+            "Canales Internacionales"
+        ],
         "price": 2.99
     },
     {

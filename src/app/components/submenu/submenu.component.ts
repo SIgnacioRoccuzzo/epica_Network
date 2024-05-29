@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Tarifas } from 'src/app/interfaces/tarifas.interface';
 import { TarifasService } from 'src/app/services/tarifas.service';
 import { filter } from 'rxjs/operators';
+import { UrlFormatterService } from 'src/app/services/url-formatter.service';
 
 @Component({
   selector: 'app-submenu',
@@ -13,6 +14,7 @@ export class SubmenuComponent implements OnInit {
   @Input() items: Tarifas[] = [];
   selectedItem: Tarifas | null = null;
   isSubmenuVisible = true;
+  urlFormatter = inject(UrlFormatterService)
 
   constructor(
     private route: ActivatedRoute,
@@ -63,4 +65,8 @@ export class SubmenuComponent implements OnInit {
   selectItem(item: Tarifas): void {
     this.selectedItem = item;
   }
+  /*   navigateToDetail(name: string): void {
+      const friendlyUrl = this.urlFormatter.toUrlFriendly(name);
+      this.router.navigate([`/fibra-y-movil/detalle/${friendlyUrl}`]);
+    } */
 }

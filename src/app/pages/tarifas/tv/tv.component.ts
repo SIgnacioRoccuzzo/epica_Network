@@ -36,16 +36,6 @@ export class TvComponent {
     ];
 
   }
-  /*   toggle(index: number): void {
-      this.activeIndex = this.activeIndex === index ? null : index;
-    }
-  
-    isActive(index: number): boolean {
-      return this.activeIndex === index;
-    }
-    getClass(index: number): string {
-      return this.isActive(index) ? 'accordion-collapse collapse show' : 'accordion-collapse collapse';
-    } */
   async ngOnInit() {
     try {
       const response = await this.tarifasService.getByType('TV');

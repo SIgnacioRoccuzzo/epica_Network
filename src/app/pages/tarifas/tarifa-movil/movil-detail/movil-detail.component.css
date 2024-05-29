@@ -10,7 +10,7 @@
     font-size: 1rem;
     width: 80%;
     margin: 20px auto;
-    margin-top: 11rem;
+    margin-top: 8rem;
 }
 
 .row {
@@ -95,7 +95,6 @@
 .lista_checks {
     font-family: var(--fuente-cuerpo);
     font-size: var(--size-text);
-    color: var(--text);
     padding: 10px;
     border-radius: 8px;
     background-color: var(--accent);
@@ -103,7 +102,7 @@
 
 .lista_checks p {
     font-family: var(--fuente-titulo);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--background);
 }
 
@@ -178,6 +177,7 @@
     text-decoration: none;
     color: var(--accent);
 }
+
 
 @media (max-width: 1024px) {
     .grid {

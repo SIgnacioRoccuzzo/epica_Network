@@ -29,6 +29,13 @@
                     </div>
 
                     <ul class="checklist">
+                        <li *ngIf="tarifa.extras?.includes('Canales TDT')"><i class="fas fa-check-circle"></i> Canales
+                            TDT</li>
+                        <li *ngIf="tarifa.extras?.includes('Canales TV Autonomicas')"><i
+                                class="fas fa-check-circle"></i> Canales TV Autonómicas</li>
+                        <li *ngIf="tarifa.extras?.includes('Canales Internacionales')"><i
+                                class="fas fa-check-circle"></i>
+                            Canales Internacionales</li>
                         <li *ngIf="tarifa.extras?.includes('cine')"><i class="fas fa-check-circle"></i> Cine</li>
                         <li *ngIf="tarifa.extras?.includes('series')"><i class="fas fa-check-circle"></i> Series</li>
                         <li *ngIf="tarifa.extras?.includes('documentales')"><i class="fas fa-check-circle"></i>

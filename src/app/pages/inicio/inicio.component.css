@@ -366,4 +366,8 @@ img {
         font-size: 2.5rem;
         font-family: var(--fuente-titulo) !important;
     }
+
+    .banner:nth-child(2) {
+        margin: 0 auto;
+    }
 }

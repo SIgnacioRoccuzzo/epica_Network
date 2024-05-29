@@ -26,7 +26,7 @@ export class FibraMovilDetailComponent {
         if (response.length > 0) {
           this.tarifa = response[0]; // 
         } else {
-          console.error('No se encontró tarifa con ese valor de data');
+          console.error('No se encontró tarifa con ese valor de name');
         }
       }
     } catch (error) {
